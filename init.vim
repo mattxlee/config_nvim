@@ -26,3 +26,7 @@ let g:Lf_ShortcutF = '<C-P>'
 " ---- Neoformat settings ----
 noremap C :Neoformat<CR>
 " ---- end of Neoformat settings ----
+
+" ---- Switch header/source settings ----
+noremap <C-H> :A<CR>
+" ---- end of Switch header/source settings ----

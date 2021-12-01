@@ -12,4 +12,6 @@ return require('packer').startup(function()
     use 'Yggdroot/LeaderF'
 
     use 'sbdchd/neoformat'
+
+    use 'vim-scripts/a.vim'
 end)
