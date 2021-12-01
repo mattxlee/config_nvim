@@ -4,6 +4,7 @@ lua require('plugins')
 set nu
 let mapleader = ';'
 noremap N :noh<CR>
+noremap * :keepjumps normal! mi*`i<CR>
 " ---- end of Common settings ----
 
 " ---- Color scheme `gruvbox` ----
