@@ -20,7 +20,6 @@ let g:lightline = {'colorscheme': 'gruvbox_material'}
 
 " ---- Fugitive settings ----
 noremap <C-G> :Git<CR>
-noremap gu :Git push<CR>
 " ---- end of Fugitive settings ----
 
 " ---- LeaderF related settings ----
@@ -55,3 +54,26 @@ function OpenNERDTree()
 endfunction
 noremap <C-J> :call OpenNERDTree()<CR>
 " ---- end of NERDTree settings ----
+
+" ---- AsyncRun settings ----
+let g:asyncrun_open = 20
+let g:asyncrun_bell = 1
+noremap gu :AsyncRun git push<CR>
+noremap <C-K> :AsyncStop<CR>
+function Build()
+    if !empty(expand(glob("Makefile")))
+        :AsyncRun make -j9
+    else
+        :AsyncRun cmake --build ./build --config debug -j9
+    endif
+endfunction
+function Clean()
+    if !empty(expand(glob("Makefile")))
+        :AsyncRun make clean
+    else
+        :AsyncRun cmake --build ./build --target clean
+    endif
+endfunction
+noremap mk :call Build()<CR>
+noremap mc :call Clean()<CR>
+" ---- end of AsyncRun settings ----

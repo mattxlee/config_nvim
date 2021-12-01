@@ -18,4 +18,6 @@ return require('packer').startup(function()
     use 'airblade/vim-gitgutter'
 
     use 'preservim/nerdtree'
+
+    use 'skywind3000/asyncrun.vim'
 end)
