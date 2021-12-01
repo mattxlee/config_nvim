@@ -58,6 +58,7 @@ noremap <C-J> :call OpenNERDTree()<CR>
 " ---- AsyncRun settings ----
 let g:asyncrun_open = 20
 let g:asyncrun_bell = 1
+noremap M :cclose<CR>:lclose<CR>:pclose<CR>
 noremap gu :AsyncRun git push<CR>
 noremap <C-K> :AsyncStop<CR>
 function Build()
@@ -76,4 +77,5 @@ function Clean()
 endfunction
 noremap mk :call Build()<CR>
 noremap mc :call Clean()<CR>
+noremap <Leader>n :cn<CR>
 " ---- end of AsyncRun settings ----
