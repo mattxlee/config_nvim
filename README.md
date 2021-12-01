@@ -16,7 +16,7 @@ For more information about the plugin manager, please visit [Packer](https://git
 
 ## Manage git repo
 
-Use `:Git` to show file status and make new commit.
+Use `ctrl+g` to show file status and make new commit.
 
 ## Format current file
 

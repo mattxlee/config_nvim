@@ -13,6 +13,10 @@ colorscheme gruvbox-material
 let g:lightline = {'colorscheme': 'gruvbox_material'}
 " ---- end of Color scheme `gruvbox` for lightline
 
+" ---- Fugitive settings ----
+noremap <C-G> :Git<CR>
+" ---- end of Fugitive settings ----
+
 " ---- LeaderF related settings ----
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
