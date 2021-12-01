@@ -13,8 +13,12 @@ colorscheme gruvbox-material
 let g:lightline = {'colorscheme': 'gruvbox_material'}
 " ---- end of Color scheme `gruvbox` for lightline
 
-" ---- LeaderF related config ----
+" ---- LeaderF related settings ----
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 let g:Lf_ShortcutF = '<C-P>'
 " ---- end of LeaderF related config ----
+
+" ---- Neoformat settings ----
+noremap C :Neoformat<CR>
+" ---- end of Neoformat settings ----

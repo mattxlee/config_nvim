@@ -10,4 +10,6 @@ return require('packer').startup(function()
     use 'editorconfig/editorconfig-vim'
 
     use 'Yggdroot/LeaderF'
+
+    use 'sbdchd/neoformat'
 end)
