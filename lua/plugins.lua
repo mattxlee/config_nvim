@@ -16,4 +16,6 @@ return require('packer').startup(function()
     use 'mattxlee/vim-fswitch'
 
     use 'airblade/vim-gitgutter'
+
+    use 'preservim/nerdtree'
 end)
