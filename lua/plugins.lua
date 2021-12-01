@@ -20,4 +20,10 @@ return require('packer').startup(function()
     use 'preservim/nerdtree'
 
     use 'skywind3000/asyncrun.vim'
+
+    use 'tpope/vim-surround'
+
+    use 'tomtom/tcomment_vim'
+
+    use 'easymotion/vim-easymotion'
 end)
