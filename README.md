@@ -12,6 +12,8 @@ To install the script, just clone the repo to your local config path by running 
 
 Use `:PackerSync` to install/update plugins.
 
+For more information about the plugin manager, please visit [Packer](https://github.com/wbthomason/packer.nvim)
+
 ## Manage git repo
 
 Use `:Git` to show file status and make new commit.
