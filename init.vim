@@ -2,6 +2,7 @@ lua require('plugins')
 
 " ---- Common settings ----
 set nu
+noremap N :noh<CR>
 " ---- end of Common settings ----
 
 " ---- Color scheme `gruvbox` ----
