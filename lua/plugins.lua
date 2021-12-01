@@ -14,4 +14,6 @@ return require('packer').startup(function()
     use 'sbdchd/neoformat'
 
     use 'vim-scripts/a.vim'
+
+    use 'airblade/vim-gitgutter'
 end)
