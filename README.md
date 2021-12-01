@@ -16,7 +16,9 @@ For more information about the plugin manager, please visit [Packer](https://git
 
 ## Manage git repo
 
-Use `ctrl+g` to show file status and make new commit.
+* Use `ctrl+g` to show file status and make new commit.
+
+* Use `gu` to push current branch to remote repo.
 
 ## Format current file
 

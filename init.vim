@@ -15,6 +15,7 @@ let g:lightline = {'colorscheme': 'gruvbox_material'}
 
 " ---- Fugitive settings ----
 noremap <C-G> :Git<CR>
+noremap gu :Git push<CR>
 " ---- end of Fugitive settings ----
 
 " ---- LeaderF related settings ----
