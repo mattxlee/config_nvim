@@ -2,15 +2,21 @@
 
 This is my config script for nvim, feel free to use it.
 
+## Prepare
+
+* You need to install Git or the git related plugin will be disabled automatically.
+
+* You need to install silver ag searcher on your system in order to search text from all files in your project. For example, you can use Homebrew to install the searcher by typing the command `brew install the_silver_searcher`.
+
 ## Install
 
-To install the script, just clone the repo to your local config path by running the command below
+To install the script, just clone the repo to your local config path by running the command below.
 
 `git clone https://github.com/mattxlee/config_nvim ~/.config/nvim`
 
 ## Update plugins
 
-Use `:PackerSync` to install/update plugins.
+Use `:PackerSync` to install/update plugins. Or you can just run shell command `nvim +PackerSync` to invoke the updating procedure.
 
 For more information about the plugin manager, please visit [Packer](https://github.com/wbthomason/packer.nvim)
 
