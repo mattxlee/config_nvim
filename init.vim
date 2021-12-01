@@ -79,4 +79,5 @@ endfunction
 noremap mk :call Build()<CR>
 noremap mc :call Clean()<CR>
 noremap <Leader>n :cn<CR>
+noremap <Leader>p :cp<CR>
 " ---- end of AsyncRun settings ----
