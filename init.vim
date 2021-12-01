@@ -17,7 +17,7 @@ let g:lightline = {'colorscheme': 'gruvbox_material'}
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 let g:Lf_ShortcutF = '<C-P>'
-" ---- end of LeaderF related config ----
+" ---- end of LeaderF related settings ----
 
 " ---- Neoformat settings ----
 noremap C :Neoformat<CR>
