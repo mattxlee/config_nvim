@@ -13,7 +13,7 @@ return require('packer').startup(function()
 
     use 'sbdchd/neoformat'
 
-    use 'vim-scripts/a.vim'
+    use 'mattxlee/vim-fswitch'
 
     use 'airblade/vim-gitgutter'
 end)

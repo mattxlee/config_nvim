@@ -34,5 +34,6 @@ noremap C :Neoformat<CR>
 " ---- end of Neoformat settings ----
 
 " ---- Switch header/source settings ----
-noremap <C-H> :A<CR>
+let g:fsnonewfiles = 'on'
+noremap <C-H> :FSHere<CR>
 " ---- end of Switch header/source settings ----
