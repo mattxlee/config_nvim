@@ -1,5 +1,9 @@
 lua require('plugins')
 
+" ---- Common settings ----
+set nu
+" ---- end of Common settings ----
+
 " ---- Color scheme `gruvbox` ----
 if has('termguicolors')
     set termguicolors
