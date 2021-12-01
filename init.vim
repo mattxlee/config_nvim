@@ -23,10 +23,42 @@ let g:lightline = {'colorscheme': 'gruvbox_material'}
 noremap <C-G> :Git<CR>
 " ---- end of Fugitive settings ----
 
+" ---- CTags settings ----
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
+let g:gutentags_ctags_tagfile = '.tags'
+let g:gutentags_generate_on_empty_buffer = 1
+let g:gutentags_generate_on_missing = 1
+let s:vim_tags = expand('~/.cache/tags')
+let g:gutentags_ctags_exclude = ['node_modules']
+let g:gutentags_cache_dir=s:vim_tags
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--exclude=node_modules']
+let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']
+if !isdirectory(s:vim_tags)
+  silent! call mkdir(s:vim_tags, 'p')
+endif
+" ---- end of CTags settings ----
+
 " ---- LeaderF related settings ----
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 let g:Lf_ShortcutF = '<C-P>'
+let g:Lf_WildIgnore={
+    \ 'dir': ['.svn','.git','.hg','node_modules'],
+    \ 'file': ['*.sw?','*.bak','*.exe','*.o','*.so']
+    \}
+let g:Lf_StlSeparator={'left': '', 'right': '', 'font': ''}
+let g:Lf_RootMarkers=['.project', '.root', '.svn', '.git']
+let g:Lf_WorkingDirectoryMode='Ac'
+let g:Lf_CacheDirectory=expand('~/.vim/cache')
+let g:Lf_ShowRelativePath=0
+let g:Lf_PreviewResult={'Function':0, 'BufTag':0}
+let g:Lf_ShortcutF='<C-P>'
+let g:Lf_ShowDevIcons=0
+noremap <Leader>o :LeaderfFunction<CR>
+noremap <Leader>g :LeaderfTag<CR>
 " ---- end of LeaderF related settings ----
 
 " ---- Neoformat settings ----

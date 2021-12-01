@@ -6,6 +6,8 @@ This is my config script for nvim, feel free to use it.
 
 * You need to install Git or the git related plugin will be disabled automatically.
 
+* You need to install `universal-ctags` to use ctags from nvim. Under macOS, you can use Homebrew to install it `brew install universal-ctags`.
+
 * You need to install silver ag searcher on your system in order to search text from all files in your project. For example, you can use Homebrew to install the searcher by typing the command `brew install the_silver_searcher`.
 
 ## Install
@@ -35,6 +37,16 @@ Use `shift+c` to format current file (normal mode).
 Use `<leader>+ff` to type and search text in the files from current project.
 
 Learn more about the text search plugin, please visit [vim-esearch](https://github.com/eugen0329/vim-esearch)
+
+## Jump to tags
+
+* Use `<leader>o` to show the functions list from current opened file.
+
+* Use `<leader>g` to global search tags.
+
+* Use `ctrl+]` to jump to the location of the declaration of the tag above the cursor.
+
+* Use `ctrl+o` to return to the previous position.
 
 ## File explorer (NERDTree)
 

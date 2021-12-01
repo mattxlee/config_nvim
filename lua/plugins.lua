@@ -28,4 +28,6 @@ return require('packer').startup(function()
     use 'easymotion/vim-easymotion'
 
     use 'eugen0329/vim-esearch'
+
+    use 'ludovicchabant/vim-gutentags' 
 end)
