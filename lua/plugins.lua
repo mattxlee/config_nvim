@@ -6,4 +6,6 @@ return require('packer').startup(function()
     use 'itchyny/lightline.vim'
 
     use 'tpope/vim-fugitive'
+
+    use 'editorconfig/editorconfig-vim'
 end)
