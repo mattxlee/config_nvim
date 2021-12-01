@@ -22,7 +22,13 @@ For more information about the plugin manager, please visit [Packer](https://git
 
 ## Format current file
 
-Use SHIFT+C to format current file (normal mode).
+Use `shift+c` to format current file (normal mode).
+
+## Global search in files
+
+Use `<leader>+ff` to type and search text in the files from current project.
+
+Learn more about the text search plugin, please visit [vim-esearch](https://github.com/eugen0329/vim-esearch)
 
 ## File explorer (NERDTree)
 
