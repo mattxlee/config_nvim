@@ -52,9 +52,9 @@ let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 let g:Lf_ShortcutF = '<C-P>'
 let g:Lf_WildIgnore={
-    \ 'dir': ['.svn','.git','.hg','node_modules'],
-    \ 'file': ['*.sw?','*.bak','*.exe','*.o','*.so']
-    \}
+            \ 'dir': ['.svn','.git','.hg','node_modules'],
+            \ 'file': ['*.sw?','*.bak','*.exe','*.o','*.so']
+            \}
 let g:Lf_StlSeparator={'left': '', 'right': '', 'font': ''}
 let g:Lf_RootMarkers=['.project', '.root', '.svn', '.git']
 let g:Lf_WorkingDirectoryMode='Ac'
