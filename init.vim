@@ -4,6 +4,7 @@ lua require('plugins')
 set nu
 set noshowmode
 set showtabline=0
+set cursorline
 let mapleader = ';'
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
