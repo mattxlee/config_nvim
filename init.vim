@@ -2,6 +2,7 @@ lua require('plugins')
 
 " ---- Common settings ----
 set nu
+set noshowmode
 let mapleader = ';'
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
@@ -17,7 +18,10 @@ colorscheme gruvbox-material
 " ---- end of Color scheme `gruvbox` ----
 
 " ---- Color scheme `gruvbox` for lightline
-let g:lightline = {'colorscheme': 'gruvbox_material'}
+let g:lightline = {
+            \ 'colorscheme': 'gruvbox_material',
+            \ 'active': {'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']]},
+            \ 'component_function': {'gitbranch': 'FugitiveHead'}}
 " ---- end of Color scheme `gruvbox` for lightline
 
 " ---- Fugitive settings ----
