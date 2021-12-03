@@ -1,4 +1,4 @@
-return require('packer').startup(function()
+return require('packer').startup({function()
     use 'wbthomason/packer.nvim'
 
     use 'embear/vim-localvimrc'
@@ -42,4 +42,10 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-nvim-lsp'
 
     use 'hrsh7th/nvim-cmp'
-end)
+end,
+    config = {
+        display = {
+            open_fn = require('packer.util').float,
+        }
+    }
+})
