@@ -36,6 +36,10 @@ For more information about the plugin manager, please visit [Packer](https://git
 
 Use `shift+c` to format current file (normal mode).
 
+## Trim whitespace on the end of line
+
+Use `ctrl+t` to get ride of the whitespace on the end of line.
+
 ## Global search in files
 
 Use `<leader>+ff` to type and search text in the files from current project.
