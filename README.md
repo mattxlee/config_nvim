@@ -79,3 +79,9 @@ Use `ctrl+p` to show local files filter, type name and open file.
 ## Close tool panels
 
 Use shortcut `shift+m` to close all other tool panels in normal mode.
+
+## Autocomplete by using LSP
+
+Use `ctrl+l` to trigger the autocomplete, `ctrl+n` or `ctrl+p` to select the items.
+
+Use command `:LspInstallInfo` to show all language server and use key `i` to install, or `X` to uninstall.

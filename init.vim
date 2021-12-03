@@ -1,10 +1,30 @@
 " ---- Plugins setup ----
 lua << EOF
 require('plugins')
-local lspconfig = require('lspconfig') or 0
-if lspconfig ~= 0 then
-    lspconfig.clangd.setup{}
-end
+-- Setup nvim-cmp.
+local cmp = require('cmp')
+cmp.setup({
+  enabled = function()
+    return vim.api.nvim_buf_get_option(0, 'buftype') ~= 'prompt'
+  end,
+  completion = {
+    autocomplete = {},
+  },
+  mapping = {
+    ['<C-L>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+  },
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+  })
+})
+
+-- Setup lspconfig.
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local lsp_installer = require('nvim-lsp-installer')
+lsp_installer.on_server_ready(function(server)
+    local opts = { capabilities = capabilities }
+    server:setup(opts)
+end)
 EOF
 " ---- end of Plugins setup ----
 
