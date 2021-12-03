@@ -6,6 +6,10 @@ set noshowmode
 set showtabline=0
 set cursorline
 set cinkeys-=:
+set linebreak
+set breakindent
+set breakindentopt=shift:4
+" ---- Common shortcuts ----
 let mapleader = ';'
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
