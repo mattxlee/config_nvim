@@ -42,7 +42,7 @@ Use `ctrl+t` to get ride of the whitespace on the end of line.
 
 ## Global search in files
 
-Use `<leader>+ff` to type and search text in the files from current project.
+Use `<leader>ff` to type and search text in the files from current project.
 
 Learn more about the text search plugin, please visit [vim-esearch](https://github.com/eugen0329/vim-esearch)
 
@@ -55,6 +55,8 @@ Learn more about the text search plugin, please visit [vim-esearch](https://gith
 * Use `ctrl+]` to jump to the location of the declaration of the tag above the cursor.
 
 * Use `ctrl+o` to return to the previous position.
+
+* EasyMotion is installed, use '<leader><leader>w' or '<leader><leader>b' to jump quickly by words.
 
 ## File explorer (NERDTree)
 
@@ -85,3 +87,5 @@ Use shortcut `shift+m` to close all other tool panels in normal mode.
 Use `ctrl+l` to trigger the autocomplete, `ctrl+n` or `ctrl+p` to select the items.
 
 Use command `:LspInstallInfo` to show all language server and use key `i` to install, or `X` to uninstall.
+
+**Please note, wget is required for installing language server**
