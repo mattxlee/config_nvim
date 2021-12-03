@@ -22,7 +22,7 @@ To install the script, just clone the repo to your local config path by running 
 
 ## Update plugins
 
-Use `:PackerSync` to install/update plugins. Or you can just run shell command `nvim +PackerSync` to invoke the updating procedure.
+Use `:PackerSync` to install/update plugins. Or you can just run shell command `nvim +PackerSync` to invoke the syncing procedure. Please ignore the error message on the first one.
 
 For more information about the plugin manager, please visit [Packer](https://github.com/wbthomason/packer.nvim)
 
