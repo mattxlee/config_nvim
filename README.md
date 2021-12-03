@@ -12,6 +12,10 @@ This is my config script for nvim, feel free to use it.
 
 ## Install
 
+First you need to install the plugin `packer` by cloning the repo from github:
+
+`git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim`
+
 To install the script, just clone the repo to your local config path by running the command below.
 
 `git clone https://github.com/mattxlee/config_nvim ~/.config/nvim`
