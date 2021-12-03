@@ -15,6 +15,10 @@ noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
 " ---- end of Common settings ----
 
+" ---- Local vimrc settings ----
+let g:localvimrc_ask = 0
+" ---- end of Local vimrc settings ----
+
 " ---- Color scheme `gruvbox` ----
 if has('termguicolors')
     set termguicolors
