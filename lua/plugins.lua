@@ -31,5 +31,7 @@ return require('packer').startup(function()
 
     use 'eugen0329/vim-esearch'
 
-    use 'ludovicchabant/vim-gutentags' 
+    use 'ludovicchabant/vim-gutentags'
+
+    use 'ntpeters/vim-better-whitespace'
 end)

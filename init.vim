@@ -35,6 +35,10 @@ let g:lightline = {
             \ 'component_function': {'gitbranch': 'FugitiveHead'}}
 " ---- end of Color scheme `gruvbox` for lightline
 
+" ---- TrailerTrim settings ----
+noremap <C-T> :StripWhitespace<CR>
+" ---- end of TrailerTrim settings ----
+
 " ---- Fugitive settings ----
 noremap <C-G> :Git<CR>
 " ---- end of Fugitive settings ----
