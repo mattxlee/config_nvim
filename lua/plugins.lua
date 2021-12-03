@@ -34,4 +34,6 @@ return require('packer').startup(function()
     use 'ludovicchabant/vim-gutentags'
 
     use 'ntpeters/vim-better-whitespace'
+
+    use 'neovim/nvim-lspconfig'
 end)

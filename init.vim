@@ -1,4 +1,12 @@
-lua require('plugins')
+" ---- Plugins setup ----
+lua << EOF
+require('plugins')
+local lspconfig = require('lspconfig') or 0
+if lspconfig ~= 0 then
+    lspconfig.clangd.setup{}
+end
+EOF
+" ---- end of Plugins setup ----
 
 " ---- Common settings ----
 set nu
