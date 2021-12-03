@@ -88,4 +88,10 @@ Use `ctrl+l` to trigger the autocomplete, `ctrl+n` or `ctrl+p` to select the ite
 
 Use command `:LspInstallInfo` to show all language server and use key `i` to install, or `X` to uninstall.
 
+Use `gd` goto the definition.
+
+Use `K` to show the document of current word.
+
+Use `ctrl+k` to show the signature of current function/method.
+
 **Please note, wget is required for installing language server**
