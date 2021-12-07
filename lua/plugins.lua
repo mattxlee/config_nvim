@@ -27,8 +27,6 @@ return require('packer').startup({function()
 
     use 'tomtom/tcomment_vim'
 
-    use 'easymotion/vim-easymotion'
-
     use 'eugen0329/vim-esearch'
 
     use 'ludovicchabant/vim-gutentags'
