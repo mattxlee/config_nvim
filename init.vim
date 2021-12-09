@@ -63,6 +63,7 @@ set cinkeys-=:
 set linebreak
 set breakindent
 set breakindentopt=shift:4
+set updatetime=200
 " ---- Common shortcuts ----
 let mapleader = ';'
 noremap N :noh<CR>
