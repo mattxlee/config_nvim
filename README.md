@@ -44,6 +44,10 @@ Use `ctrl+t` to get ride of the whitespace on the end of line.
 
 Use `<leader>ff` to type and search text in the files from current project.
 
+* To paste text from system clipboard, press `ctrl+r` with `*`
+
+* To paste text from vim yark buffer, press `ctrl+r` with `"`
+
 Learn more about the text search plugin, please visit [vim-esearch](https://github.com/eugen0329/vim-esearch)
 
 ## Jump to tags
