@@ -33,13 +33,7 @@ return require('packer').startup({function()
 
     use 'ntpeters/vim-better-whitespace'
 
-    use 'neovim/nvim-lspconfig'
-
-    use 'williamboman/nvim-lsp-installer'
-
-    use 'hrsh7th/cmp-nvim-lsp'
-
-    use 'hrsh7th/nvim-cmp'
+    use {'neoclide/coc.nvim', branch = 'release'}
 end,
     config = {
         display = {
