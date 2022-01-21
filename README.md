@@ -60,8 +60,6 @@ Learn more about the text search plugin, please visit [vim-esearch](https://gith
 
 * Use `ctrl+o` to return to the previous position.
 
-* EasyMotion is installed, use '<leader><leader>w' or '<leader><leader>b' to jump quickly by words.
-
 ## File explorer (NERDTree)
 
 Use `ctrl+j` to show the explorer.
@@ -90,12 +88,8 @@ Use shortcut `shift+m` to close all other tool panels in normal mode.
 
 Use `ctrl+l` to trigger the autocomplete, `ctrl+n` or `ctrl+p` to select the items.
 
-Use command `:LspInstallInfo` to show all language server and use key `i` to install, or `X` to uninstall.
+Use `:CocUpdate` to upgrade Coc plugins.
 
 Use `gd` goto the definition.
 
 Use `K` to show the document of current word.
-
-Use `ctrl+k` to show the signature of current function/method.
-
-**Please note, wget is required for installing language server**
