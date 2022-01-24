@@ -15,8 +15,6 @@ return require('packer').startup({function()
 
     use 'sbdchd/neoformat'
 
-    use 'mattxlee/vim-fswitch'
-
     use 'airblade/vim-gitgutter'
 
     use 'preservim/nerdtree'
