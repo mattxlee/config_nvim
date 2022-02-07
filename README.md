@@ -26,9 +26,13 @@ First you need to install the plugin `packer` by cloning the repo from github:
 
 `git clone https://github.com/mattxlee/config_nvim "$env:LOCALAPPDATA\nvim"`
 
+After those 2 repo have been downloaded to the correct place, please ensure the plugin 'pynvim' has been installed by using the following command
+
+`python -m pip install --user --upgrade pynvim`
+
 ## Update plugins
 
-Use `:PackerSync` to install/update plugins. Or you can just run shell command `nvim +PackerSync` to invoke the syncing procedure. Please ignore the error message on the first one.
+Use `:PackerSync` to install/update plugins. Or you can just run shell command `nvim +PackerSync` to invoke the syncing procedure. Please ignore the errors on the first one.
 
 For more information about the plugin manager, please visit [Packer](https://github.com/wbthomason/packer.nvim)
 
