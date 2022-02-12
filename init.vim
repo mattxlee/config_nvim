@@ -17,6 +17,8 @@ set cinkeys-=:
 let mapleader = ';'
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
+noremap <C-J> :edit .<CR>
+
 " ---- end of Common settings ----
 
 " ---- Coc ----
@@ -256,24 +258,6 @@ noremap C :Neoformat<CR>
 let g:fsnonewfiles = 'on'
 noremap <C-H> :CocCommand clangd.switchSourceHeader<CR>
 " ---- end of Switch header/source settings ----
-
-" ---- NERDTree settings ----
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeHijackNetrw = 1
-let g:NERDTreeQuitOnOpen = 1
-let g:NERDTreeWinSize = 35
-" Will close vim if there is only a nerdtree window exists
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Nerd tree command
-function OpenNERDTree()
-    if bufname('%') == ''
-        :NERDTree
-    else
-        :NERDTreeFind
-    endif
-endfunction
-noremap <C-J> :call OpenNERDTree()<CR>
-" ---- end of NERDTree settings ----
 
 " ---- AsyncRun settings ----
 let g:asyncrun_open = 20
