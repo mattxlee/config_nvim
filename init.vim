@@ -13,6 +13,9 @@ set linebreak
 set breakindent
 set breakindentopt=shift:4
 set cinkeys-=:
+set nobackup
+set nowritebackup
+set noswapfile
 " ---- Common shortcuts ----
 let mapleader = ';'
 noremap N :noh<CR>
