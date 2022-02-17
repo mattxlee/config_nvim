@@ -20,7 +20,12 @@ set noswapfile
 let mapleader = ';'
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
-noremap <C-J> :edit .<CR>
+
+let g:netrw_banner=1
+noremap <C-J> :Ex<CR>
+
+noremap <leader>v :Vex<CR>
+noremap <leader>s :Sex<CR>
 
 " ---- end of Common settings ----
 

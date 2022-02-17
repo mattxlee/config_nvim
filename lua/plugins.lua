@@ -9,6 +9,8 @@ return require('packer').startup({function()
 
     use 'tpope/vim-fugitive'
 
+    use 'tpope/vim-vinegar'
+
     use 'editorconfig/editorconfig-vim'
 
     use 'Yggdroot/LeaderF'
