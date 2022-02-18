@@ -192,13 +192,6 @@ let g:gruvbox_material_background = 'hard'
 colorscheme gruvbox-material
 " ---- end of Color scheme `gruvbox` ----
 
-" ---- Color scheme `gruvbox` for lightline
-let g:lightline = {
-            \ 'colorscheme': 'gruvbox_material',
-            \ 'active': {'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']]},
-            \ 'component_function': {'gitbranch': 'FugitiveHead'}}
-" ---- end of Color scheme `gruvbox` for lightline
-
 " ---- TrailerTrim settings ----
 noremap <C-T> :StripWhitespace<CR>
 " ---- end of TrailerTrim settings ----

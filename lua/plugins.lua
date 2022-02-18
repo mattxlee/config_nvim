@@ -5,7 +5,7 @@ return require('packer').startup({function()
 
     use 'sainnhe/gruvbox-material'
 
-    use 'itchyny/lightline.vim'
+    use 'liuchengxu/eleline.vim'
 
     use 'tpope/vim-fugitive'
 
