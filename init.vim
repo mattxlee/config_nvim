@@ -20,6 +20,7 @@ set noswapfile
 let mapleader = ';'
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
+noremap K :on<CR>
 
 let g:netrw_banner=1
 noremap <C-J> :Ex<CR>
@@ -76,7 +77,6 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <silent> gh :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
