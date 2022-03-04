@@ -17,7 +17,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 " ---- Common shortcuts ----
-let mapleader = ';'
+let mapleader=';'
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
 noremap K :on<CR>
@@ -180,15 +180,15 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " ---- End of Coc ----
 
 " ---- Local vimrc settings ----
-let g:localvimrc_ask = 0
+let g:localvimrc_ask=0
 " ---- end of Local vimrc settings ----
 
 " ---- Color scheme `gruvbox` ----
 if has('termguicolors')
     set termguicolors
 endif
-let g:gruvbox_background = 'dark'
-let g:gruvbox_material_background = 'hard'
+let g:gruvbox_background='dark'
+let g:gruvbox_material_background='hard'
 colorscheme gruvbox-material
 " ---- end of Color scheme `gruvbox` ----
 
@@ -201,26 +201,26 @@ noremap <C-G> :Git<CR>
 " ---- end of Fugitive settings ----
 
 " ---- CTags settings ----
-let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
-let g:gutentags_ctags_tagfile = '.tags'
-let g:gutentags_generate_on_empty_buffer = 1
-let g:gutentags_generate_on_missing = 1
-let s:vim_tags = expand('~/.cache/tags')
-let g:gutentags_ctags_exclude = ['node_modules']
+let g:gutentags_project_root=['.root', '.svn', '.git', '.hg', '.project']
+let g:gutentags_ctags_tagfile='.tags'
+let g:gutentags_generate_on_empty_buffer=1
+let g:gutentags_generate_on_missing=1
+let s:vim_tags=expand('~/.cache/tags')
+let g:gutentags_ctags_exclude=['node_modules']
 let g:gutentags_cache_dir=s:vim_tags
-let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
-let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
-let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
-let g:gutentags_ctags_extra_args += ['--exclude=node_modules']
-let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']
+let g:gutentags_ctags_extra_args=['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args+=['--c++-kinds=+px']
+let g:gutentags_ctags_extra_args+=['--c-kinds=+px']
+let g:gutentags_ctags_extra_args+=['--exclude=node_modules']
+let g:gutentags_exclude_filetypes=['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']
 if !isdirectory(s:vim_tags)
   silent! call mkdir(s:vim_tags, 'p')
 endif
 " ---- end of CTags settings ----
 
 " ---- LeaderF related settings ----
-let g:Lf_PreviewInPopup = 1
-let g:Lf_ShortcutF = '<C-P>'
+let g:Lf_PreviewInPopup=1
+let g:Lf_ShortcutF='<C-P>'
 let g:Lf_WildIgnore={
             \ 'dir': ['.svn','.git','.hg','node_modules'],
             \ 'file': ['*.sw?','*.bak','*.exe','*.o','*.so']
@@ -242,13 +242,13 @@ noremap C :Neoformat<CR>
 " ---- end of Neoformat settings ----
 
 " ---- Switch header/source settings ----
-let g:fsnonewfiles = 'on'
+let g:fsnonewfiles='on'
 noremap <C-H> :CocCommand clangd.switchSourceHeader<CR>
 " ---- end of Switch header/source settings ----
 
 " ---- AsyncRun settings ----
-let g:asyncrun_open = 20
-let g:asyncrun_bell = 1
+let g:asyncrun_open=20
+let g:asyncrun_bell=1
 noremap M :cclose<CR>:lclose<CR>:pclose<CR>
 noremap gu :AsyncRun git push<CR>
 noremap <C-K> :AsyncStop<CR>
