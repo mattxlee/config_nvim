@@ -17,6 +17,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 let c_no_curly_error=1
+if has('termguicolors')
+    set termguicolors
+endif
 " ---- Common shortcuts ----
 let mapleader=';'
 noremap N :noh<CR>
@@ -184,21 +187,17 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 let g:localvimrc_ask=0
 " ---- end of Local vimrc settings ----
 
-" ---- Color scheme `gruvbox` ----
-if has('termguicolors')
-    set termguicolors
-endif
-let g:gruvbox_background='dark'
-let g:gruvbox_material_background='hard'
-colorscheme gruvbox-material
-" ---- end of Color scheme `gruvbox` ----
+" ---- Color scheme ----
+set background=dark
+colorscheme dracula
+" ---- end of Color scheme ----
 
 " ---- TrailerTrim settings ----
 noremap <C-T> :StripWhitespace<CR>
 " ---- end of TrailerTrim settings ----
 
 " ---- Fugitive settings ----
-noremap <C-G> :Git<CR>
+noremap <C-G> :vertical Git<CR>
 " ---- end of Fugitive settings ----
 
 " ---- CTags settings ----

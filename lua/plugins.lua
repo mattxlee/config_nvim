@@ -3,7 +3,7 @@ return require('packer').startup({function()
 
     use 'embear/vim-localvimrc'
 
-    use 'sainnhe/gruvbox-material'
+    use 'dracula/vim'
 
     use 'liuchengxu/eleline.vim'
 
