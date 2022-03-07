@@ -31,6 +31,8 @@ return require('packer').startup({function()
 
     use 'ntpeters/vim-better-whitespace'
 
+    use 'vim-scripts/DoxygenToolkit.vim'
+
     use {'neoclide/coc.nvim', branch = 'release'}
 end,
     config = {
