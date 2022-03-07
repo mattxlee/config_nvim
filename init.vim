@@ -254,9 +254,9 @@ noremap gu :AsyncRun git push<CR>
 noremap <C-K> :AsyncStop<CR>
 function Build()
     if !empty(expand(glob("Makefile")))
-        :AsyncRun make -j5
+        :AsyncRun make
     else
-        :AsyncRun cmake --build ./build --config debug -j5
+        :AsyncRun cmake --build ./build --config debug
     endif
 endfunction
 function Clean()
