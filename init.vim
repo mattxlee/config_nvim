@@ -181,15 +181,33 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-" ---- End of Coc ----
+" ---- end of Coc ----
+
+" ---- Lightline ----
+function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+endfunction
+
+let g:lightline = {
+      \ 'colorscheme': 'PaperColor',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status',
+      \   'currentfunction': 'CocCurrentFunction'
+      \ },
+      \ }
+" ---- end of Lightline ----
 
 " ---- Local vimrc settings ----
 let g:localvimrc_ask=0
 " ---- end of Local vimrc settings ----
 
 " ---- Color scheme ----
-set background=dark
-colorscheme dracula
+set background=light
+colorscheme PaperColor
 " ---- end of Color scheme ----
 
 " ---- TrailerTrim settings ----

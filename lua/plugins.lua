@@ -5,7 +5,9 @@ return require('packer').startup({function()
 
     use 'dracula/vim'
 
-    use 'liuchengxu/eleline.vim'
+    use 'NLKNguyen/papercolor-theme'
+
+    use 'itchyny/lightline.vim'
 
     use 'tpope/vim-fugitive'
 
