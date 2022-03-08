@@ -206,7 +206,7 @@ let g:localvimrc_ask=0
 " ---- end of Local vimrc settings ----
 
 " ---- Color scheme ----
-set background=light
+" set background=light
 colorscheme PaperColor
 " ---- end of Color scheme ----
 
