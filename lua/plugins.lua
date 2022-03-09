@@ -3,9 +3,7 @@ return require('packer').startup({function()
 
     use 'embear/vim-localvimrc'
 
-    use 'dracula/vim'
-
-    use 'NLKNguyen/papercolor-theme'
+    use 'joshdick/onedark.vim'
 
     use 'itchyny/lightline.vim'
 

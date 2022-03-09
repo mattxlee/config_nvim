@@ -34,6 +34,10 @@ noremap <leader>s :Sex<CR>
 
 " ---- end of Common settings ----
 
+" ---- Color scheme ----
+colorscheme onedark
+" ---- end of Color scheme ----
+
 " ---- Coc ----
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -189,7 +193,7 @@ function! CocCurrentFunction()
 endfunction
 
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
+      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
@@ -204,11 +208,6 @@ let g:lightline = {
 " ---- Local vimrc settings ----
 let g:localvimrc_ask=0
 " ---- end of Local vimrc settings ----
-
-" ---- Color scheme ----
-" set background=light
-colorscheme PaperColor
-" ---- end of Color scheme ----
 
 " ---- TrailerTrim settings ----
 noremap <C-T> :StripWhitespace<CR>
