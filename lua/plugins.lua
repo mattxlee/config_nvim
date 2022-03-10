@@ -1,8 +1,6 @@
 return require('packer').startup({function()
     use 'wbthomason/packer.nvim'
 
-    use 'embear/vim-localvimrc'
-
     use 'joshdick/onedark.vim'
 
     use 'liuchengxu/eleline.vim'

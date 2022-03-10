@@ -187,10 +187,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " ---- end of Coc ----
 
-" ---- Local vimrc settings ----
-let g:localvimrc_ask=0
-" ---- end of Local vimrc settings ----
-
 " ---- TrailerTrim settings ----
 noremap <C-T> :StripWhitespace<CR>
 " ---- end of TrailerTrim settings ----
