@@ -32,6 +32,10 @@ return require('packer').startup({function()
     use 'vim-scripts/DoxygenToolkit.vim'
 
     use {'neoclide/coc.nvim', branch = 'release'}
+
+    use 'mattxlee/vim-fswitch'
+
+    use 'mhinz/vim-startify'
 end,
     config = {
         display = {
