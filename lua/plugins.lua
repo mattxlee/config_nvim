@@ -1,7 +1,7 @@
 return require('packer').startup({function()
     use 'wbthomason/packer.nvim'
 
-    use 'joshdick/onedark.vim'
+    use 'dracula/vim'
 
     use 'liuchengxu/eleline.vim'
 
@@ -31,11 +31,11 @@ return require('packer').startup({function()
 
     use 'vim-scripts/DoxygenToolkit.vim'
 
-    use {'neoclide/coc.nvim', branch = 'release'}
+    use 'mhinz/vim-startify'
 
     use 'mattxlee/vim-fswitch'
 
-    use 'mhinz/vim-startify'
+    use {'neoclide/coc.nvim', branch = 'release'}
 end,
     config = {
         display = {

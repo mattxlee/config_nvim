@@ -42,7 +42,7 @@ noremap <leader>s :Sex<CR>
 " ---- end of Common settings ----
 
 " ---- Color scheme ----
-colorscheme onedark
+colorscheme dracula
 " ---- end of Color scheme ----
 
 " ---- Coc ----
@@ -199,7 +199,7 @@ noremap <C-T> :StripWhitespace<CR>
 " ---- end of TrailerTrim settings ----
 
 " ---- Fugitive settings ----
-noremap <C-G> :Git<CR>
+noremap <C-G> :vertical Git<CR>
 " ---- end of Fugitive settings ----
 
 " ---- CTags settings ----
@@ -245,7 +245,7 @@ noremap C :Neoformat<CR>
 
 " ---- Switch header/source settings ----
 let g:fsnonewfiles='on'
-noremap <C-H> :CocCommand clangd.switchSourceHeader<CR>
+noremap <C-H> :FSHere<CR>
 " ---- end of Switch header/source settings ----
 
 " ---- Startify settings ----
