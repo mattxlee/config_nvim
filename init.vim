@@ -8,6 +8,7 @@ EOF
 set nu
 set noshowmode
 set showtabline=0
+set updatetime=200
 set cursorline
 set linebreak
 set breakindent
@@ -19,6 +20,12 @@ set noswapfile
 let c_no_curly_error=1
 if has('termguicolors')
     set termguicolors
+endif
+if has("nvim-0.5.0") || has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
 endif
 " ---- Common shortcuts ----
 let mapleader=';'
