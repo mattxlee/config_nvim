@@ -199,7 +199,7 @@ noremap <C-T> :StripWhitespace<CR>
 " ---- end of TrailerTrim settings ----
 
 " ---- Fugitive settings ----
-noremap <C-G> :Git<CR>
+noremap <C-G> :vertical Git<CR>
 " ---- end of Fugitive settings ----
 
 " ---- CTags settings ----
