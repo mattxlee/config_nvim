@@ -42,7 +42,9 @@ noremap <leader>s :Sex<CR>
 " ---- end of Common settings ----
 
 " ---- Color scheme ----
-colorscheme dracula
+let g:gruvbox_italic=1
+let g:gruvbox_transparent_bg=1
+colorscheme gruvbox
 " ---- end of Color scheme ----
 
 " ---- Coc ----
