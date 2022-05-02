@@ -65,6 +65,8 @@ set updatetime=200
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
+let g:coc_default_semantic_highlight_groups=1
+
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("nvim-0.5.0") || has("patch-8.1.1564")
@@ -247,7 +249,7 @@ noremap C :Neoformat<CR>
 
 " ---- Switch header/source settings ----
 let g:fsnonewfiles='on'
-noremap <C-H> :FSHere<CR>
+noremap <C-H> :CocCommand clangd.switchSourceHeader<CR>
 " ---- end of Switch header/source settings ----
 
 " ---- Startify settings ----
