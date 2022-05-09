@@ -32,13 +32,6 @@ let mapleader=';'
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
 noremap K :on<CR>
-
-let g:netrw_banner=1
-noremap <C-J> :Ex<CR>
-
-noremap <leader>v :Vex<CR>
-noremap <leader>s :Sex<CR>
-
 " ---- end of Common settings ----
 
 " ---- Color scheme ----
@@ -46,6 +39,24 @@ let g:gruvbox_italic=1
 let g:gruvbox_transparent_bg=1
 colorscheme gruvbox
 " ---- end of Color scheme ----
+
+" ---- NERDTree settings ----
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeHijackNetrw = 1
+let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeWinSize = 35
+" Will close vim if there is only a nerdtree window exists
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Nerd tree command
+function OpenNERDTree()
+    if bufname('%') == ''
+        :NERDTree
+    else
+        :NERDTreeFind
+    endif
+endfunction
+noremap <C-J> :call OpenNERDTree()<CR>
+" ---- end of NERDTree settings ----
 
 " ---- TrailerTrim settings ----
 noremap <C-T> :StripWhitespace<CR>

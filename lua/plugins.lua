@@ -33,6 +33,8 @@ return require('packer').startup({function()
 
     use 'mhinz/vim-startify'
 
+    use 'preservim/nerdtree'
+
     use 'mattxlee/vim-fswitch'
 end,
     config = {
