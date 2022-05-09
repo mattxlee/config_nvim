@@ -36,9 +36,7 @@ noremap <Leader>v :vsp<CR>
 " ---- end of Common settings ----
 
 " ---- Color scheme ----
-let g:gruvbox_italic=1
-let g:gruvbox_transparent_bg=1
-colorscheme gruvbox
+colorscheme dracula
 " ---- end of Color scheme ----
 
 " ---- NERDTree settings ----

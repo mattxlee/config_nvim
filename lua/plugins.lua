@@ -1,7 +1,7 @@
 return require('packer').startup({function()
     use 'wbthomason/packer.nvim'
 
-    use 'morhetz/gruvbox'
+    use 'dracula/vim'
 
     use 'liuchengxu/eleline.vim'
 
