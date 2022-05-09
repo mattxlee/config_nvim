@@ -59,6 +59,10 @@ endfunction
 noremap <C-J> :call OpenNERDTree()<CR>
 " ---- end of NERDTree settings ----
 
+" ---- Markdown settings ----
+let g:vim_markdown_folding_disabled=1
+" ---- end of Markdown settings ----
+
 " ---- TrailerTrim settings ----
 noremap <C-T> :StripWhitespace<CR>
 " ---- end of TrailerTrim settings ----

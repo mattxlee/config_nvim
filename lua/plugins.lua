@@ -36,6 +36,9 @@ return require('packer').startup({function()
     use 'mattxlee/vim-fswitch'
 
     use 'easymotion/vim-easymotion'
+
+    use 'godlygeek/tabular'
+    use 'preservim/vim-markdown'
 end,
     config = {
         display = {
