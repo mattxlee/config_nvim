@@ -33,7 +33,7 @@ return require('packer').startup({function()
 
     use 'mhinz/vim-startify'
 
-    use {'neoclide/coc.nvim', branch = 'release'}
+    use 'mattxlee/vim-fswitch'
 end,
     config = {
         display = {
