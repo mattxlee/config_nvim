@@ -36,6 +36,8 @@ return require('packer').startup({function()
     use 'preservim/nerdtree'
 
     use 'mattxlee/vim-fswitch'
+
+    use 'easymotion/vim-easymotion'
 end,
     config = {
         display = {
