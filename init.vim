@@ -32,6 +32,7 @@ let mapleader=';'
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
 noremap K :on<CR>
+noremap <Leader>v :vsp<CR>
 " ---- end of Common settings ----
 
 " ---- Color scheme ----
