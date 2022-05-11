@@ -34,6 +34,7 @@ noremap * :keepjumps normal! mi*`i<CR>
 noremap K :on<CR>
 noremap <Leader>s :sp<CR>
 noremap <Leader>v :vsp<CR>
+noremap <Leader>w <C-W>w
 noremap gd <C-]>
 " ---- end of Common settings ----
 
