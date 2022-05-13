@@ -1,4 +1,6 @@
 return require('packer').startup({function()
+    use 'vim-scripts/a.vim'
+
     use 'wbthomason/packer.nvim'
 
     use 'morhetz/gruvbox'
@@ -34,8 +36,6 @@ return require('packer').startup({function()
     use 'mhinz/vim-startify'
 
     use 'preservim/nerdtree'
-
-    use 'mattxlee/vim-fswitch'
 
     use 'easymotion/vim-easymotion'
 

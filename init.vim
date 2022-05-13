@@ -44,6 +44,10 @@ let g:gruvbox_transparent_bg=1
 colorscheme gruvbox
 " ---- end of Color scheme ----
 
+" ---- Header/Source switcher settings ----
+let g:alternateNoDefaultAlternate=1
+" ---- end of Header/Source switcher settings ----
+
 " ---- NERDTree settings ----
 let g:NERDTreeShowHidden=1
 let g:NERDTreeHijackNetrw=1
@@ -115,7 +119,7 @@ noremap C :Neoformat<CR>
 
 " ---- Switch header/source settings ----
 let g:fsnonewfiles='on'
-noremap <C-H> :FSHere<CR>
+noremap <C-H> :A<CR>
 " ---- end of Switch header/source settings ----
 
 " ---- Startify settings ----
