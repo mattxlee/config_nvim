@@ -119,7 +119,7 @@ noremap C :Neoformat<CR>
 
 " ---- Switch header/source settings ----
 let g:fsnonewfiles='on'
-noremap <C-H> :A<CR>
+noremap <C-H> :silent A<CR>
 " ---- end of Switch header/source settings ----
 
 " ---- Startify settings ----
