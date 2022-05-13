@@ -11,6 +11,8 @@ return require('packer').startup({function()
 
     use 'Yggdroot/LeaderF'
 
+    use 'kien/ctrlp.vim'
+
     use 'sbdchd/neoformat'
 
     use 'airblade/vim-gitgutter'
