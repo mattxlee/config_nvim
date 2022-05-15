@@ -48,6 +48,10 @@ colorscheme gruvbox
 let g:alternateNoDefaultAlternate=1
 " ---- end of Header/Source switcher settings ----
 
+" ---- CtrlP settings ----
+let g:ctrlp_show_hidden=1
+" ---- end of CtrlP settings ----
+
 " ---- NERDTree settings ----
 let g:NERDTreeShowHidden=1
 let g:NERDTreeHijackNetrw=1
