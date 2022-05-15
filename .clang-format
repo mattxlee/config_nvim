@@ -1,9 +1,10 @@
 ---
 Language:                         Cpp
 BasedOnStyle:                     Google
-AccessModifierOffset:             -2
-ColumnLimit:                      80
-IndentWidth:                      2
+AccessModifierOffset:             -4
+ColumnLimit:                      120
+IndentWidth:                      4
+ContinuationIndentWidth:          8
 DerivePointerAlignment:           false
 PointerAlignment:                 Left
 NamespaceIndentation:             None
