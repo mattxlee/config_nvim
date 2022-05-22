@@ -105,6 +105,7 @@ let g:alternateNoDefaultAlternate=1
 
 " ---- CtrlP settings ----
 let g:ctrlp_show_hidden=1
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|ccls-cache'
 " ---- end of CtrlP settings ----
 
 " ---- NERDTree settings ----
