@@ -37,10 +37,19 @@ return require('packer').startup({function()
 
     use 'preservim/nerdtree'
 
-    use 'easymotion/vim-easymotion'
-
     use 'godlygeek/tabular'
+
     use 'preservim/vim-markdown'
+
+    use 'neovim/nvim-lspconfig'
+
+    use 'williamboman/nvim-lsp-installer'
+
+    use 'hrsh7th/cmp-nvim-lsp'
+
+    use 'hrsh7th/nvim-cmp'
+
+    use 'nvim-lua/lsp-status.nvim'
 end,
     config = {
         display = {

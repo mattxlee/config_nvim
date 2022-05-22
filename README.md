@@ -98,8 +98,4 @@ Use shortcut `shift+m` to close all other tool panels in normal mode.
 
 Use `ctrl+l` to trigger the autocomplete, `ctrl+n` or `ctrl+p` to select the items.
 
-Use `:CocUpdate` to upgrade Coc plugins.
-
-Use `gd` goto the definition.
-
-Use `K` to show the document of current word.
+Use command `:LspInstallInfo` to show all language server and use key `i` to install, or `X` to uninstall.
