@@ -33,8 +33,6 @@ return require('packer').startup({function()
 
     use 'vim-scripts/DoxygenToolkit.vim'
 
-    use 'mhinz/vim-startify'
-
     use 'preservim/nerdtree'
 
     use 'godlygeek/tabular'
