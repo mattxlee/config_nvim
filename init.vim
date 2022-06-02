@@ -143,12 +143,11 @@ let g:gutentags_ctags_tagfile='.tags'
 let g:gutentags_generate_on_empty_buffer=1
 let g:gutentags_generate_on_missing=1
 let s:vim_tags=expand('~/.cache/tags')
-let g:gutentags_ctags_exclude=['node_modules']
+let g:gutentags_ctags_exclude=['node_modules', '.ccls-cache']
 let g:gutentags_cache_dir=s:vim_tags
 let g:gutentags_ctags_extra_args=['--fields=+niazS', '--extra=+q']
 let g:gutentags_ctags_extra_args+=['--c++-kinds=+px']
 let g:gutentags_ctags_extra_args+=['--c-kinds=+px']
-let g:gutentags_ctags_extra_args+=['--exclude=node_modules']
 let g:gutentags_exclude_filetypes=['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']
 if !isdirectory(s:vim_tags)
   silent! call mkdir(s:vim_tags, 'p')
