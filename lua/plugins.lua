@@ -5,8 +5,6 @@ return require('packer').startup({function()
 
     use 'morhetz/gruvbox'
 
-    use 'ryanoasis/vim-devicons'
-
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
@@ -18,8 +16,6 @@ return require('packer').startup({function()
     use 'editorconfig/editorconfig-vim'
 
     use 'Yggdroot/LeaderF'
-
-    use 'kien/ctrlp.vim'
 
     use 'sbdchd/neoformat'
 
@@ -78,6 +74,8 @@ return require('packer').startup({function()
     use 'nvim-lua/lsp-status.nvim'
 
     use 'jackguo380/vim-lsp-cxx-highlight'
+
+    use 'ryanoasis/vim-devicons'
 
 end,
     config = {

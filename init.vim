@@ -159,7 +159,9 @@ endif
 " ---- end of CTags settings ----
 
 " ---- LeaderF related settings ----
+let g:Lf_WindowPosition='popup'
 let g:Lf_PreviewInPopup=1
+let g:Lf_ShortcutF='<C-P>'
 let g:Lf_WildIgnore={
             \ 'dir': ['.svn','.git','.hg','node_modules'],
             \ 'file': ['*.sw?','*.bak','*.exe','*.o','*.so']
@@ -170,7 +172,7 @@ let g:Lf_WorkingDirectoryMode='Ac'
 let g:Lf_CacheDirectory=expand('~/.vim/cache')
 let g:Lf_ShowRelativePath=0
 let g:Lf_PreviewResult={'Function':0, 'BufTag':0}
-let g:Lf_ShowDevIcons=0
+let g:Lf_ShowDevIcons=1
 noremap <Leader>o :LeaderfFunction<CR>
 noremap <Leader>g :LeaderfTag<CR>
 " ---- end of LeaderF related settings ----
