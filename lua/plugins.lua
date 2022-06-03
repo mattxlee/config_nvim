@@ -7,8 +7,6 @@ return require('packer').startup({function()
 
     use 'liuchengxu/eleline.vim'
 
-    use 'tpope/vim-fugitive'
-
     use 'editorconfig/editorconfig-vim'
 
     use 'Yggdroot/LeaderF'
@@ -17,7 +15,25 @@ return require('packer').startup({function()
 
     use 'sbdchd/neoformat'
 
-    use 'airblade/vim-gitgutter'
+    use 'tpope/vim-fugitive'
+
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup {
+                on_attach = function(bufnr)
+                    local function map(mode, lhs, rhs, opts)
+                        opts = vim.tbl_extend('force', {noremap = true, silent = true}, opts or {})
+                        vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, opts)
+                    end
+                    -- Navigation
+                    map('n', ']c', "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", {expr=true})
+                    map('n', '[c', "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", {expr=true})
+                end,
+                current_line_blame = true
+            }
+        end
+    }
 
     use 'skywind3000/asyncrun.vim'
 
