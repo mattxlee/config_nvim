@@ -49,15 +49,15 @@ cmp.setup({
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lsp_installer = require('nvim-lsp-installer')
 lsp_installer.on_server_ready(function(server)
+    local opts = { on_attach = on_attach, capabilities = capabilities }
     -- ccls
     if server.name == "ccls" then
-        local ccls_opts = { on_attach = on_attach, capabilities = capabilities, init_options = {
-                highlight = { lsRanges = true };
-                compilationDatabaseDirectory = "./build/";
-            }
+        opts.init_options = {
+            highlight = { lsRanges = true };
+            compilationDatabaseDirectory = "./build/";
         }
-        server:setup(ccls_opts)
     end
+    server:setup(opts)
 end)
 EOF
 " ---- end of Plugins setup ----
