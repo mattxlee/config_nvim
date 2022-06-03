@@ -191,7 +191,7 @@ let g:startify_change_to_vcs_root=1
 let g:asyncrun_open=20
 let g:asyncrun_bell=1
 noremap M :cclose<CR>:lclose<CR>:pclose<CR>
-noremap gu :AsyncRun git push<CR>
+noremap gu :Git push<CR>
 noremap <C-K> :AsyncStop<CR>
 function Build()
     if !empty(expand(glob("Makefile")))
