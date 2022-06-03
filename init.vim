@@ -114,6 +114,8 @@ let g:NERDTreeShowHidden=1
 let g:NERDTreeHijackNetrw=1
 let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeWinSize=35
+let g:NERDTreeDirArrowExpandable='-'
+let g:NERDTreeDirArrowCollapsible='.'
 " Will close vim if there is only a nerdtree window exists
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Nerd tree command
