@@ -174,6 +174,7 @@ noremap <Leader>g :LeaderfTag<CR>
 
 " ---- Neoformat settings ----
 noremap C :Neoformat<CR>
+let g:EditorConfig_preserve_formatoptions=1
 " ---- end of Neoformat settings ----
 
 " ---- Switch header/source settings ----
