@@ -158,7 +158,7 @@ let g:Lf_WindowPosition='popup'
 let g:Lf_PreviewInPopup=1
 let g:Lf_ShortcutF='<C-P>'
 let g:Lf_WildIgnore={
-            \ 'dir': ['.svn','.git','.hg','node_modules'],
+            \ 'dir': ['.svn','.git','.hg','.ccls-cache','node_modules','build'],
             \ 'file': ['*.sw?','*.bak','*.exe','*.o','*.so']
             \}
 let g:Lf_StlSeparator={'left': '', 'right': '', 'font': ''}
