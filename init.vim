@@ -65,7 +65,7 @@ EOF
 set nu
 set noshowmode
 set showtabline=0
-set updatetime=200
+set updatetime=100
 set cursorline
 set linebreak
 set breakindent
