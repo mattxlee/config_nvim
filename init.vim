@@ -172,9 +172,14 @@ noremap <Leader>o :LeaderfFunction<CR>
 noremap <Leader>g :LeaderfTag<CR>
 " ---- end of LeaderF related settings ----
 
+
+" ---- Editorconfig settings ----
+let g:EditorConfig_preserve_formatoptions=1
+let g:EditorConfig_max_line_indicator="fill"
+" ---- end of Editorconfig settings ----
+
 " ---- Neoformat settings ----
 noremap C :Neoformat<CR>
-let g:EditorConfig_preserve_formatoptions=1
 " ---- end of Neoformat settings ----
 
 " ---- Switch header/source settings ----
