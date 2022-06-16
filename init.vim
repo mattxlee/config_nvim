@@ -85,7 +85,7 @@ else
   set signcolumn=yes
 endif
 " ---- Common shortcuts ----
-let mapleader=';'
+let mapleader='\'
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
 noremap K :on<CR>
