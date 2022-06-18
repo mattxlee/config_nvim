@@ -70,6 +70,7 @@ set cursorline
 set linebreak
 set breakindent
 set breakindentopt=shift:4
+set guifont=Hack\ NF:h11
 set cinkeys-=:
 set nobackup
 set nowritebackup
