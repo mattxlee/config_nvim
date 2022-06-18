@@ -86,6 +86,7 @@ else
 endif
 " ---- Common shortcuts ----
 let mapleader='\'
+noremap <C-J> :ex .<CR>
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
 noremap K :on<CR>
@@ -103,26 +104,6 @@ colorscheme gruvbox
 " ---- Header/Source switcher settings ----
 let g:alternateNoDefaultAlternate=1
 " ---- end of Header/Source switcher settings ----
-
-" ---- NERDTree settings ----
-let g:NERDTreeShowHidden=1
-let g:NERDTreeHijackNetrw=1
-let g:NERDTreeQuitOnOpen=1
-let g:NERDTreeWinSize=35
-let g:NERDTreeDirArrowExpandable='-'
-let g:NERDTreeDirArrowCollapsible='.'
-" Will close vim if there is only a nerdtree window exists
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Nerd tree command
-function OpenNERDTree()
-    if bufname('%') == ''
-        :NERDTree
-    else
-        :NERDTreeFind
-    endif
-endfunction
-noremap <C-J> :call OpenNERDTree()<CR>
-" ---- end of NERDTree settings ----
 
 " ---- Markdown settings ----
 let g:vim_markdown_folding_disabled=1
@@ -171,7 +152,6 @@ let g:Lf_ShowDevIcons=1
 noremap <Leader>o :LeaderfFunction<CR>
 noremap <Leader>g :LeaderfTag<CR>
 " ---- end of LeaderF related settings ----
-
 
 " ---- Editorconfig settings ----
 let g:EditorConfig_preserve_formatoptions=1

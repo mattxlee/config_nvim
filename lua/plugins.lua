@@ -53,11 +53,7 @@ return require('packer').startup({function()
 
     use 'vim-scripts/DoxygenToolkit.vim'
 
-    use 'preservim/nerdtree'
-
-    use 'Xuyuanp/nerdtree-git-plugin'
-
-    use 'vwxyutarooo/nerdtree-devicons-syntax'
+    use 'tpope/vim-vinegar'
 
     use 'godlygeek/tabular'
 
