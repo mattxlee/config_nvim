@@ -1,6 +1,8 @@
 " ---- Plugins setup ----
 lua << EOF
-require("nvim-tree").setup()
+require("nvim-tree").setup({
+    actions = { open_file = { quit_on_open = true } }
+})
 require('plugins')
 local nvim_lsp = require('lspconfig')
 -- Use an on_attach function to only map the following keys
