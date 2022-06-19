@@ -3,6 +3,7 @@ lua << EOF
 require("nvim-tree").setup({
     actions = { open_file = { quit_on_open = true } }
 })
+require("workspaces").setup()
 require('plugins')
 local nvim_lsp = require('lspconfig')
 -- Use an on_attach function to only map the following keys
@@ -120,6 +121,11 @@ noremap <C-T> :StripWhitespace<CR>
 " ---- Fugitive settings ----
 noremap <C-G> :Git<CR>
 " ---- end of Fugitive settings ----
+
+" ---- Workspaces settings ----
+noremap <Leader>a :WorkspacesOpen<CR>
+noremap <Leader><Leader>a :WorkspacesAdd
+" ---- end of Workspaces settings ----
 
 " ---- CTags settings ----
 let g:gutentags_project_root=['.root', '.svn', '.git', '.hg', '.project']
