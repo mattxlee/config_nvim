@@ -63,7 +63,11 @@ require("nvim-tree").setup({
     update_cwd = true,
     actions = { open_file = { quit_on_open = true } }
 })
-require("workspaces").setup()
+require("workspaces").setup({
+    hooks = {
+        open = "silent! %bd"
+    }
+})
 EOF
 " ---- end of Plugins setup ----
 
