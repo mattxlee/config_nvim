@@ -60,6 +60,7 @@ lsp_installer.on_server_ready(function(server)
 end)
 -- Other setups
 require("nvim-tree").setup({
+    update_cwd = true,
     actions = { open_file = { quit_on_open = true } }
 })
 require("workspaces").setup()
