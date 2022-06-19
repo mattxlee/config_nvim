@@ -1,5 +1,6 @@
 " ---- Plugins setup ----
 lua << EOF
+require("nvim-tree").setup()
 require('plugins')
 local nvim_lsp = require('lspconfig')
 -- Use an on_attach function to only map the following keys
@@ -87,7 +88,7 @@ else
 endif
 " ---- Common shortcuts ----
 let mapleader='\'
-noremap <C-J> :ex .<CR>
+noremap <C-J> :NvimTreeToggle<CR>
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
 noremap K :on<CR>
