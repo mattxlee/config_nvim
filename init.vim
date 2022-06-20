@@ -104,6 +104,8 @@ noremap K :on<CR>
 noremap <Leader>s :sp<CR>
 noremap <Leader>v :vsp<CR>
 noremap <Leader>h :vertical resize 130<CR>
+noremap <Leader><Leader>r :NvimTreeRefresh<CR>
+noremap <Leader><Leader>d :%bd<CR>
 " ---- end of Common settings ----
 
 " ---- Color scheme ----
