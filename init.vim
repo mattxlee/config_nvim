@@ -112,7 +112,7 @@ noremap <Leader><Leader>d :%bd<CR>
 " ---- Color scheme ----
 let g:gruvbox_italic=1
 let g:gruvbox_transparent_bg=1
-colorscheme gruvbox
+silent! colorscheme gruvbox
 " ---- end of Color scheme ----
 
 " ---- Header/Source switcher settings ----
