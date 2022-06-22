@@ -136,6 +136,10 @@ noremap <Leader>a :WorkspacesOpen<CR>
 noremap <Leader><Leader>a :WorkspacesAdd
 " ---- end of Workspaces settings ----
 
+" ---- ToggleTerm settings ----
+noremap <C-M> :ToggleTerm direction=float<CR>
+" ---- end of ToggleTerm settings ----
+
 " ---- CTags settings ----
 let g:gutentags_project_root=['.root', '.svn', '.git', '.hg', '.project']
 let g:gutentags_ctags_tagfile='.tags'
