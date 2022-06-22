@@ -137,7 +137,7 @@ noremap <Leader><Leader>a :WorkspacesAdd
 " ---- end of Workspaces settings ----
 
 " ---- ToggleTerm settings ----
-noremap <Leader>t :ToggleTerm direction=float<CR>
+noremap <Leader>t :silent! ToggleTerm size=30<CR>
 " ---- end of ToggleTerm settings ----
 
 " ---- CTags settings ----
