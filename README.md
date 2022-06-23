@@ -80,6 +80,14 @@ Use `ctrl+j` to show the explorer.
 
 Use `ctrl+p` to show local files filter, type name and open file.
 
+## Working with workspaces
+
+* Use `<leader><leader>a` to add a workspace, the path to the new workspace should be entered.
+
+* Use `<leader>a` to show all saved workspaces and press `enter` to select.
+
+* Use `<leader><leader>d` to close all window buffer.
+
 ## Make and CMake support
 
 **Note: AsyncRun is the plugin make task running in async mode. Use shortcut `ctrl+k` to stop current running task.**
@@ -90,9 +98,9 @@ Use `ctrl+p` to show local files filter, type name and open file.
 
 * Command `mc`: Clear the output files with the same logic of command `mk`.
 
-* Command `<leader>+n`: Show next compile errors and jump to the related file.
+* Command `<leader>n`: Show next compile errors and jump to the related file.
 
-* Command `<leader>+p`: Show previous compile errors and jump to the related file.
+* Command `<leader>p`: Show previous compile errors and jump to the related file.
 
 ## Close tool panels
 
