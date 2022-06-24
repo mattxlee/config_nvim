@@ -61,14 +61,18 @@ end)
 -- Other setups
 require("nvim-tree").setup({
     update_cwd = true,
+    actions = {
+        open_file = {
+            quit_on_open = true
+        }
+    },
     view = {
         width = 40
     }
 })
 require("workspaces").setup({
     hooks = {
-        open_pre = "silent! %bd",
-        open = "NvimTreeOpen"
+        open_pre = "silent! %bd"
     }
 })
 EOF
