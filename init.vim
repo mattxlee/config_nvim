@@ -191,10 +191,6 @@ let g:fsnonewfiles='on'
 noremap <C-H> :silent A<CR>
 " ---- end of Switch header/source settings ----
 
-" ---- Startify settings ----
-let g:startify_change_to_vcs_root=1
-" ---- end of Startify settings ----
-
 " ---- AsyncRun settings ----
 let g:asyncrun_open=20
 let g:asyncrun_bell=1
