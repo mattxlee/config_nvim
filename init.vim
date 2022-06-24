@@ -60,8 +60,7 @@ lsp_installer.on_server_ready(function(server)
 end)
 -- Other setups
 require("nvim-tree").setup({
-    update_cwd = true,
-    actions = { open_file = { quit_on_open = true } }
+    update_cwd = true
 })
 require("workspaces").setup({
     hooks = {
@@ -98,7 +97,7 @@ else
 endif
 " ---- Common shortcuts ----
 let mapleader='\'
-noremap <C-J> :NvimTreeToggle<CR>
+noremap <C-J> :NvimTreeFindFileToggle<CR>
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
 noremap K :on<CR>
