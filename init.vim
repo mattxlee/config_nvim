@@ -64,7 +64,7 @@ require("nvim-tree").setup({
 })
 require("workspaces").setup({
     hooks = {
-        open = "silent! %bd"
+        open = { "silent! %bd", "NvimTreeOpen" }
     }
 })
 EOF
@@ -97,7 +97,7 @@ else
 endif
 " ---- Common shortcuts ----
 let mapleader='\'
-noremap <C-J> :NvimTreeFindFileToggle<CR>
+noremap <C-J> :NvimTreeFindFile<CR>
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
 noremap K :on<CR>
