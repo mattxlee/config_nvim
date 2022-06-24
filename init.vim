@@ -85,6 +85,7 @@ set cinkeys-=:
 set nobackup
 set nowritebackup
 set noswapfile
+autocmd! bufreadpost *.ac set syntax off
 let c_no_curly_error=1
 if has('termguicolors')
     set termguicolors
