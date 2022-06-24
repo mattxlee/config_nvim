@@ -172,11 +172,11 @@ let g:Lf_WindowPosition='popup'
 let g:Lf_PreviewInPopup=1
 let g:Lf_ShortcutF='<C-P>'
 let g:Lf_WildIgnore={
-            \ 'dir': ['.svn','.git','.hg','.ccls-cache','node_modules'],
+            \ 'dir': ['.svn', '.git', '.hg', '.ccls-cache', 'node_modules', 'build'],
             \ 'file': ['*.sw?','*.bak','*.exe','*.o','*.so']
             \}
 let g:Lf_StlSeparator={'left': '', 'right': '', 'font': ''}
-let g:Lf_RootMarkers=['.project', '.root', '.svn', '.git']
+let g:Lf_RootMarkers=['.root', '.svn', '.git', '.hg', '.project']
 let g:Lf_WorkingDirectoryMode='Ac'
 let g:Lf_CacheDirectory=expand('~/.vim/cache')
 let g:Lf_ShowRelativePath=0
