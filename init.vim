@@ -108,6 +108,8 @@ noremap <Leader>w <C-W>w
 noremap <Leader>h :vertical resize 130<CR>
 noremap <Leader><Leader>r :NvimTreeRefresh<CR>
 noremap <Leader><Leader>d :%bd<CR>
+noremap <C-C> "*y
+noremap <C-V> "*p
 " ---- end of Common settings ----
 
 " ---- Color scheme ----
