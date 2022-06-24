@@ -60,11 +60,15 @@ lsp_installer.on_server_ready(function(server)
 end)
 -- Other setups
 require("nvim-tree").setup({
-    update_cwd = true
+    update_cwd = true,
+    view = {
+        width = 40
+    }
 })
 require("workspaces").setup({
     hooks = {
-        open = { "silent! %bd", "NvimTreeOpen" }
+        open_pre = "silent! %bd",
+        open = "NvimTreeOpen"
     }
 })
 EOF
