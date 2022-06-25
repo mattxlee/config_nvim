@@ -105,7 +105,6 @@ else
 endif
 " ---- Common shortcuts ----
 let mapleader='\'
-noremap <C-J> :NvimTreeFindFile<CR>
 noremap N :noh<CR>
 noremap * :keepjumps normal! mi*`i<CR>
 noremap K :on<CR>
@@ -113,7 +112,6 @@ noremap <Leader>s :sp<CR>
 noremap <Leader>v :vsp<CR>
 noremap <Leader>w <C-W>w
 noremap <Leader>h :vertical resize 130<CR>
-noremap <Leader><Leader>r :NvimTreeRefresh<CR>
 noremap <Leader><Leader>d :%bd<CR>
 noremap <Leader><Leader>c "*y
 noremap <Leader><Leader>p "*p
@@ -166,6 +164,17 @@ if !isdirectory(s:vim_tags)
   silent! call mkdir(s:vim_tags, 'p')
 endif
 " ---- end of CTags settings ----
+
+" ---- Nvim-tree settings ----
+function OpenTree()
+    if bufname('%') == ''
+        :NvimTreeOpen
+    else
+        :NvimTreeFindFile
+    endif
+endfunction
+noremap <C-J> :call OpenTree()<CR>
+" ---- end of NERDTree settings ----
 
 " ---- LeaderF related settings ----
 let g:Lf_WindowPosition='popup'
