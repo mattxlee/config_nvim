@@ -70,9 +70,19 @@ require("nvim-tree").setup({
         width = 40
     }
 })
+require("sessions").setup({
+    events = { "WinEnter", "BufEnter" },
+    session_filepath = ""
+})
 require("workspaces").setup({
     hooks = {
-        open_pre = "silent! %bd"
+        open_pre = function()
+            require("sessions").save(".session", { silent = true })
+            vim.cmd "silent! %bd"
+        end,
+        open = function()
+            require("sessions").load(".session", { silent = true })
+        end
     }
 })
 EOF

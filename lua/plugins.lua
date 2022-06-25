@@ -79,6 +79,8 @@ return require('packer').startup({function()
 
     use 'natecraddock/workspaces.nvim'
 
+    use 'natecraddock/sessions.nvim'
+
     use {'akinsho/toggleterm.nvim',
         tag = 'v1.*',
         config = function()
