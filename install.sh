@@ -31,12 +31,14 @@ if [ $# -eq 0 ]; then
 	cpfile .editorconfig
 	cpfile .gitconfig
 	cpfile .gitignore_global
+    echo 'installing plugins...'
+    nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 	exit 0
 fi
 
 if [ $# -eq 1 ]; then
 	if [ "$1" = "-u" ]; then
-		echo "uninstalling..."
+        echo 'removing nvim settings...'
 		rmdir ~/.local/share/nvim
 		rmdir ~/.config/nvim
 	else
