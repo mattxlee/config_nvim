@@ -59,7 +59,7 @@ lsp_installer.on_server_ready(function(server)
     server:setup(opts)
 end)
 -- Other setups
-require("nvim-tree").setup({
+require('nvim-tree').setup({
     update_cwd = true,
     actions = {
         open_file = {
@@ -70,20 +70,24 @@ require("nvim-tree").setup({
         width = 40
     }
 })
-require("sessions").setup({
-    events = { "WinEnter", "BufEnter" },
-    session_filepath = ""
+require('sessions').setup({
+    events = { 'WinEnter', 'BufEnter' },
+    session_filepath = '.session'
 })
-require("workspaces").setup({
+require('workspaces').setup({
     global_cd = true,
     sort = true,
     notify_info = true,
     hooks = {
         open_pre = function()
-            vim.cmd "silent! %bd"
+            vim.cmd 'silent! %bd'
         end,
         open = function()
-            require("sessions").load(nil, { silent = true })
+            local sessions = require('sessions')
+            sessions.load(nil, { silent = false })
+            if not sessions.recording() then
+                sessions.save(nil)
+            end
         end
     }
 })
@@ -150,10 +154,10 @@ noremap <C-T> :StripWhitespace<CR>
 noremap <C-G> :Git<CR>
 " ---- end of Fugitive settings ----
 
-" ---- Workspaces settings ----
+" ---- Workspace settings ----
 noremap <Leader>a :WorkspacesOpen<CR>
-noremap <Leader><Leader>a :WorkspacesAdd
-" ---- end of Workspaces settings ----
+noremap <Leader><Leader>a :WorkspacesAdd<CR>
+" ---- end of Telescope settings ----
 
 " ---- ToggleTerm settings ----
 noremap <Leader>t :silent! ToggleTerm size=30<CR>
@@ -203,7 +207,7 @@ let g:Lf_ShowRelativePath=0
 let g:Lf_PreviewResult={'Function':0, 'BufTag':0}
 let g:Lf_ShowDevIcons=1
 noremap <Leader>o :LeaderfFunction<CR>
-noremap <Leader>g :LeaderfTag<CR>
+" noremap <Leader>g :LeaderfTag<CR>
 " ---- end of LeaderF related settings ----
 
 " ---- Editorconfig settings ----
