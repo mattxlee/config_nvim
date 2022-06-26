@@ -72,7 +72,7 @@ require('timer').add(function()
     if sessions.recording() then
         sessions.save(nil)
     end
-    return 200
+    return 1000
 end)
 require('sessions').setup({
     events = { 'WinEnter', 'BufEnter' },
