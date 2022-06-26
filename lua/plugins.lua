@@ -81,6 +81,8 @@ return require('packer').startup({function()
 
     use 'natecraddock/workspaces.nvim'
 
+    use 'alex-popov-tech/timer.nvim'
+
     use {'akinsho/toggleterm.nvim',
         tag = 'v1.*',
         config = function()

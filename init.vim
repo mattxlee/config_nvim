@@ -70,6 +70,13 @@ require('nvim-tree').setup({
         width = 40
     }
 })
+require('timer').add(function()
+    local sessions = require('sessions')
+    if sessions.recording() then
+        sessions.save(nil)
+    end
+    return 200
+end)
 require('sessions').setup({
     events = { 'WinEnter', 'BufEnter' },
     session_filepath = '.session'
