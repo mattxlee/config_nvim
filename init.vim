@@ -81,21 +81,21 @@ require('sessions').setup({
     events = { 'WinEnter', 'BufEnter' },
     session_filepath = '.session'
 })
+local load_cur_session = function()
+    local sessions = require('sessions')
+    sessions.load(nil, { silent = true })
+    if not sessions.recording() then
+        sessions.save(nil)
+    end
+end
 require('workspaces').setup({
     global_cd = true,
     sort = true,
     notify_info = true,
     hooks = {
-        open_pre = function()
-            vim.cmd 'silent! %bd'
-        end,
-        open = function()
-            local sessions = require('sessions')
-            sessions.load(nil, { silent = true })
-            if not sessions.recording() then
-                sessions.save(nil)
-            end
-        end
+        add = load_cur_session,
+        open_pre = { 'silent! %bd' },
+        open = load_cur_session
     }
 })
 EOF
