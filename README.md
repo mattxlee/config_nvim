@@ -18,7 +18,7 @@ First you need to install the plugin `packer` by cloning the repo from github:
 
 *MacOS(Or Linux):*
 
-`curl -s -L https://github.com/mattxlee/config_nvim/blob/master/install.sh | bash`
+`curl -s -L https://github.com/mattxlee/config_nvim/raw/master/install.sh | bash`
 
 *Windows (Run the command under powershell):*
 
