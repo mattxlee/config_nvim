@@ -135,8 +135,8 @@ noremap <Leader>v :vsp<CR>
 noremap <Leader>w <C-W>w
 noremap <Leader>h :vertical resize 130<CR>
 noremap <Leader><Leader>d :%bd<CR>
-noremap <Leader>c "*y
-noremap <Leader>p "*p
+noremap <Leader><Leader>c "*y
+noremap <Leader><Leader>p "*p
 " ---- end of Common settings ----
 
 " ---- Color scheme ----
