@@ -70,7 +70,7 @@ Learn more about the text search plugin, please visit [vim-esearch](https://gith
 
 * Use `ctrl+o` to return to the previous position.
 
-## File explorer (NERDTree)
+## File explorer (Nvim-tree)
 
 Use `ctrl+j` to show the explorer.
 
@@ -80,11 +80,9 @@ Use `ctrl+p` to show local files filter, type name and open file.
 
 ## Working with workspaces
 
-* Use `<leader><leader>a` to add a workspace, the path to the new workspace should be entered.
+* Use `<leader><leader>a` to add current dir to workspace and also start session autosaving.
 
-* Use `<leader>a` to show all saved workspaces and press `enter` to select.
-
-* Use `<leader><leader>d` to close all window buffer.
+* Use `<leader>a` to select a workspace.
 
 ## Make and CMake support
 
