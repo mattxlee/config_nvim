@@ -2,7 +2,7 @@
 gitclone() {
 	SRC=$1
 	DEST=$2
-	if [ -d $DEST ]; then
+	if [ ! -d $DEST ]; then
 		git clone --depth 1 $SRC $DEST
 	fi
 }
