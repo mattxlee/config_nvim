@@ -6,7 +6,7 @@ This is my config script for nvim, feel free to use it.
 
 * You need to install Git or the git related plugin will be disabled automatically.
 
-* You need to install python or python3 and pip in order to obtain `pynvim`.
+* You need to install python3 and pip3 in order to obtain `pynvim`.
 
 * You need to install `universal-ctags` to use ctags from nvim. Under macOS, you can use Homebrew to install it `brew install universal-ctags`.
 
@@ -18,9 +18,7 @@ First you need to install the plugin `packer` by cloning the repo from github:
 
 *MacOS(Or Linux):*
 
-`git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim`
-
-`git clone https://github.com/mattxlee/config_nvim ~/.config/nvim`
+`curl -s -L https://github.com/mattxlee/config_nvim/blob/master/install.sh | bash`
 
 *Windows (Run the command under powershell):*
 
