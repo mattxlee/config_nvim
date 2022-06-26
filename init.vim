@@ -75,13 +75,15 @@ require("sessions").setup({
     session_filepath = ""
 })
 require("workspaces").setup({
+    global_cd = true,
+    sort = true,
+    notify_info = true,
     hooks = {
         open_pre = function()
-            require("sessions").save(".session", { silent = true })
             vim.cmd "silent! %bd"
         end,
         open = function()
-            require("sessions").load(".session", { silent = true })
+            require("sessions").load(nil, { silent = true })
         end
     }
 })
