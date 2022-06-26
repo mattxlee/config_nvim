@@ -84,6 +84,8 @@ Use `ctrl+p` to show local files filter, type name and open file.
 
 * Use `<leader>a` to select a workspace.
 
+* Use `<leader><leader>d` to remove all buffers.
+
 ## Make and CMake support
 
 **Note: AsyncRun is the plugin make task running in async mode. Use shortcut `ctrl+k` to stop current running task.**
