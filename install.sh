@@ -32,7 +32,7 @@ if [ $# -eq 0 ]; then
 	cpfile .gitconfig
 	cpfile .gitignore_global
     echo 'installing plugins...'
-    nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+    nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync' > /dev/null 2>&1
 	exit 0
 fi
 
