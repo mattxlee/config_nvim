@@ -163,7 +163,7 @@ noremap <C-G> :Git<CR>
 
 " ---- Workspace settings ----
 noremap <Leader>a :WorkspacesOpen<CR>
-noremap <Leader><Leader>a :WorkspacesAdd<CR>
+noremap <Leader><Leader>a :silent! WorkspacesRemove<CR>:WorkspacesAdd<CR>
 " ---- end of Telescope settings ----
 
 " ---- ToggleTerm settings ----
