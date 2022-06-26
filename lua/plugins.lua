@@ -67,6 +67,8 @@ return require('packer').startup({function()
 
     use 'hrsh7th/nvim-cmp'
 
+    use 'lukas-reineke/indent-blankline.nvim'
+
     use 'nvim-lua/lsp-status.nvim'
 
     use 'jackguo380/vim-lsp-cxx-highlight'
