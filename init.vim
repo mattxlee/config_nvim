@@ -84,7 +84,7 @@ require('workspaces').setup({
         end,
         open = function()
             local sessions = require('sessions')
-            sessions.load(nil, { silent = false })
+            sessions.load(nil, { silent = true })
             if not sessions.recording() then
                 sessions.save(nil)
             end
