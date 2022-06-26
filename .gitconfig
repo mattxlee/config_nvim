@@ -11,6 +11,7 @@
     editor = vi
     pager = less -F -X
     autocrlf = input
+    excludesfile = ~/.gitignore_global
 [gui]
     encoding = utf-8
 [push]
@@ -19,3 +20,5 @@
     rebase = true
 [credential]
     helper = store
+# [http]
+#     proxy = http://lisa:8080
