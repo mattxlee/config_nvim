@@ -190,9 +190,9 @@ endif
 " ---- Nvim-tree settings ----
 function OpenTree()
     if bufname('%') == ''
-        :NvimTreeOpen
+        :silent! NvimTreeOpen
     else
-        :NvimTreeFindFile
+        :silent! NvimTreeFindFile
     endif
 endfunction
 noremap <C-J> :call OpenTree()<CR>
