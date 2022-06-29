@@ -5,6 +5,8 @@ return require('packer').startup({function()
 
     use 'morhetz/gruvbox'
 
+    use {'akinsho/bufferline.nvim', tag = 'v2.*', requires = 'kyazdani42/nvim-web-devicons'}
+
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
@@ -76,8 +78,6 @@ return require('packer').startup({function()
     use 'ryanoasis/vim-devicons'
 
     use 'kyazdani42/nvim-tree.lua'
-
-    use 'stevearc/dressing.nvim'
 
     use 'natecraddock/sessions.nvim'
 
