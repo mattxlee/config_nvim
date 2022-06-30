@@ -56,7 +56,6 @@ lsp_installer.on_server_ready(function(server)
     server:setup(opts)
 end)
 -- Other setups
-require('bufferline').setup()
 require('nvim-tree').setup({
     update_cwd = true,
     actions = {
