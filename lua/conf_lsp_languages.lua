@@ -21,6 +21,8 @@ vim.keymap.set('n', '<leader>c', ':Mason<CR>')
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+require("flutter-tools").setup()
+
 -- clangd
 require('lspconfig').clangd.setup({
     on_attach = on_attach,
@@ -38,7 +40,8 @@ local setup_entries = {
     capabilities = capabilities,
 }
 
-local langs = { 'cmake', 'rust_analyzer', 'texlab', 'gopls', 'tsserver', 'tailwindcss', 'pylsp' }
+local langs = { 'cmake', 'rust_analyzer', 'texlab', 'gopls', 'tsserver', 'tailwindcss', 'pylsp', 'dartls' }
 for _, lang in ipairs(langs) do
     require('lspconfig')[lang].setup(setup_entries)
 end
+

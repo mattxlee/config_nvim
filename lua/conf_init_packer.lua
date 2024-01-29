@@ -107,6 +107,13 @@ return require('packer').startup({function(use)
         use 'hrsh7th/cmp-nvim-lsp'
         use 'hrsh7th/cmp-path'
         use 'hrsh7th/cmp-buffer'
+        -- flutter settings
+        use {
+            'akinsho/flutter-tools.nvim',
+            requires = {
+                'nvim-lua/plenary.nvim',
+            },
+        }
         -- make selection with signature selection
         use 'hrsh7th/cmp-vsnip'
         use 'hrsh7th/vim-vsnip'
