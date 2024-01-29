@@ -2,4 +2,6 @@
 .cache
 .session
 .ccls
+.clangd
+.exrc
 compile_flags.txt
