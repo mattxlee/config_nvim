@@ -41,6 +41,9 @@ clone_plugin() {
 clone_plugin https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 clone_plugin https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+cpfile .clang-format
+cpfile .clang-tidy
+cpfile .clangd
 cpfile .editorconfig
 cpfile .gitconfig
 cpfile .gitignore_global

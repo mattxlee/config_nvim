@@ -95,6 +95,29 @@ return require('packer').startup({function(use)
         }
         -- trailing whitespaces
         use 'ntpeters/vim-better-whitespace'
+        -- Lsp related
+        use 'williamboman/mason.nvim'
+        use 'williamboman/mason-lspconfig.nvim'
+        use 'neovim/nvim-lspconfig'
+        -- main complete plugin
+        use 'hrsh7th/nvim-cmp'
+        -- show icons from complete menu
+        use 'onsails/lspkind.nvim'
+        -- complete sources
+        use 'hrsh7th/cmp-nvim-lsp'
+        use 'hrsh7th/cmp-path'
+        use 'hrsh7th/cmp-buffer'
+        -- make selection with signature selection
+        use 'hrsh7th/cmp-vsnip'
+        use 'hrsh7th/vim-vsnip'
+        -- signature help
+        use 'hrsh7th/cmp-nvim-lsp-signature-help'
+        -- syntax color
+        use 'nvim-treesitter/nvim-treesitter'
+        -- inlay hints
+        use 'lvimuser/lsp-inlayhints.nvim'
+        -- show lsp progress
+        use 'WhoIsSethDaniel/lualine-lsp-progress.nvim'
         -- auto pair
         use 'echasnovski/mini.nvim'
     end)
