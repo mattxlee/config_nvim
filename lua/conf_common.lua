@@ -75,5 +75,10 @@ vim.keymap.set('n', '<leader>x', ':StripWhitespace<CR>')
 vim.keymap.set('n', ']x', ':NextTrailingWhitespace<CR>')
 vim.keymap.set('n', '[x', ':PrevTrailingWhitespace<CR>')
 
+-- format current document
+vim.keymap.set('n', '<leader>=', function ()
+    vim.lsp.buf.format({ async = true })
+end , { silent = true })
+
 -- close all other windows
 vim.keymap.set('n', 'K', ':only<CR>')
