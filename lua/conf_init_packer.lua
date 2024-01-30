@@ -38,6 +38,7 @@ return require('packer').startup({function(use)
         }
         -- external file types
         use 'mtdl9/vim-log-highlighting'
+        use 'cfdrake/vim-pbxproj'
         -- todo highlighting
         use {
             'folke/todo-comments.nvim',
