@@ -29,3 +29,8 @@ end)
 vim.keymap.set('n', 'gr', function()
     builtin.lsp_references(require('telescope.themes').get_ivy({ previewer = false }))
 end)
+
+require('telescope').load_extension('flutter')
+vim.keymap.set('n', '<leader>u', function()
+    require('telescope').extensions.flutter.commands()
+end)
