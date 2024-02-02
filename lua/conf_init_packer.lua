@@ -96,8 +96,6 @@ return require('packer').startup({function(use)
         }
         -- trailing whitespaces
         use 'ntpeters/vim-better-whitespace'
-        -- auto pair
-        use 'echasnovski/mini.nvim'
     end)
     -- Sync plugins on first time starts up
     if packer_bootstrap then
