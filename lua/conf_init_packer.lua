@@ -126,8 +126,6 @@ return require('packer').startup({function(use)
         use 'lvimuser/lsp-inlayhints.nvim'
         -- show lsp progress
         use 'WhoIsSethDaniel/lualine-lsp-progress.nvim'
-        -- auto pair
-        use 'echasnovski/mini.nvim'
     end)
     -- Sync plugins on first time starts up
     if packer_bootstrap then
