@@ -15,7 +15,7 @@ return require('packer').startup({function(use)
     use 'wbthomason/packer.nvim'
     pcall(function()
         -- color scheme
-        use 'maxmx03/dracula.nvim'
+        use 'ellisonleao/gruvbox.nvim'
         -- read local config files
         use {
             'klen/nvim-config-local',
