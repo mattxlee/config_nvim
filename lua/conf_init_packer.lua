@@ -69,8 +69,6 @@ return require('packer').startup({function(use)
             -- or                          , branch = '0.1.x',
             requires = { 'nvim-lua/plenary.nvim' },
         }
-        -- yank to system clipboard
-        use 'ojroques/nvim-osc52'
         -- editorconfig
         use 'editorconfig/editorconfig-vim'
         -- hop goto anywhere easily
