@@ -82,3 +82,6 @@ end , { silent = true })
 
 -- close all other windows
 vim.keymap.set('n', 'K', ':only<CR>')
+
+-- hide the highlights
+vim.keymap.set('n', '<leader>n', ':noh<CR>')
