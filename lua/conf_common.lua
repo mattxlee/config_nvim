@@ -43,21 +43,6 @@ vim.keymap.set('n', '<f2>', ':w<CR>', { silent = true })
 vim.keymap.set('n', '<f3>', '<c-w>x', { silent = true })
 vim.keymap.set('n', '<f4>', ':q<CR>', { silent = true })
 
--- open/close bottom window
-vim.keymap.set('n', '<f9>', function()
-    local qf_exists = false
-    for _, win in pairs(vim.fn.getwininfo()) do
-        if win["quickfix"] == 1 then
-            qf_exists = true
-            vim.cmd('cclose')
-            return
-        end
-    end
-    if not vim.tbl_isempty(vim.fn.getqflist()) then
-        vim.cmd "copen"
-    end
-end, { silent = true })
-
 -- easy jump to words/characters
 vim.keymap.set('n', '<leader>w', ':HopWord<CR>')
 
