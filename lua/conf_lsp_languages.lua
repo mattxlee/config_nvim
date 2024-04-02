@@ -46,7 +46,7 @@ local setup_entries = {
     capabilities = capabilities,
 }
 
-local langs = { 'cmake', 'rust_analyzer', 'texlab', 'gopls', 'tsserver', 'tailwindcss', 'pylsp'}
+local langs = { 'cmake', 'rust_analyzer', 'texlab', 'gopls', 'tsserver', 'tailwindcss',  'cssls', 'pylsp'}
 for _, lang in ipairs(langs) do
     require('lspconfig')[lang].setup(setup_entries)
 end
