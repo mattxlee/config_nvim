@@ -23,6 +23,7 @@ local bdopts = {
 local cmp = require('cmp')
 cmp.setup({
     completion = {
+        autocomplete = false,
         completeopt = 'menu,menuone,noinsert,noselect',
     },
     snippet = {
