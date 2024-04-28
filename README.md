@@ -24,10 +24,9 @@ The default config path for NeoVim is `$HOME/.config/nvim`, but you can set a ne
 
 **Setup your system environment**
 
-Add these lines to your `$HOME/.profile` and ensure it will be executed by `.bashrc` or `.zshrc`.
+Add the following line to your `$HOME/.profile` and ensure it will be executed by `.bashrc` or `.zshrc`.
 
 ```bash
-alias v='nvim'
 alias vl='NVIM_APPNAME=nvim-lsp nvim'
 ```
 
@@ -43,3 +42,10 @@ git clone -b lsp https://github.com/mattxlee/config_nvim ~/.config/nvim-lsp
 
 Run command `vl`, the new settings will drive NeoVim to download plugins.
 
+### Preserve config with `sudo`
+
+Add another alias command to `$HOME/.profile`, and use `sv` to run nvim with root privileges but preserve the environment.
+
+```bash
+alias sv=`sudo -E -s nvim`
+```
