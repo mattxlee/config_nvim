@@ -47,5 +47,5 @@ Run command `vl`, the new settings will drive NeoVim to download plugins.
 Add another alias command to `$HOME/.profile`, and use `sv` to run nvim with root privileges but preserve the environment.
 
 ```bash
-alias sv=`sudo -E -s nvim`
+alias sv='sudo -E -s nvim'
 ```
