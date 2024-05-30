@@ -86,6 +86,8 @@ vim.cmd.colorscheme 'catppuccin-macchiato'
 require('oil').setup()
 vim.keymap.set('n', '<c-j>', ':Oil<CR>')
 
+require('lsp-progress').setup()
+
 require('lualine').setup({
     options = {
         icons_enabled = false,
