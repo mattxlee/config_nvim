@@ -17,7 +17,7 @@ require('lazy').setup({
     { 'ntpeters/vim-better-whitespace' },
     { 'mtdl9/vim-log-highlighting' },
     { 'cfdrake/vim-pbxproj' },
-    { 'nvim-treesitter/nvim-treesitter' },
+    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     { 'catppuccin/nvim', name = 'catppuccin' },
     { 'stevearc/oil.nvim' },
     { 'nvim-lualine/lualine.nvim' },

@@ -1,10 +1,8 @@
-require('nvim-treesitter.configs').setup {
+require('nvim-treesitter.configs').setup({
     -- A list of parser names, or 'all'
     ensure_installed = { 'c', 'lua', 'vim', 'vimdoc', 'query' },
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
-    -- Automatically install missing parsers when entering buffer
-    auto_install = true,
     -- List of parsers to ignore installing (for 'all')
     ignore_install = {},
     ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
@@ -24,7 +22,8 @@ require('nvim-treesitter.configs').setup {
         -- Instead of true it can also be a list of languages
         additional_vim_regex_highlighting = false,
     },
-}
+    indent = { enable = true },
+})
 -- register filetype `ejs`
 vim.filetype.add({
     extension = {
