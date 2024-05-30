@@ -122,8 +122,13 @@ return require('packer').startup({function(use)
         use 'nvim-treesitter/nvim-treesitter'
         -- inlay hints
         use 'lvimuser/lsp-inlayhints.nvim'
-        -- show lsp progress
-        use 'WhoIsSethDaniel/lualine-lsp-progress.nvim'
+        -- progress of lsp loading
+        use {
+            'linrongbin16/lsp-progress.nvim',
+            config = function()
+                require('lsp-progress').setup()
+            end
+        }
     end)
     -- Sync plugins on first time starts up
     if packer_bootstrap then
