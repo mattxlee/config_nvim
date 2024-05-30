@@ -1,8 +1,6 @@
 local on_attach = function(client, bufnr)
     -- diagnostic
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
-    vim.keymap.set('n', ']d', vim.diagnostic.goto_next, bufopts)
-    vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, bufopts)
     -- language options
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
