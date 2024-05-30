@@ -24,7 +24,7 @@ require('lazy').setup({
     { 'lewis6991/gitsigns.nvim' },
     { 'tpope/vim-fugitive' },
     { 'windwp/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
-    { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+    { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
     { 'kylechui/nvim-surround' },
     -- flutter settings
     { 'akinsho/flutter-tools.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -50,7 +50,6 @@ require('lazy').setup({
     -- progress of lsp loading
     { 'linrongbin16/lsp-progress.nvim' },
 })
-require('conf_plugins')
 
 -- load lsp config --
 require('conf_lsp')
@@ -113,3 +112,5 @@ vim.keymap.set('n', 'K', ':only<CR>')
 
 -- hide the highlights
 vim.keymap.set('n', '<leader>n', ':noh<CR>')
+
+require('conf_plugins')
