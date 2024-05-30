@@ -24,10 +24,9 @@ require('lazy').setup({
     { 'lewis6991/gitsigns.nvim' },
     { 'tpope/vim-fugitive' },
     { 'windwp/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
-    { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+    { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
     { 'kylechui/nvim-surround' },
 })
-require('conf_plugins')
 
 -- common setup --
 vim.cmd [[set maxmempattern=2000000]]
@@ -86,3 +85,5 @@ vim.keymap.set('n', 'K', ':only<CR>')
 
 -- hide the highlights
 vim.keymap.set('n', '<leader>n', ':noh<CR>')
+
+require('conf_plugins')
