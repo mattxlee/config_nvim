@@ -51,10 +51,6 @@ require('lazy').setup({
     { 'linrongbin16/lsp-progress.nvim' },
 })
 
--- load lsp config --
-require('conf_lsp')
-require('conf_lsp_languages')
-
 -- common setup --
 vim.cmd [[set maxmempattern=2000000]]
 vim.cmd [[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o formatoptions+=mM]]
@@ -114,3 +110,7 @@ vim.keymap.set('n', 'K', ':only<CR>')
 vim.keymap.set('n', '<leader>n', ':noh<CR>')
 
 require('conf_plugins')
+
+-- load lsp config --
+require('conf_lsp')
+require('conf_lsp_languages')
