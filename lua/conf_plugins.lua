@@ -141,5 +141,7 @@ end)
 vim.keymap.set('n', 'gr', function()
     builtin.lsp_references(require('telescope.themes').get_cursor({ previewer = false }))
 end)
+vim.cmd('highlight link TelescopeSelection PmenuSel')
+vim.cmd('highlight link TelescopeMatching GruvboxYellow')
 
 require('nvim-surround').setup()
