@@ -81,7 +81,7 @@ require('catppuccin').setup({
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
 })
-vim.cmd.colorscheme 'catppuccin-macchiato'
+vim.cmd.colorscheme 'catppuccin-latte'
 
 require('oil').setup()
 vim.keymap.set('n', '<c-j>', ':Oil<CR>')
