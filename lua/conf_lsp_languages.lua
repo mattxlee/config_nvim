@@ -15,7 +15,7 @@ require('mason').setup()
 require('mason-lspconfig').setup()
 
 vim.keymap.set('n', '<c-h>', ':ClangdSwitchSourceHeader<CR>')
-vim.keymap.set('n', '<c-;>', ':Mason<CR>')
+vim.keymap.set('n', '<leader>m', ':Mason<CR>')
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -48,4 +48,3 @@ local langs = { 'cmake', 'rust_analyzer', 'texlab', 'gopls', 'tsserver', 'tailwi
 for _, lang in ipairs(langs) do
     require('lspconfig')[lang].setup(setup_entries)
 end
-
