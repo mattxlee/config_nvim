@@ -18,7 +18,7 @@ require('lazy').setup({
     { 'mtdl9/vim-log-highlighting' },
     { 'cfdrake/vim-pbxproj' },
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-    { "ellisonleao/gruvbox.nvim" },
+    { 'ellisonleao/gruvbox.nvim' },
     { 'stevearc/oil.nvim' },
     { 'nvim-lualine/lualine.nvim' },
     { 'lewis6991/gitsigns.nvim' },
