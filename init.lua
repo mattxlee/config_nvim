@@ -18,7 +18,7 @@ require('lazy').setup({
     { 'mtdl9/vim-log-highlighting' },
     { 'cfdrake/vim-pbxproj' },
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-    { 'catppuccin/nvim', name = 'catppuccin' },
+    { "ellisonleao/gruvbox.nvim" },
     { 'stevearc/oil.nvim' },
     { 'nvim-lualine/lualine.nvim' },
     { 'lewis6991/gitsigns.nvim' },
@@ -54,7 +54,6 @@ require('lazy').setup({
 -- common setup --
 vim.cmd [[set maxmempattern=2000000]]
 vim.cmd [[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o formatoptions+=mM]]
-vim.cmd [[autocmd FileType c,cpp,objc set nocindent]]
 vim.cmd [[autocmd FileType markdown set breakat=]]
 vim.cmd [[autocmd FileType markdown set nobreakindent]]
 
