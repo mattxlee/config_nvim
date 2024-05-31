@@ -31,7 +31,6 @@ require('lazy').setup({
 -- common setup --
 vim.cmd [[set maxmempattern=2000000]]
 vim.cmd [[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o formatoptions+=mM]]
-vim.cmd [[autocmd FileType c,cpp,objc set nocindent]]
 vim.cmd [[autocmd FileType markdown set breakat=]]
 vim.cmd [[autocmd FileType markdown set nobreakindent]]
 
