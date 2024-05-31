@@ -34,7 +34,7 @@ vim.filetype.add({
 vim.treesitter.language.register('html', 'ejs')
 
 -- Default options:
-require("gruvbox").setup({
+require('gruvbox').setup({
     terminal_colors = true, -- add neovim terminal colors
     undercurl = true,
     underline = true,
@@ -52,13 +52,13 @@ require("gruvbox").setup({
     invert_tabline = false,
     invert_intend_guides = false,
     inverse = true, -- invert background for search, diffs, statuslines and errors
-    contrast = "", -- can be "hard", "soft" or empty string
+    contrast = '', -- can be 'hard', 'soft' or empty string
     palette_overrides = {},
     overrides = {},
     dim_inactive = false,
     transparent_mode = false,
 })
-vim.cmd("colorscheme gruvbox")
+vim.cmd('colorscheme gruvbox')
 
 require('oil').setup()
 vim.keymap.set('n', '<c-j>', ':Oil<CR>')
@@ -68,7 +68,6 @@ require('lualine').setup({
         icons_enabled = false,
         component_separators = '',
         section_separators = '',
-        theme = 'catppuccin',
     },
     sections = {
         lualine_a = { 'mode' },
