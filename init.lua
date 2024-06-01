@@ -53,8 +53,8 @@ require('lazy').setup({
 })
 
 -- common setup --
-vim.cmd [[set maxmempattern=2000000]]
-vim.cmd [[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o formatoptions+=mM]]
+vim.cmd('set maxmempattern=2000000')
+vim.cmd('autocmd FileType markdown set nolinebreak | set nobreakindent')
 
 -- leader key
 vim.g.mapleader = ';'
