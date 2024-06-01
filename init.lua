@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     { 'editorconfig/editorconfig-vim' },
-    { 'cohama/lexima.vim' },
+    { 'echasnovski/mini.nvim', version= '*' },
     { 'tomtom/tcomment_vim' },
     { 'ntpeters/vim-better-whitespace' },
     { 'mtdl9/vim-log-highlighting' },
