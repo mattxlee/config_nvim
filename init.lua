@@ -50,6 +50,13 @@ require('lazy').setup({
     { 'lvimuser/lsp-inlayhints.nvim' },
     -- progress of lsp loading
     { 'linrongbin16/lsp-progress.nvim' },
+    -- Markdown preview
+    {
+        'iamcco/markdown-preview.nvim',
+        cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
+        ft = { 'markdown' },
+        build = function() vim.fn['mkdp#util#install']() end,
+    }
 })
 
 -- common setup --
