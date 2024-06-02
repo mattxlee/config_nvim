@@ -20,7 +20,7 @@ require('lazy').setup({
     { 'cfdrake/vim-pbxproj' },
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     { 'ellisonleao/gruvbox.nvim' },
-    { "nvim-neo-tree/neo-tree.nvim", branch = "v3.x", dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" } },
+    { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim' } },
     { 'nvim-lualine/lualine.nvim' },
     { 'lewis6991/gitsigns.nvim' },
     { 'tpope/vim-fugitive' },
