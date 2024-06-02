@@ -164,3 +164,4 @@ local format_current_buffer = function()
   })
 end
 vim.keymap.set('n', '<leader>=', format_current_buffer)
+vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
