@@ -62,8 +62,10 @@ require('gruvbox').setup({
 })
 vim.cmd('colorscheme gruvbox')
 
-require('oil').setup()
-vim.keymap.set('n', '<c-j>', ':Oil<CR>')
+require('neo-tree').setup({
+    close_if_last_window = true,
+})
+vim.keymap.set('n', '<c-j>', ':Neotree reveal<CR>')
 
 require('lualine').setup({
     options = {
