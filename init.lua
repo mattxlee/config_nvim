@@ -61,6 +61,9 @@ vim.opt.breakindentopt = { 'shift:8', 'sbr' }
 -- important to avoid preview items from auto-complete list
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
+-- Open Lazy plugin manager window
+vim.keymap.set('n', '<leader>a', ':Lazy<CR>')
+
 -- '*' highlights all same strings without jumping to next one
 vim.keymap.set('n', '*', ':keepjumps normal! mi*`i<CR>')
 
