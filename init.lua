@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+    { 'stevearc/dressing.nvim' },
     { 'editorconfig/editorconfig-vim' },
     { 'echasnovski/mini.nvim', version= '*' },
     { 'tomtom/tcomment_vim' },
