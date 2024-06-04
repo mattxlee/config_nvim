@@ -31,7 +31,7 @@ require('lspconfig').clangd.setup({
 })
 
 -- flutter tools
-require('flutter-tools').setup(
+require('flutter-tools').setup({
     lsp = {
         on_attach = on_attach,
         capabilities = capabilities,
@@ -47,4 +47,14 @@ local setup_entries = {
 local langs = { 'cmake', 'rust_analyzer', 'texlab', 'gopls', 'tsserver', 'tailwindcss',  'cssls', 'pylsp'}
 for _, lang in ipairs(langs) do
     require('lspconfig')[lang].setup(setup_entries)
+end
+
+-- fix: renaming buffer newer than edits
+vim.lsp.util.apply_text_document_edit = function(text_document_edit, index, offset_encoding)
+    local text_document = text_document_edit.textDocument
+    local bufnr = vim.uri_to_bufnr(text_document.uri)
+    if offset_encoding == nil then
+        vim.notify_once('apply_text_document_edit must be called with valid offset encoding', vim.log.levels.WARN)
+    end
+    vim.lsp.util.apply_text_edits(text_document_edit.edits, bufnr, offset_encoding)
 end
