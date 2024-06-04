@@ -31,7 +31,7 @@ require('lspconfig').clangd.setup({
 })
 
 -- flutter tools
-require("flutter-tools").setup({
+require('flutter-tools').setup(
     lsp = {
         on_attach = on_attach,
         capabilities = capabilities,
