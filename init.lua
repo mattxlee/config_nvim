@@ -22,11 +22,11 @@ require('lazy').setup({
     { 'ellisonleao/gruvbox.nvim' },
     { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim' } },
     { 'nvim-lualine/lualine.nvim' },
-    { 'lewis6991/gitsigns.nvim' },
-    { 'tpope/vim-fugitive' },
     { 'windwp/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
     { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
     { 'kylechui/nvim-surround' },
+    { 'lewis6991/gitsigns.nvim' },
+    { 'kdheepak/lazygit.nvim', cmd = { 'LazyGit', 'LazyGitConfig', 'LazyGitCurrentFile', 'LazyGitFilter', 'LazyGitFilterCurrentFile' }, dependencies = { 'nvim-lua/plenary.nvim' } },
 })
 
 -- common setup --

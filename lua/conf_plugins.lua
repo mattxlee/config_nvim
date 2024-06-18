@@ -106,7 +106,6 @@ require('gitsigns').setup({
     end, {expr=true})
   end
 })
-vim.keymap.set('n', '<C-g>', ':Git<CR>')
 
 require('spectre').setup({
     open_cmd = 'new',
@@ -149,3 +148,6 @@ vim.cmd('highlight link TelescopeSelection PmenuSel')
 vim.cmd('highlight link TelescopeMatching GruvboxYellow')
 
 require('nvim-surround').setup()
+
+-- LazyGit shortcut
+vim.keymap.set('n', '<c-g>', ':LazyGit<CR>')
