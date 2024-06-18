@@ -146,6 +146,7 @@ vim.keymap.set('n', 'gr', function()
 end)
 vim.cmd('highlight link TelescopeSelection PmenuSel')
 vim.cmd('highlight link TelescopeMatching GruvboxYellow')
+vim.cmd('highlight SignColumn guibg=0')
 
 require('nvim-surround').setup()
 
