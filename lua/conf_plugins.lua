@@ -114,6 +114,8 @@ require('gitsigns').setup({
         end, {expr=true})
 
         map('n', '<leader>rr', gs.reset_hunk)
+
+        map('n', '<leader>bb', function() gs.blame_line{full=true} end)
     end
 })
 
