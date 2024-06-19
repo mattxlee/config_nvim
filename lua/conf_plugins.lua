@@ -64,6 +64,14 @@ vim.cmd('colorscheme gruvbox')
 
 require('neo-tree').setup({
     close_if_last_window = true,
+    filesystem = {
+        window = {
+            mappings = {
+                ["[c"] = "prev_git_modified",
+                ["]c"] = "next_git_modified"
+            }
+        }
+    }
 })
 vim.keymap.set('n', '<c-j>', ':Neotree reveal<CR>')
 
