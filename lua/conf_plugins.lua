@@ -74,6 +74,7 @@ require('neo-tree').setup({
     }
 })
 vim.keymap.set('n', '<c-j>', ':Neotree reveal<CR>')
+vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>')
 
 require('lualine').setup({
     options = {
