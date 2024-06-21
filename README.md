@@ -4,7 +4,7 @@
 
 There are two branches: main, lsp.
 
-* main - The branch contains the config files without any LSP support.
+* main - The branch contains the config files without any LSP support but treesitter is installed.
 
 * lsp - The branch contains the config files with LSP and treesitter support.
 
@@ -49,3 +49,43 @@ Add another alias command to `$HOME/.profile`, and use `sv` to run nvim with roo
 ```bash
 alias sv='sudo -E -s nvim'
 ```
+
+## How to setup with tmux
+
+You need to modify the tmux config file `$HOME/.tmux.conf`
+
+### Use vim key bindings
+
+Add the following line to tmux config file:
+
+```
+setw -g mode-keys vi
+```
+
+### Setup colors and fonts
+
+Please install WezTerm under your macOS and config it with following instructions. Add following lines to tmux config file to apply the terminal settings, nvim from a tmux session will has font italic/bold support.
+
+* macOS
+
+```
+set -g default-terminal "xterm-256color"
+set -ga terminal-overrides ",xterm-256color:RGB"
+```
+
+* Linux
+
+```
+set -g default-terminal 'tmux-256color'
+set -as terminal-overrides ',xterm*:Tc:sitm=\E[3m'
+```
+
+## External tools
+
+You need to install the following tools from your os in order to work with nvim properly.
+
+* Lazygit - the default git manager tool the nvim with <c-g>.
+
+* Ripgrep - for searching in files.
+
+* Python3 - some of the lsp will require Python3, you might need to install pip as well.
