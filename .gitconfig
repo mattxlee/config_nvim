@@ -19,7 +19,7 @@
 [pull]
     rebase = true
 [credential]
-	helper = store
+    helper = store
 [http]
     proxy = http://lisa:8080
     sslVerify = false
