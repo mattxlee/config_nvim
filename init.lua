@@ -26,6 +26,7 @@ require('lazy').setup({
     { 'windwp/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
     { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
     { 'kylechui/nvim-surround' },
+    { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
     -- flutter settings
     { 'akinsho/flutter-tools.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
     -- Lsp related

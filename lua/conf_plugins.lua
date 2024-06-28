@@ -168,3 +168,7 @@ require('nvim-surround').setup()
 
 -- LazyGit shortcut
 vim.keymap.set('n', '<c-g>', ':LazyGit<CR>')
+
+require('ibl').setup({
+    scope = { enabled = false },
+})
