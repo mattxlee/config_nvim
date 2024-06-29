@@ -166,8 +166,8 @@ vim.cmd('highlight SignColumn guibg=0')
 
 require('nvim-surround').setup()
 
--- LazyGit shortcut
-vim.keymap.set('n', '<c-g>', ':LazyGit<CR>')
+-- Git manager window
+vim.keymap.set('n', '<c-g>', ':Git<CR>')
 
 require('ibl').setup({
     scope = { enabled = false },

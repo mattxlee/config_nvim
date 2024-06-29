@@ -77,12 +77,6 @@ your $HOME dir. Thus, you might need to copy them manually, especially the file
 You need to install the following tools from your os in order to work with nvim
 properly.
 
-* Lazygit - the default git manager tool the nvim with <c-g>.
-
-```bash
-brew install lazygit
-```
-
 * Ripgrep - for searching in files.
 
 ```bash

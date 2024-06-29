@@ -59,7 +59,7 @@ require('lazy').setup({
     },
     -- Git related plugins
     { 'lewis6991/gitsigns.nvim' },
-    { 'kdheepak/lazygit.nvim', cmd = { 'LazyGit', 'LazyGitConfig', 'LazyGitCurrentFile', 'LazyGitFilter', 'LazyGitFilterCurrentFile' }, dependencies = { 'nvim-lua/plenary.nvim' } },
+    { 'tpope/vim-fugitive' },
 })
 
 -- common setup --
