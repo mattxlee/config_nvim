@@ -1,12 +1,11 @@
 ---
 Language:                         Cpp
 BasedOnStyle:                     WebKit
-SortIncludes:                     false
-AccessModifierOffset:             -4
-BreakBeforeBraces:                Linux
-ColumnLimit:                      999
-IndentWidth:                      4
-ContinuationIndentWidth:          8
+AccessModifierOffset:             -2
+BreakBeforeBraces:                Attach
+ColumnLimit:                      80
+IndentWidth:                      2
+ContinuationIndentWidth:          4
 DerivePointerAlignment:           false
 PointerAlignment:                 Left
 QualifierAlignment:               Right
