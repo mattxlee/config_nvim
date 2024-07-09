@@ -1,41 +1,4 @@
-require('mini.pairs').setup()
-
-require('nvim-treesitter.configs').setup({
-    -- A list of parser names, or 'all'
-    ensure_installed = { 'c', 'lua', 'vim', 'vimdoc', 'query', 'markdown' },
-    -- Install parsers synchronously (only applied to `ensure_installed`)
-    sync_install = false,
-    -- List of parsers to ignore installing (for 'all')
-    ignore_install = {},
-    ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
-    -- parser_install_dir = '/some/path/to/store/parsers',
-    -- Remember to run vim.opt.runtimepath:append('/some/path/to/store/parsers')!
-    highlight = {
-        -- `false` will disable the whole extension
-        enable = true,
-        -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
-        -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
-        -- the name of the parser)
-        -- list of language that will be disabled
-        disable = { 'cpp' },
-        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-        -- Using this option may slow down your editor, and you may see some duplicate highlights.
-        -- Instead of true it can also be a list of languages
-        additional_vim_regex_highlighting = false,
-    },
-    indent = { enable = false },
-})
--- register filetype `ejs`
-vim.filetype.add({
-    extension = {
-        ejs = 'ejs',
-    }
-})
--- use html parser to parse *.ejs files
-vim.treesitter.language.register('html', 'ejs')
-
--- Default options:
+-- Gruvbox, the theme
 require('gruvbox').setup({
     terminal_colors = true, -- add neovim terminal colors
     undercurl = true,
@@ -62,6 +25,43 @@ require('gruvbox').setup({
 })
 vim.cmd('colorscheme gruvbox')
 
+-- Treesitter for highlighting keywords, functions and etc
+require('nvim-treesitter.configs').setup({
+    -- A list of parser names, or 'all'
+    ensure_installed = { 'c', 'lua', 'vim', 'vimdoc', 'query', 'markdown' },
+    -- Install parsers synchronously (only applied to `ensure_installed`)
+    sync_install = false,
+    -- List of parsers to ignore installing (for 'all')
+    ignore_install = {},
+    ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
+    -- parser_install_dir = '/some/path/to/store/parsers',
+    -- Remember to run vim.opt.runtimepath:append('/some/path/to/store/parsers')!
+    highlight = {
+        -- `false` will disable the whole extension
+        enable = true,
+        -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
+        -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
+        -- the name of the parser)
+        -- list of language that will be disabled
+        disable = { 'cpp' }, -- cpp in treesitter: I've found some incorrect highlighting of some keywords
+        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+        -- Using this option may slow down your editor, and you may see some duplicate highlights.
+        -- Instead of true it can also be a list of languages
+        additional_vim_regex_highlighting = false,
+    },
+    indent = { enable = false },
+})
+-- register filetype `ejs`
+vim.filetype.add({
+    extension = {
+        ejs = 'ejs',
+    }
+})
+-- use html parser to parse *.ejs files
+vim.treesitter.language.register('html', 'ejs')
+
+-- Tree view from the left draw
 require('neo-tree').setup({
     close_if_last_window = true,
     filesystem = {
@@ -76,6 +76,7 @@ require('neo-tree').setup({
 vim.keymap.set('n', '<c-j>', ':Neotree reveal<CR>')
 vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>')
 
+-- Status bar
 require('lualine').setup({
     options = {
         icons_enabled = false,
@@ -94,11 +95,11 @@ require('lualine').setup({
     },
 })
 
+-- Git sign settings
 require('gitsigns').setup({
     current_line_blame = true,
     on_attach = function(bufnr)
         local gs = package.loaded.gitsigns
-
         local function map(mode, l, r, opts)
             opts = opts or {}
             opts.buffer = bufnr
@@ -110,19 +111,17 @@ require('gitsigns').setup({
             vim.schedule(function() gs.next_hunk() end)
             return '<Ignore>'
         end, {expr=true})
-
         map('n', '[c', function()
             if vim.wo.diff then return '[c' end
             vim.schedule(function() gs.prev_hunk() end)
             return '<Ignore>'
         end, {expr=true})
-
         map('n', '<leader>rr', gs.reset_hunk)
-
         map('n', '<leader>bb', function() gs.blame_line{full=true} end)
     end
 })
 
+-- Find and replace in files
 require('spectre').setup({
     open_cmd = 'new',
 })
@@ -130,6 +129,7 @@ vim.keymap.set('n', '<leader>h', function()
     require('spectre').open()
 end)
 
+-- Telescope settings
 local actions = require('telescope.actions')
 require('telescope').setup({
     defaults = {
@@ -164,7 +164,14 @@ vim.cmd('highlight link TelescopeSelection PmenuSel')
 vim.cmd('highlight link TelescopeMatching GruvboxYellow')
 vim.cmd('highlight SignColumn guibg=0')
 
+-- Surround settings
 require('nvim-surround').setup()
+
+-- Pair with brackets and etc
+require('mini.pairs').setup()
+
+-- Neogen, documents generator settings
+require('neogen').setup({ snippet_engine = 'vsnip' })
 
 -- Git manager window
 vim.keymap.set('n', '<c-g>', ':Git<CR>')

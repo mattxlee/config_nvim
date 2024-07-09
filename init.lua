@@ -27,6 +27,7 @@ require('lazy').setup({
     { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
     { 'kylechui/nvim-surround' },
     { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
+    { 'danymat/neogen', config = true, version = '*' },
     -- flutter settings
     { 'akinsho/flutter-tools.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
     -- Lsp related
