@@ -58,6 +58,8 @@ require('lazy').setup({
         ft = { 'markdown' },
         build = function() vim.fn['mkdp#util#install']() end,
     },
+    -- Format document
+    { 'sbdchd/neoformat' },
     -- Git related plugins
     { 'lewis6991/gitsigns.nvim' },
     { 'tpope/vim-fugitive' },

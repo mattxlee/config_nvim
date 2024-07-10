@@ -167,6 +167,9 @@ vim.cmd('highlight SignColumn guibg=0')
 -- Surround settings
 require('nvim-surround').setup()
 
+-- Format current doc
+vim.keymap.set('n', '<leader>t', ':Neoformat<CR>')
+
 -- Pair with brackets and etc
 require('mini.pairs').setup()
 

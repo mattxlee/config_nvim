@@ -163,5 +163,4 @@ local format_current_buffer = function()
     timeout_ms = 10000,
   })
 end
-vim.keymap.set('n', '<leader>t', format_current_buffer)
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
