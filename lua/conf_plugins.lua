@@ -175,6 +175,7 @@ require('mini.pairs').setup()
 
 -- Neogen, documents generator settings
 require('neogen').setup({ snippet_engine = 'vsnip' })
+vim.keymap.set('n', '<leader>y', ':Neogen<CR>')
 
 -- Git manager window
 vim.keymap.set('n', '<c-g>', ':Git<CR>')
