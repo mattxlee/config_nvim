@@ -137,6 +137,9 @@ vim.keymap.set('n', 'K', ':only<CR>')
 -- hide the highlights
 vim.keymap.set('n', '<leader>n', ':noh<CR>')
 
+-- copy to clipboard
+vim.keymap.set('n', '<leader>c', '"*y"')
+
 require('conf_plugins')
 
 -- load lsp config --
