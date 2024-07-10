@@ -180,6 +180,10 @@ vim.keymap.set('n', '<leader>y', ':Neogen<CR>')
 -- Git manager window
 vim.keymap.set('n', '<c-g>', ':Git<CR>')
 
+-- Settings for indent lines
 require('ibl').setup({
     scope = { enabled = false },
 })
+
+-- Switch header/source
+vim.cmd('autocmd! Filetype c,cpp map<buffer> <C-h> :Ouroboros<CR>')

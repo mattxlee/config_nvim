@@ -15,41 +15,54 @@ require('lazy').setup({
     { 'stevearc/dressing.nvim' },
     { 'editorconfig/editorconfig-vim' },
     { 'echasnovski/mini.nvim', version= '*' },
+    -- Comment code respect the language
     { 'tomtom/tcomment_vim' },
+    -- Highlight the white space with red blocks
     { 'ntpeters/vim-better-whitespace' },
+    -- Switch between h/cpp
+    { 'jakemason/ouroboros', dependencies = { 'nvim-lua/plenary.nvim' } },
+    -- Some extend highlights
     { 'mtdl9/vim-log-highlighting' },
     { 'cfdrake/vim-pbxproj' },
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+    -- Theme
     { 'ellisonleao/gruvbox.nvim' },
+    -- Tree-view explorer
     { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim' } },
+    -- Status line
     { 'nvim-lualine/lualine.nvim' },
+    -- Search and replace special window
     { 'windwp/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
+    -- Huge telescope plugins
     { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+    -- Surround with brackets and etc
     { 'kylechui/nvim-surround' },
+    -- Show indent lines
     { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
+    -- Generate documents from current code
     { 'danymat/neogen', config = true, version = '*' },
-    -- flutter settings
+    -- Flutter settings
     { 'akinsho/flutter-tools.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
     -- Lsp related
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
     { 'neovim/nvim-lspconfig' },
-    -- main complete plugin
+    -- Main complete plugin
     { 'hrsh7th/nvim-cmp' },
-    -- show icons from complete menu
+    -- Show icons from complete menu
     { 'onsails/lspkind.nvim' },
-    -- complete sources
+    -- Complete sources
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-path' },
     { 'hrsh7th/cmp-buffer' },
-    -- make selection with signature selection
+    -- Make selection with signature selection
     { 'hrsh7th/cmp-vsnip' },
     { 'hrsh7th/vim-vsnip' },
-    -- signature help
+    -- Signature help
     { 'hrsh7th/cmp-nvim-lsp-signature-help' },
-    -- inlay hints
+    -- Inlay hints
     { 'lvimuser/lsp-inlayhints.nvim' },
-    -- progress of lsp loading
+    -- Progress of lsp loading
     { 'linrongbin16/lsp-progress.nvim' },
     -- Markdown preview
     {
