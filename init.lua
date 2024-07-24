@@ -19,8 +19,6 @@ require('lazy').setup({
     { 'tomtom/tcomment_vim' },
     -- Highlight the white space with red blocks
     { 'ntpeters/vim-better-whitespace' },
-    -- Switch between h/cpp
-    { 'jakemason/ouroboros', dependencies = { 'nvim-lua/plenary.nvim' } },
     -- Some extend highlights
     { 'mtdl9/vim-log-highlighting' },
     { 'cfdrake/vim-pbxproj' },

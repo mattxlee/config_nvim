@@ -186,4 +186,4 @@ require('ibl').setup({
 })
 
 -- Switch header/source
-vim.cmd('autocmd! Filetype c,cpp map<buffer> <C-h> :Ouroboros<CR>')
+vim.keymap.set('n', '<c-h>', ':ClangdSwitchSourceHeader<CR>')
