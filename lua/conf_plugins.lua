@@ -79,7 +79,7 @@ vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>')
 -- Status bar
 require('lualine').setup({
     options = {
-        icons_enabled = false,
+        icons_enabled = true,
         component_separators = '',
         section_separators = '',
     },
