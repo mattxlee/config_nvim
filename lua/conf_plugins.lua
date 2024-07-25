@@ -28,7 +28,7 @@ vim.cmd('colorscheme gruvbox')
 -- Treesitter for highlighting keywords, functions and etc
 require('nvim-treesitter.configs').setup({
     -- A list of parser names, or 'all'
-    ensure_installed = { 'c', 'lua', 'vim', 'vimdoc', 'query', 'markdown' },
+    ensure_installed = { 'c', 'cpp', 'lua', 'vim', 'vimdoc', 'query', 'markdown' },
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
     -- List of parsers to ignore installing (for 'all')
@@ -43,7 +43,7 @@ require('nvim-treesitter.configs').setup({
         -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
         -- the name of the parser)
         -- list of language that will be disabled
-        disable = { 'cpp' }, -- cpp in treesitter: I've found some incorrect highlighting of some keywords
+        disable = {},
         -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
         -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
         -- Using this option may slow down your editor, and you may see some duplicate highlights.
