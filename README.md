@@ -100,22 +100,22 @@ npm install -g @tailwindcss/language-server
 
 |Shortcut|Command|Comment|
 |-|-|-|
-|<leader>h|Find & replace|Open Spectre to do find and replace|
-|<leader>l|Find cursor word|Open telescope and find cursor word from current workspace|
-|<leader>f|Fuzzy find|Open telescope and find characters from current workspace|
+|`leader`h|Find & replace|Open Spectre to do find and replace|
+|`leader`l|Find cursor word|Open telescope and find cursor word from current workspace|
+|`leader`f|Fuzzy find|Open telescope and find characters from current workspace|
 
 ### Language Server Provider related
 
 |Shortcut|Command|Comment|
 |-|-|-|
-|<leader>g|Find symbol|Find symbol from current workspace|
-|<leader>o|Find symbol from buffer|Find symbol from current buffer|
+|`leader`g|Find symbol|Find symbol from current workspace|
+|`leader`o|Find symbol from buffer|Find symbol from current buffer|
 |gr|Find references|Find references of the symbol from cursor word|
 |]d|Next diagnostics|Jump to next diagnostics which is provided by Lsp|
 |[d|Previous diagnostics|Jump to previous diagnostics which is provided by Lsp|
 |;d|Show diagnostics info.|Show diagnostics info. about the line|
-|<leader>rn|Rename|Rename cursor symbol with popup window|
-|<leader>ca|Code action|Show code action list for current issue|
+|`leader`rn|Rename|Rename cursor symbol with popup window|
+|`leader`ca|Code action|Show code action list for current issue|
 |gh|Show info.|Show code info. of cursor symbol|
 
 ### Completion
@@ -123,48 +123,48 @@ npm install -g @tailwindcss/language-server
 |Shortcut|Command|Comment|
 |-|-|-|
 |tab|Confirm|Select the highlight entry from list|
-|<c-l>|Trigger completion|Show completion list manually|
-|<c-k>|Close completion|Close completion list manually|
-|<c-n>|Select next|Select next entry from completion list|
-|<c-p>|Select previous|Select previous entry from completion list|
-|<c-f>|Next placeholder|Jump to next place holder|
-|<c-b>|Previous placeholder|Jump to previous place holder|
+|`<c-l>`|Trigger completion|Show completion list manually|
+|`<c-k>`|Close completion|Close completion list manually|
+|`<c-n>`|Select next|Select next entry from completion list|
+|`<c-p>`|Select previous|Select previous entry from completion list|
+|`<c-f>`|Next placeholder|Jump to next place holder|
+|`<c-b>`|Previous placeholder|Jump to previous place holder|
 
 ### Move cursor/jumping files
 
 |Shortcut|Command|Comment|
 |-|-|-|
 |gd|Goto definition|Goto definition from cursor word|
-|<c-h>|Switch header/source|Find and switch to the related (header or source), it words only when the type of current buffer is cpp|
-|<c-p>|Jump files|Show file list and jump|
+|`<c-h>`|Switch header/source|Find and switch to the related (header or source), it words only when the type of current buffer is cpp|
+|`<c-p>`|Jump files|Show file list and jump|
 
 ### File explorer
 
 |Shortcut|Command|Comment|
 |-|-|-|
-|<c-j>|Open file explorer|Open file explorer with current file located|
-|<leader>e|Open/Close file explorer|Open or close file explorer|
+|`<c-j>`|Open file explorer|Open file explorer with current file located|
+|`leader`e|Open/Close file explorer|Open or close file explorer|
 
 ### Git related
 
 |Shortcut|Command|Comment|
 |-|-|-|
-|<c-g>|Git status|Show current status of current git repo|
+|`<c-g>`|Git status|Show current status of current git repo|
 |]c|Goto next change|Find and move cursor to next changed hunk|
 |[c|Goto previous change|Find and move cursor to previous changed hunk|
-|<leader>rr|Reset hunk|Restore current changed hunk|
-|<leader>bb|Show blame|Show blame info. of current line|
+|`leader`rr|Reset hunk|Restore current changed hunk|
+|`leader`bb|Show blame|Show blame info. of current line|
 
 ### Code edit
 
 |Shortcut|Command|Comment|
 |-|-|-|
-|<leader>t|Format|Format current buffer with configured formatter|
-|<leader>y|Doc gen.|Generate document from current line|
+|`leader`t|Format|Format current buffer with configured formatter|
+|`leader`y|Doc gen.|Generate document from current line|
 
 ### Misc.
 
 |Shortcut|Command|Comment|
 |-|-|-|
-|<leader>a|Plugin manager|Show plugin manager|
-|<leader>m|Lsp manager|Show manager window of Lsp plugins|
+|`leader`a|Plugin manager|Show plugin manager|
+|`leader`m|Lsp manager|Show manager window of Lsp plugins|
