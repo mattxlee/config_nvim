@@ -61,20 +61,9 @@ vim.filetype.add({
 -- use html parser to parse *.ejs files
 vim.treesitter.language.register('html', 'ejs')
 
--- Tree view from the left draw
-require('neo-tree').setup({
-    close_if_last_window = true,
-    filesystem = {
-        window = {
-            mappings = {
-                ["[c"] = "prev_git_modified",
-                ["]c"] = "next_git_modified"
-            }
-        }
-    }
-})
-vim.keymap.set('n', '<c-j>', ':Neotree reveal<CR>')
-vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>')
+-- Oil shortcut setup
+require('oil').setup()
+vim.keymap.set('n', '<c-j>', ':Oil<CR>')
 
 -- Status bar
 require('lualine').setup({
