@@ -22,8 +22,9 @@ local bdopts = {
 -- setup cmp
 local cmp = require('cmp')
 cmp.setup({
+    preselect = 'none',
     completion = {
-        completeopt = 'menu,menuone,noinsert',
+        completeopt = 'menu,menuone,insert,noselect',
     },
     snippet = {
         expand = function(args)
