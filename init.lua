@@ -99,9 +99,6 @@ vim.o.linebreak = true
 vim.o.breakindent = true
 vim.opt.breakindentopt = { 'shift:8', 'sbr' }
 
--- important to avoid preview items from auto-complete list
-vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
-
 -- open Lazy plugin manager window
 vim.keymap.set('n', '<leader>a', ':Lazy<CR>')
 
