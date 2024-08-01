@@ -71,8 +71,6 @@ require('lazy').setup({
 
 -- common setup --
 vim.cmd('set maxmempattern=2000000')
-vim.cmd('autocmd FileType markdown set breakindentopt=shift:0')
-vim.cmd('autocmd FileType tex set breakindentopt=shift:0')
 
 -- leader key
 vim.g.mapleader = ';'
