@@ -38,7 +38,7 @@ cmp.setup({
     mapping = cmp.mapping.preset.insert({
         ['<c-l>'] = cmp.mapping.complete(),
         ['<c-k>'] = cmp.mapping.abort(),
-        ['<Tab>'] = cmp.mapping.confirm({ select = false }),
+        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
         ['<c-n>'] = cmp.mapping(function(fallback)
             local col = vim.fn.col('.') - 1
             if cmp.visible() then
