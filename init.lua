@@ -39,6 +39,8 @@ require('lazy').setup({
     { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
     -- Generate documents from current code
     { 'danymat/neogen', config = true, version = '*' },
+    -- Zen mode?
+    { 'shortcuts/no-neck-pain.nvim', version = '*' },
     -- Flutter settings
     { 'akinsho/flutter-tools.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
     -- Lsp related
@@ -93,9 +95,6 @@ vim.o.autoindent = true
 vim.o.signcolumn = 'yes'
 
 -- line break settings
-vim.o.linebreak = true
-vim.o.breakindent = true
-vim.opt.breakindentopt = { 'shift:8', 'sbr' }
 
 -- open Lazy plugin manager window
 vim.keymap.set('n', '<leader>a', ':Lazy<CR>')
@@ -126,6 +125,7 @@ vim.keymap.set('n', '<leader>n', ':noh<CR>')
 -- copy to clipboard
 vim.keymap.set('n', '<leader>c', '"*y"')
 
+-- other settings
 require('conf_plugins')
 
 -- load lsp config --

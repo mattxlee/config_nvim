@@ -187,3 +187,23 @@ require('ibl').setup({
 
 -- Switch header/source
 vim.keymap.set('n', '<c-h>', ':ClangdSwitchSourceHeader<CR>')
+
+-- Zen mode for markdown
+require("no-neck-pain").setup({
+    width = 120
+})
+vim.keymap.set('n', '<leader>z', ':NoNeckPain<CR>')
+vim.api.nvim_create_autocmd('BufEnter', {
+    pattern = '*',
+    callback = function ()
+        if (vim.tbl_contains({'text', 'markdown'}, vim.o.filetype)) then
+            -- add your autocmd logic here
+            vim.o.linebreak = false
+            vim.o.breakindent = false
+        else
+            vim.o.linebreak = true
+            vim.o.breakindent = true
+            vim.opt.breakindentopt = { 'shift:8', 'sbr' }
+        end
+    end
+})
