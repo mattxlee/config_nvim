@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
     { 'stevearc/dressing.nvim' },
     { 'editorconfig/editorconfig-vim' },
-    { 'echasnovski/mini.nvim', version= '*' },
     -- Comment code respect the language
     { 'tomtom/tcomment_vim' },
     -- Highlight the white space with red blocks
