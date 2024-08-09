@@ -170,9 +170,6 @@ require('nvim-surround').setup()
 -- Format current doc
 vim.keymap.set('n', '<leader>t', ':Neoformat<CR>')
 
--- Pair with brackets and etc
-require('mini.pairs').setup()
-
 -- Neogen, documents generator settings
 require('neogen').setup({ snippet_engine = 'vsnip' })
 vim.keymap.set('n', '<leader>y', ':Neogen<CR>')
