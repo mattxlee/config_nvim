@@ -49,12 +49,16 @@ require('mason-lspconfig').setup({
   }
 })
 
-vim.cmd [[
-sign define DiagnosticSignError text=  linehl= texthl=DiagnosticSignError numhl=
-sign define DiagnosticSignWarn text= linehl= texthl=DiagnosticSignWarn numhl=
-sign define DiagnosticSignInfo text=  linehl= texthl=DiagnosticSignInfo numhl=
-sign define DiagnosticSignHint text=💡  linehl= texthl=DiagnosticSignHint numhl=
-]]
+vim.diagnostic.config({
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = ' ',
+            [vim.diagnostic.severity.WARN] = ' ',
+            [vim.diagnostic.severity.INFO] = ' ',
+            [vim.diagnostic.severity.HINT] = '💡',
+        }
+    }
+})
 
 -- fix: renaming buffer newer than edits
 vim.lsp.util.apply_text_document_edit = function(text_document_edit, index, offset_encoding)
