@@ -24,7 +24,6 @@ local cmp = require('cmp')
 cmp.setup({
     preselect = 'none',
     completion = {
-        autocomplete = false,
         completeopt = 'menu,menuone,insert,noselect',
     },
     snippet = {
