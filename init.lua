@@ -32,6 +32,7 @@ require('lazy').setup({
     { 'windwp/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
     -- Huge telescope plugins
     { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+    { 'nvim-telescope/telescope-symbols.nvim' },
     -- Surround with brackets and etc
     { 'kylechui/nvim-surround' },
     -- Show indent lines
