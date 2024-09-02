@@ -197,13 +197,13 @@ vim.api.nvim_create_autocmd('BufEnter', {
     pattern = '*',
     callback = function ()
         if (vim.tbl_contains({'text', 'markdown'}, vim.o.filetype)) then
-            -- add your autocmd logic here
-            vim.o.linebreak = false
-            vim.o.breakindent = false
+            vim.o.linebreak = true
+            vim.o.breakindent = true
+            vim.opt.breakindentopt = { 'shift:0', 'sbr' }
         else
             vim.o.linebreak = true
             vim.o.breakindent = true
-            vim.opt.breakindentopt = { 'shift:8', 'sbr' }
+            vim.opt.breakindentopt = { 'shift:4', 'sbr' }
         end
     end
 })
