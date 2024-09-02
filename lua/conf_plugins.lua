@@ -190,7 +190,7 @@ vim.keymap.set('n', '<c-h>', ':ClangdSwitchSourceHeader<CR>')
 
 -- Zen mode for markdown
 require("no-neck-pain").setup({
-    width = 120
+    width = 200
 })
 vim.keymap.set('n', '<leader>z', ':NoNeckPain<CR>')
 vim.api.nvim_create_autocmd('BufEnter', {
