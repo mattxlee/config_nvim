@@ -25,7 +25,7 @@ require('lazy').setup({
     -- Theme
     { 'ellisonleao/gruvbox.nvim' },
     -- Tree-view explorer
-    { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim', 'nvim-tree/nvim-web-devicons', 'MunifTanjim/nui.nvim' } },
+    { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim' } },
     -- Status line
     { 'nvim-lualine/lualine.nvim' },
     -- Search and replace special window
