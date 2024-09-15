@@ -73,7 +73,7 @@ require('lazy').setup({
 
 -- common setup --
 vim.cmd('set maxmempattern=2000000')
-vim.cmd('filetype indent off')
+vim.cmd('filetype indent on')
 
 -- leader key
 vim.g.mapleader = ';'
