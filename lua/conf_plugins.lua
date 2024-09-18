@@ -178,6 +178,17 @@ require('neogen').setup({ snippet_engine = 'vsnip' })
 vim.keymap.set('n', '<leader>y', ':Neogen<CR>')
 
 -- Git manager window
+vim.cmd[[
+function! s:close_gstatus()
+	for l:winnr in range(1, winnr('$'))
+		if !empty(getwinvar(l:winnr, 'fugitive_status'))
+			execute l:winnr.'close'
+		endif
+	endfor
+endfunction
+command! GstatusClose call s:close_gstatus()
+]]
+vim.keymap.set('n', '<leader>q', ':GstatusClose<CR>')
 vim.keymap.set('n', '<c-g>', ':Git<CR>')
 
 -- Settings for indent lines
