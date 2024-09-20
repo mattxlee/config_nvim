@@ -12,7 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    { 'stevearc/dressing.nvim' },
     { 'editorconfig/editorconfig-vim' },
     -- Comment code respect the language
     { 'tomtom/tcomment_vim' },
