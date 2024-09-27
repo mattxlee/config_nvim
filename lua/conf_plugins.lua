@@ -169,7 +169,7 @@ vim.keymap.set('n', 'gr', function()
     builtin.lsp_references(require('telescope.themes').get_cursor({ previewer = false }))
 end)
 vim.keymap.set('n', '<leader>e', function()
-    require('telescope.builtin').symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }
+    require('telescope.builtin').symbols(require('telescope.themes').get_cursor({ previewer = false, sources = {'emoji', 'kaomoji', 'gitmoji'} }))
 end)
 vim.cmd('highlight link TelescopeSelection PmenuSel')
 vim.cmd('highlight link TelescopeMatching GruvboxYellow')
