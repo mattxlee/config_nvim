@@ -32,6 +32,7 @@ require('lazy').setup({
     -- Huge telescope plugins
     { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
     { 'nvim-telescope/telescope-symbols.nvim' },
+    { 'nvim-telescope/telescope-ui-select.nvim' },
     -- Surround with brackets and etc
     { 'kylechui/nvim-surround' },
     -- Show indent lines

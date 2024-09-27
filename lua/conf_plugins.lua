@@ -133,6 +133,11 @@ end)
 -- Telescope settings
 local actions = require('telescope.actions')
 require('telescope').setup({
+    extensions = {
+        ['ui-select'] = {
+            require('telescope.themes').get_cursor({ previewer = false })
+        },
+    },
     defaults = {
         mappings = {
             i = {
@@ -142,6 +147,8 @@ require('telescope').setup({
         }
     },
 })
+require('telescope').load_extension('ui-select')
+
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<c-p>', function()
     builtin.find_files(require('telescope.themes').get_cursor({ previewer = false }))
