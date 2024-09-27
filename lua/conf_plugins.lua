@@ -171,6 +171,7 @@ end)
 vim.keymap.set('n', '<leader>e', function()
     require('telescope.builtin').symbols(require('telescope.themes').get_cursor({ previewer = false, sources = {'emoji', 'kaomoji', 'gitmoji'} }))
 end)
+-- Fix the color and highlights from telescope dialogs.
 vim.cmd('highlight link TelescopeSelection PmenuSel')
 vim.cmd('highlight link TelescopeMatching GruvboxYellow')
 vim.cmd('highlight SignColumn guibg=0')
