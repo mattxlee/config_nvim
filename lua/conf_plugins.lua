@@ -198,7 +198,6 @@ endfunction
 command! GstatusClose call s:close_gstatus()
 ]]
 vim.keymap.set('n', '<leader>q', ':GstatusClose<CR>')
-vim.keymap.set('n', '<c-g>', ':Git<CR>')
 
 -- Settings for indent lines
 require('ibl').setup({
