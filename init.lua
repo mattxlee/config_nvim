@@ -24,13 +24,13 @@ require('lazy').setup({
     -- Theme
     { 'ellisonleao/gruvbox.nvim' },
     -- Tree-view explorer
-    { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim' } },
+    { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim', 'nvim-tree/nvim-web-devicons' } },
     -- Status line
-    { 'nvim-lualine/lualine.nvim' },
+    { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
     -- Search and replace special window
     { 'windwp/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
     -- Huge telescope plugins
-    { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+    { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim', 'nvim-tree/nvim-web-devicons' } },
     { 'nvim-telescope/telescope-symbols.nvim' },
     { 'nvim-telescope/telescope-ui-select.nvim' },
     -- Surround with brackets and etc
