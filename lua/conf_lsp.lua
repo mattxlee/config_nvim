@@ -160,7 +160,7 @@ require('lsp-progress').setup()
 
 local format_current_buffer = function()
   vim.lsp.buf.format({
-    async = true,
+    async = false,
     timeout_ms = 10000,
   })
 end
