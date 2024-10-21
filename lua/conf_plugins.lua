@@ -179,9 +179,6 @@ vim.cmd('highlight SignColumn guibg=0')
 -- Surround settings
 require('nvim-surround').setup()
 
--- Format current doc
-vim.keymap.set('n', '<leader>t', ':Neoformat<CR>')
-
 -- Neogen, documents generator settings
 require('neogen').setup({ snippet_engine = 'luasnip' })
 vim.keymap.set('n', '<leader>y', ':Neogen<CR>')

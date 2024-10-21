@@ -69,8 +69,6 @@ require('lazy').setup({
     { 'lvimuser/lsp-inlayhints.nvim' },
     -- Progress of lsp loading
     { 'linrongbin16/lsp-progress.nvim' },
-    -- Format document
-    { 'sbdchd/neoformat' },
     -- Git related plugins
     { 'lewis6991/gitsigns.nvim' },
     {

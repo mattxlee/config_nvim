@@ -153,11 +153,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 require('lsp-progress').setup()
 
+-- Format current doc
 local format_current_buffer = function()
   vim.lsp.buf.format({
-    async = false,
+    async = true,
     timeout_ms = 10000,
   })
 end
+vim.keymap.set('n', '<leader>t', format_current_buffer)
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>u', ':LspRestart<CR>')
