@@ -54,7 +54,6 @@ require('lazy').setup({
     -- Complete sources
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-path' },
-    { 'hrsh7th/cmp-buffer' },
     -- Make selection with signature selection
     {
         "L3MON4D3/LuaSnip",
