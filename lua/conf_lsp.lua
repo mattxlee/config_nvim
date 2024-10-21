@@ -20,11 +20,12 @@ local bdopts = {
 }
 
 -- setup cmp
+local luasnip = require('luasnip')
 local cmp = require('cmp')
 cmp.setup({
     preselect = 'none',
     completion = {
-        completeopt = 'menu,menuone,insert,noselect',
+        completeopt = 'menu,menuone,preview,noinsert,select',
     },
     snippet = {
         expand = function(args)
@@ -38,9 +39,11 @@ cmp.setup({
     mapping = cmp.mapping.preset.insert({
         ['<c-l>'] = cmp.mapping.complete(),
         ['<c-k>'] = cmp.mapping.abort(),
-        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
-        ['<c-n>'] = cmp.mapping(function(fallback)
-            local col = vim.fn.col('.') - 1
+        ['<Tab>'] = cmp.mapping.confirm({
+            select = true
+        }),
+        ['<c-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+        ['<c-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
         ['<c-f>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
