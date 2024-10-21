@@ -28,7 +28,7 @@ cmp.setup({
     },
     snippet = {
         expand = function(args)
-            vim.fn['vsnip#anonymous'](args.body)
+            luasnip.lsp_expand(args.body)
         end
     },
     window = {
@@ -41,38 +41,30 @@ cmp.setup({
         ['<Tab>'] = cmp.mapping.confirm({ select = true }),
         ['<c-n>'] = cmp.mapping(function(fallback)
             local col = vim.fn.col('.') - 1
-            if cmp.visible() then
-                cmp.select_next_item(select_opts)
-            elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-                fallback()
-            else
-                cmp.complete()
-            end
-        end, {'i', 's'}),
-        ['<c-p>'] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-                cmp.select_prev_item(select_opts)
-            else
-                fallback()
-            end
-        end, {'i', 's'}),
         ['<c-f>'] = cmp.mapping(function(fallback)
-            if vim.fn['vsnip#available'](1) == 1 then
-                feedkey('<Plug>(vsnip-expand-or-jump)', '')
+            if cmp.visible() then
+                cmp.select_next_item()
+            elseif luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
             else
-                fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
+                fallback()
             end
-        end, {'i', 's'}),
-        ['<c-b>'] = cmp.mapping(function()
-            if vim.fn['vsnip#jumpable'](-1) == 1 then
-                feedkey('<Plug>(vsnip-jump-prev)', '')
+        end, { 'i', 's' }),
+
+        ['<c-b>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_prev_item()
+            elseif luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+            else
+                fallback()
             end
-        end, {'i', 's'})
+        end, { 'i', 's' }),
     }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'nvim_lsp_signature_help' },
-        { name = 'vsnip' },
+        { name = 'luasnip' },
         { name = 'path' },
         {
             name = 'buffer',

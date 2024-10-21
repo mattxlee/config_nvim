@@ -183,7 +183,7 @@ require('nvim-surround').setup()
 vim.keymap.set('n', '<leader>t', ':Neoformat<CR>')
 
 -- Neogen, documents generator settings
-require('neogen').setup({ snippet_engine = 'vsnip' })
+require('neogen').setup({ snippet_engine = 'luasnip' })
 vim.keymap.set('n', '<leader>y', ':Neogen<CR>')
 
 -- Settings for indent lines
