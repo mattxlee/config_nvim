@@ -64,8 +64,6 @@ require('lazy').setup({
     },
     -- Signature help
     { 'hrsh7th/cmp-nvim-lsp-signature-help' },
-    -- Inlay hints
-    { 'lvimuser/lsp-inlayhints.nvim' },
     -- Progress of lsp loading
     { 'linrongbin16/lsp-progress.nvim' },
     -- Git related plugins
