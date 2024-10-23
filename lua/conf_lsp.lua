@@ -104,4 +104,3 @@ local format_current_buffer = function()
 end
 vim.keymap.set('n', '<leader>t', format_current_buffer)
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>u', ':LspRestart<CR>')
