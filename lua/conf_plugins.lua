@@ -75,7 +75,7 @@ require('neo-tree').setup({
     }
 })
 vim.keymap.set('n', '<c-j>', ':Neotree reveal<CR>')
-vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>')
+vim.keymap.set('n', '<leader>b', ':Neotree toggle<CR>')
 
 -- Status bar
 require('lualine').setup({
@@ -118,7 +118,6 @@ require('gitsigns').setup({
             return '<Ignore>'
         end, {expr=true})
         map('n', '<leader>rr', gs.reset_hunk)
-        map('n', '<leader>bb', function() gs.blame_line{full=true} end)
     end
 })
 
