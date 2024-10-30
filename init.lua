@@ -37,8 +37,6 @@ require('lazy').setup({
     { 'kylechui/nvim-surround' },
     -- Show indent lines
     { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
-    -- Generate documents from current code
-    { 'danymat/neogen', config = true, version = '*' },
     -- Zen mode?
     { 'shortcuts/no-neck-pain.nvim', version = '*' },
     -- Flutter settings

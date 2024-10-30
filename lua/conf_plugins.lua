@@ -178,10 +178,6 @@ vim.cmd('highlight SignColumn guibg=0')
 -- Surround settings
 require('nvim-surround').setup()
 
--- Neogen, documents generator settings
-require('neogen').setup({ snippet_engine = 'luasnip' })
-vim.keymap.set('n', '<leader>y', ':Neogen<CR>')
-
 -- Settings for indent lines
 require('ibl').setup({
     scope = { enabled = false },
