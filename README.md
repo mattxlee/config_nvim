@@ -143,7 +143,7 @@ npm install -g @tailwindcss/language-server
 |Shortcut|Command|Comment|
 |-|-|-|
 |`<c-j>`|Open file explorer|Open file explorer with current file located|
-|`leader`e|Open/Close file explorer|Open or close file explorer|
+|`leader`b|Open/Close file explorer|Open or close file explorer|
 
 ### Git related
 
@@ -153,14 +153,12 @@ npm install -g @tailwindcss/language-server
 |]c|Goto next change|Find and move cursor to next changed hunk|
 |[c|Goto previous change|Find and move cursor to previous changed hunk|
 |`leader`rr|Reset hunk|Restore current changed hunk|
-|`leader`bb|Show blame|Show blame info. of current line|
 
 ### Code edit
 
 |Shortcut|Command|Comment|
 |-|-|-|
 |`leader`t|Format|Format current buffer with configured formatter|
-|`leader`y|Doc gen.|Generate document from current line|
 
 ### Misc.
 
