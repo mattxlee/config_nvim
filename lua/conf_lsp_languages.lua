@@ -71,3 +71,14 @@ vim.lsp.util.apply_text_document_edit = function(text_document_edit, index, offs
     end
     vim.lsp.util.apply_text_edits(text_document_edit.edits, bufnr, offset_encoding)
 end
+
+-- workaround: ignore ServerCancelled error
+for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do
+    local default_diagnostic_handler = vim.lsp.handlers[method]
+    vim.lsp.handlers[method] = function(err, result, context, config)
+        if err ~= nil and err.code == -32802 then
+            return
+        end
+        return default_diagnostic_handler(err, result, context, config)
+    end
+end
