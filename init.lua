@@ -111,8 +111,6 @@ vim.o.smartindent = false
 vim.o.autoindent = true
 vim.o.signcolumn = 'yes'
 
--- line break settings
-
 -- open Lazy plugin manager window
 vim.keymap.set('n', '<leader>a', ':Lazy<CR>')
 
