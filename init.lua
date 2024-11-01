@@ -109,6 +109,7 @@ vim.o.number = true
 vim.o.cursorline = true
 vim.o.smartindent = false
 vim.o.autoindent = true
+vim.o.linebreak = true
 vim.o.signcolumn = 'yes'
 
 -- open Lazy plugin manager window
