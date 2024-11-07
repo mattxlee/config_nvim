@@ -16,7 +16,7 @@ end
 local _border = 'rounded'
 local bdopts = {
     border = _border,
-    winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
+    winhighlight = 'Normal:Pmenu,CursorLine:PmenuSel,Search:None',
 }
 
 -- setup cmp
@@ -78,6 +78,11 @@ cmp.setup({
 -- border for lsp info
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
     vim.lsp.handlers.hover, { border = _border }
+)
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+    vim.lsp.handlers.signature_help, {
+        border = _border
+    }
 )
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {

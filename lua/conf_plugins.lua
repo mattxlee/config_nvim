@@ -174,6 +174,7 @@ end)
 vim.cmd('highlight link TelescopeSelection PmenuSel')
 vim.cmd('highlight link TelescopeMatching GruvboxYellow')
 vim.cmd('highlight SignColumn guibg=0')
+vim.cmd('highlight Pmenu guibg=#3c3836')
 
 -- Surround settings
 require('nvim-surround').setup()
