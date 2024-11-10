@@ -39,6 +39,16 @@ require('lazy').setup({
     { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
     -- Zen mode?
     { 'shortcuts/no-neck-pain.nvim', version = '*' },
+    -- Markdown preview
+    {
+        'iamcco/markdown-preview.nvim',
+        cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
+        build = 'cd app && yarn install',
+        init = function()
+            vim.g.mkdp_filetypes = { 'markdown' }
+        end,
+        ft = { 'markdown' },
+    },
     -- Flutter settings
     { 'akinsho/flutter-tools.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
     -- Lsp related

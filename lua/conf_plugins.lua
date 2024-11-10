@@ -206,3 +206,6 @@ vim.api.nvim_create_autocmd('BufEnter', {
         end
     end
 })
+
+-- Settings for Markdown preview
+vim.g.mkdp_auto_close = 0
