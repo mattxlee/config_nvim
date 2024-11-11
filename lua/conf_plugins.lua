@@ -121,6 +121,9 @@ require('gitsigns').setup({
     end
 })
 
+-- Fugitive
+vim.keymap.set('n', '<c-g>', ':Git<CR>')
+
 -- Find and replace in files
 require('spectre').setup({
     open_cmd = 'new',
