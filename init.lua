@@ -64,11 +64,11 @@ require('lazy').setup({
     { 'hrsh7th/cmp-path' },
     -- Make selection with signature selection
     {
-        "L3MON4D3/LuaSnip",
+        'L3MON4D3/LuaSnip',
         -- follow latest release.
-        version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        version = 'v2.*', -- Replace <CurrentMajor> by the latest released major (first number of latest release)
         -- install jsregexp (optional!).
-        build = "make install_jsregexp"
+        build = 'make install_jsregexp'
     },
     -- Signature help
     { 'hrsh7th/cmp-nvim-lsp-signature-help' },
