@@ -84,6 +84,9 @@ require('lazy').setup({
 vim.cmd('set maxmempattern=2000000')
 vim.cmd('filetype indent on')
 
+vim.cmd('autocmd InsertEnter * :set nocursorline')
+vim.cmd('autocmd InsertLeave * :set cursorline')
+
 -- leader key
 vim.g.mapleader = ';'
 
@@ -99,7 +102,7 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.number = true
-vim.o.cursorline = false
+vim.o.cursorline = true
 vim.o.smartindent = false
 vim.o.autoindent = true
 vim.o.linebreak = true
