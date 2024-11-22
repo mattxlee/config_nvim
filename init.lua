@@ -101,8 +101,8 @@ require('lazy').setup({
             local notify = require('notify')
             notify.setup({
                 render = 'wrapped-compact',
-                stages = 'static', -- <==== This is the workaround
-                timeout = 10000,
+                stages = 'static',
+                timeout = 3000,
             })
             vim.notify = notify
         end,
