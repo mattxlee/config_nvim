@@ -87,8 +87,18 @@ vim.cmd('filetype indent on')
 vim.cmd('autocmd InsertEnter * set nocursorline')
 vim.cmd('autocmd InsertLeave * set cursorline')
 
--- Markdown special command 'set breakat'
-vim.cmd('autocmd FileType markdown set breakat= nobreakindent')
+vim.api.nvim_create_autocmd('BufEnter', {
+    callback = function()
+        local filetype = vim.bo.filetype
+        if filetype == 'markdown' then
+            -- vim.bo.breakat = ''
+            vim.api.nvim_set_option_value('breakat', '', { scope = 'local' })
+        else
+            -- vim.bo.breakat = ' ^I!@*-+;:,./?'
+            vim.api.nvim_set_option_value('breakat', ' \t!@*-+;:,./?', { scope = 'local' })
+        end
+    end,
+})
 
 -- leader key
 vim.g.mapleader = ';'
