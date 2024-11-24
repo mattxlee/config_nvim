@@ -84,8 +84,8 @@ require('lazy').setup({
 vim.cmd('set maxmempattern=2000000')
 vim.cmd('filetype indent on')
 
-vim.cmd('autocmd InsertEnter * :set nocursorline')
-vim.cmd('autocmd InsertLeave * :set cursorline')
+vim.cmd('autocmd InsertEnter * set nocursorline')
+vim.cmd('autocmd InsertLeave * set cursorline')
 
 -- Markdown special command 'set breakat'
 vim.cmd('autocmd FileType markdown set breakat= nobreakindent')
