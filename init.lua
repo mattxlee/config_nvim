@@ -87,6 +87,9 @@ vim.cmd('filetype indent on')
 vim.cmd('autocmd InsertEnter * :set nocursorline')
 vim.cmd('autocmd InsertLeave * :set cursorline')
 
+-- Markdown special command 'set breakat'
+vim.cmd('autocmd FileType markdown set breakat= nobreakindent')
+
 -- leader key
 vim.g.mapleader = ';'
 
