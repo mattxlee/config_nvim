@@ -39,7 +39,6 @@ cmp.setup({
         },
     },
     completion = {
-        autocomplete = false,
         completeopt = 'menu,menuone,preview,noinsert,select',
     },
     snippet = {
@@ -79,7 +78,6 @@ cmp.setup({
         { name = 'nvim_lsp_signature_help', priority = 200 },
         { name = 'nvim_lsp', priority = 90 },
         { name = 'path', priority = 20 },
-        { name = 'buffer', priority = 10 },
         { name = 'luasnip', priority = 3 },
         { name = 'emoji', priority = 1 },
     }),
