@@ -23,7 +23,21 @@ local bdopts = {
 local luasnip = require('luasnip')
 local cmp = require('cmp')
 cmp.setup({
-    preselect = 'none',
+    preselect = cmp.PreselectMode.None,
+    sorting = {
+        priority_weight = 100,
+        comparators = {
+            cmp.config.compare.locality,
+            cmp.config.compare.offset,
+            cmp.config.compare.score,
+            cmp.config.compare.recently_used,
+            cmp.config.compare.order,
+            -- cmp.config.compare.exact,
+            -- cmd.config.compare.kind,
+            -- cmp.config.compare.sort_text,
+            -- cmp.config.compare.length,
+        },
+    },
     completion = {
         completeopt = 'menu,menuone,preview,noinsert,select',
     },
@@ -61,10 +75,12 @@ cmp.setup({
         end, { 'i', 's' }),
     }),
     sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
-        { name = 'nvim_lsp_signature_help' },
-        { name = 'luasnip' },
-        { name = 'path' },
+        { name = 'nvim_lsp_signature_help', priority = 200 },
+        { name = 'nvim_lsp', priority = 90 },
+        { name = 'path', priority = 20 },
+        { name = 'buffer', priority = 10 },
+        { name = 'luasnip', priority = 3 },
+        { name = 'emoji', priority = 1 },
     }),
     formatting = {
         format = require('lspkind').cmp_format({

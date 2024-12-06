@@ -25,6 +25,10 @@ require('lazy').setup({
     { 'ellisonleao/gruvbox.nvim' },
     -- Tree-view explorer
     { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim', 'nvim-tree/nvim-web-devicons' } },
+    -- Git related plugins
+    { 'lewis6991/gitsigns.nvim' },
+    -- Fugitive
+    { 'tpope/vim-fugitive' },
     -- Status line
     { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
     -- Search and replace special window
@@ -56,28 +60,24 @@ require('lazy').setup({
     { 'williamboman/mason-lspconfig.nvim' },
     { 'neovim/nvim-lspconfig' },
     -- Main complete plugin
-    { 'hrsh7th/nvim-cmp' },
-    -- Show icons from complete menu
-    { 'onsails/lspkind.nvim' },
-    -- Complete sources
-    { 'hrsh7th/cmp-nvim-lsp' },
-    { 'hrsh7th/cmp-path' },
-    -- Make selection with signature selection
     {
-        'L3MON4D3/LuaSnip',
-        -- follow latest release.
-        version = 'v2.*', -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-        -- install jsregexp (optional!).
-        build = 'make install_jsregexp'
+        'hrsh7th/nvim-cmp',
+        dependencies = {
+            -- Show icons from complete menu
+            { 'onsails/lspkind.nvim' },
+            -- Complete sources
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'hrsh7th/cmp-path' },
+            { 'hrsh7th/cmp-buffer' },
+            { 'hrsh7th/cmp-emoji' },
+            -- Make selection with signature selection
+            { 'L3MON4D3/LuaSnip', build = 'make install_jsregexp' },
+            -- Signature help
+            { 'hrsh7th/cmp-nvim-lsp-signature-help' },
+            -- Progress of lsp loading
+            { 'linrongbin16/lsp-progress.nvim' },
+        },
     },
-    -- Signature help
-    { 'hrsh7th/cmp-nvim-lsp-signature-help' },
-    -- Progress of lsp loading
-    { 'linrongbin16/lsp-progress.nvim' },
-    -- Git related plugins
-    { 'lewis6991/gitsigns.nvim' },
-    -- Fugitive
-    { 'tpope/vim-fugitive' },
 })
 
 -- common setup --
