@@ -53,6 +53,13 @@ require('lazy').setup({
         end,
         ft = { 'markdown' },
     },
+    {
+        'windwp/nvim-autopairs',
+        event = 'InsertEnter',
+        config = true
+        -- use opts = {} for passing setup options
+        -- this is equivalent to setup({}) function
+    },
     -- Flutter settings
     { 'akinsho/flutter-tools.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
     -- Lsp related
