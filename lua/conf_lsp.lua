@@ -24,21 +24,8 @@ local luasnip = require('luasnip')
 local cmp = require('cmp')
 cmp.setup({
     preselect = cmp.PreselectMode.None,
-    sorting = {
-        priority_weight = 100,
-        comparators = {
-            cmp.config.compare.locality,
-            cmp.config.compare.score,
-            cmp.config.compare.exact,
-            cmp.config.compare.offset,
-            cmp.config.compare.recently_used,
-            cmp.config.compare.order,
-            -- cmd.config.compare.kind,
-            -- cmp.config.compare.sort_text,
-            -- cmp.config.compare.length,
-        },
-    },
     completion = {
+        autocomplete = false,
         completeopt = 'menu,menuone,preview,noinsert,select',
     },
     snippet = {
@@ -77,7 +64,6 @@ cmp.setup({
     sources = cmp.config.sources({
         { name = 'nvim_lsp_signature_help', priority = 200 },
         { name = 'nvim_lsp', priority = 90 },
-        { name = 'buffer', priority = 50 },
         { name = 'path', priority = 20 },
         { name = 'luasnip', priority = 3 },
         { name = 'emoji', priority = 1 },
