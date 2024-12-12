@@ -25,8 +25,7 @@ local cmp = require('cmp')
 cmp.setup({
     preselect = cmp.PreselectMode.None,
     completion = {
-        autocomplete = false,
-        completeopt = 'menu,menuone,preview,noinsert,select',
+        completeopt = 'menu,menuone,preview,noinsert,noselect',
     },
     snippet = {
         expand = function(args)
@@ -41,7 +40,8 @@ cmp.setup({
         ['<c-l>'] = cmp.mapping.complete(),
         ['<c-k>'] = cmp.mapping.abort(),
         ['<Tab>'] = cmp.mapping.confirm({
-            select = true
+            select = false,
+            behavior = cmp.ConfirmBehavior.Insert,
         }),
         ['<c-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
         ['<c-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
@@ -63,10 +63,10 @@ cmp.setup({
     }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp_signature_help', priority = 200 },
-        { name = 'nvim_lsp', priority = 90 },
-        { name = 'path', priority = 20 },
-        { name = 'luasnip', priority = 3 },
-        { name = 'emoji', priority = 1 },
+        { name = 'nvim_lsp', priority = 150 },
+        { name = 'luasnip', priority = 100 },
+        { name = 'path', priority = 70 },
+        { name = 'buffer', priority = 50 },
     }),
     formatting = {
         format = require('lspkind').cmp_format({
