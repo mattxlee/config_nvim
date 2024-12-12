@@ -41,8 +41,6 @@ require('lazy').setup({
     { 'kylechui/nvim-surround' },
     -- Show indent lines
     { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
-    -- Zen mode?
-    { 'shortcuts/no-neck-pain.nvim', version = '*' },
     -- Markdown preview
     {
         'iamcco/markdown-preview.nvim',

@@ -190,11 +190,7 @@ require('ibl').setup({
 -- Switch header/source
 vim.keymap.set('n', '<c-h>', ':ClangdSwitchSourceHeader<CR>')
 
--- Zen mode for markdown
-require("no-neck-pain").setup({
-    width = 100
-})
-vim.keymap.set('n', '<leader>z', ':NoNeckPain<CR>')
+-- Set markdown line-break mode.
 vim.api.nvim_create_autocmd('BufEnter', {
     pattern = '*',
     callback = function ()
