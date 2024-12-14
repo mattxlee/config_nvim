@@ -82,6 +82,20 @@ require('lazy').setup({
             { 'linrongbin16/lsp-progress.nvim' },
         },
     },
+    {
+        "Isrothy/neominimap.nvim",
+        version = "v3.*.*",
+        enabled = true,
+        lazy = false, -- NOTE: NO NEED to Lazy load
+        -- Optional
+        keys = {
+        },
+        init = function()
+            vim.g.neominimap = {
+                auto_enable = true,
+            }
+        end,
+    }
 })
 
 -- common setup --
