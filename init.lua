@@ -93,6 +93,16 @@ require('lazy').setup({
         init = function()
             vim.g.neominimap = {
                 auto_enable = true,
+                layout = 'float',
+                float = {
+                    max_minimap_width = 36,
+                },
+                search = {
+                    enabled = true,
+                },
+                mark = {
+                    enabled = true,
+                },
             }
         end,
     }
