@@ -220,12 +220,18 @@ cmp.event:on(
 
 -- Minimap
 local MiniMap = require 'mini.map'
+local diagnostic_integration = MiniMap.gen_integration.diagnostic({
+    error = 'DiagnosticFloatingError',
+    warn  = 'DiagnosticFloatingWarn',
+    info  = 'DiagnosticFloatingInfo',
+    hint  = 'DiagnosticFloatingHint',
+})
 MiniMap.setup {
     integrations = {
         MiniMap.gen_integration.builtin_search(),
         MiniMap.gen_integration.diff(),
-        MiniMap.gen_integration.diagnostic(),
         MiniMap.gen_integration.gitsigns(),
+        diagnostic_integration,
     },
     symbols = {
         encode = MiniMap.gen_encode_symbols.dot '4x2',
