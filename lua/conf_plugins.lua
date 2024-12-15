@@ -203,6 +203,7 @@ vim.api.nvim_create_autocmd('BufEnter', {
             vim.o.breakindent = true
             vim.opt.breakindentopt = { 'shift:4', 'sbr' }
         end
+        MiniMap.open()
     end
 })
 
@@ -216,3 +217,37 @@ cmp.event:on(
     'confirm_done',
     cmp_autopairs.on_confirm_done()
 )
+
+-- Minimap
+local MiniMap = require 'mini.map'
+MiniMap.setup {
+    integrations = {
+        MiniMap.gen_integration.builtin_search(),
+        MiniMap.gen_integration.diff(),
+        MiniMap.gen_integration.diagnostic(),
+        MiniMap.gen_integration.gitsigns(),
+    },
+    symbols = {
+        encode = MiniMap.gen_encode_symbols.dot '4x2',
+    },
+}
+
+vim.api.nvim_create_autocmd('VimEnter', {
+    callback = MiniMap.open,
+})
+
+vim.api.nvim_create_autocmd('WinClosed', {
+    callback = MiniMap.refresh,
+})
+
+vim.api.nvim_create_autocmd({'CursorHold', 'CursorHoldI'}, {
+    callback = function()
+        local _, col = unpack(vim.api.nvim_win_get_cursor(0))
+        local width = vim.api.nvim_win_get_width(0)
+        if width - col < 20 then
+            MiniMap.close()
+        else
+            MiniMap.open()
+        end
+    end,
+})
