@@ -95,7 +95,8 @@ require('lazy').setup({
                 auto_enable = true,
                 layout = 'float',
                 float = {
-                    max_minimap_width = 36,
+                    minimap_width = 5,
+                    window_border = '',
                 },
                 search = {
                     enabled = true,
