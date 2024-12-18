@@ -82,6 +82,7 @@ require('lazy').setup({
             { 'linrongbin16/lsp-progress.nvim' },
         },
     },
+    { 'folke/todo-comments.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
     { 'echasnovski/mini.map', version = false },
 })
 

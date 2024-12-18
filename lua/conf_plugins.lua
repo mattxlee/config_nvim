@@ -68,8 +68,8 @@ require('neo-tree').setup({
     filesystem = {
         window = {
             mappings = {
-                ["[c"] = "prev_git_modified",
-                ["]c"] = "next_git_modified"
+                ['[c'] = 'prev_git_modified',
+                [']c'] = 'next_git_modified'
             }
         }
     }
@@ -257,3 +257,16 @@ vim.api.nvim_create_autocmd({'CursorHold', 'CursorHoldI'}, {
         end
     end,
 })
+
+-- TODO
+require('todo-comments').setup()
+
+vim.keymap.set('n', ']t', function()
+    require('todo-comments').jump_next()
+end, { desc = 'Next todo comment' })
+
+vim.keymap.set('n', '[t', function()
+    require('todo-comments').jump_prev()
+end, { desc = 'Previous todo comment' })
+
+vim.keymap.set('n', '<leader>t', ':TodoQuickFix<CR>')

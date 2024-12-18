@@ -95,7 +95,7 @@ local format_current_buffer = function()
     timeout_ms = 10000,
   })
 end
-vim.keymap.set('n', '<leader>t', format_current_buffer)
+vim.keymap.set('n', '<leader>i', format_current_buffer)
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
 
 -- Create an autocommand for when LSP attaches to a buffer
