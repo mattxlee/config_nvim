@@ -83,7 +83,7 @@ require('lazy').setup({
         },
     },
     { 'folke/todo-comments.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
-    { 'echasnovski/mini.map', version = false },
+    { 'lewis6991/satellite.nvim' },
 })
 
 -- common setup --

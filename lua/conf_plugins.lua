@@ -203,7 +203,6 @@ vim.api.nvim_create_autocmd('BufEnter', {
             vim.o.breakindent = true
             vim.opt.breakindentopt = { 'shift:4', 'sbr' }
         end
-        MiniMap.open()
     end
 })
 
@@ -218,46 +217,6 @@ cmp.event:on(
     cmp_autopairs.on_confirm_done()
 )
 
--- Minimap
-local MiniMap = require 'mini.map'
-local diagnostic_integration = MiniMap.gen_integration.diagnostic({
-    error = 'DiagnosticFloatingError',
-    warn  = 'DiagnosticFloatingWarn',
-    info  = 'DiagnosticFloatingInfo',
-    hint  = 'DiagnosticFloatingHint',
-})
-MiniMap.setup {
-    integrations = {
-        MiniMap.gen_integration.builtin_search(),
-        MiniMap.gen_integration.diff(),
-        MiniMap.gen_integration.gitsigns(),
-        diagnostic_integration,
-    },
-    symbols = {
-        encode = MiniMap.gen_encode_symbols.dot '4x2',
-    },
-}
-
-vim.api.nvim_create_autocmd('VimEnter', {
-    callback = MiniMap.open,
-})
-
-vim.api.nvim_create_autocmd('WinClosed', {
-    callback = MiniMap.refresh,
-})
-
-vim.api.nvim_create_autocmd({'CursorHold', 'CursorHoldI'}, {
-    callback = function()
-        local _, col = unpack(vim.api.nvim_win_get_cursor(0))
-        local width = vim.api.nvim_win_get_width(0)
-        if width - col < 20 then
-            MiniMap.close()
-        else
-            MiniMap.open()
-        end
-    end,
-})
-
 -- TODO
 require('todo-comments').setup()
 
@@ -270,3 +229,6 @@ vim.keymap.set('n', '[t', function()
 end, { desc = 'Previous todo comment' })
 
 vim.keymap.set('n', '<leader>t', ':TodoQuickFix<CR>')
+
+-- Scrollbar
+require('satellite').setup()
