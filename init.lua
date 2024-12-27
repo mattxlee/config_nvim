@@ -41,16 +41,6 @@ require('lazy').setup({
     { 'kylechui/nvim-surround' },
     -- Show indent lines
     { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
-    -- Markdown preview
-    {
-        'iamcco/markdown-preview.nvim',
-        cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
-        build = 'cd app && yarn install',
-        init = function()
-            vim.g.mkdp_filetypes = { 'markdown' }
-        end,
-        ft = { 'markdown' },
-    },
     {
         'windwp/nvim-autopairs',
         event = 'InsertEnter',

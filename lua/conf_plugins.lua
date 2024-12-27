@@ -206,9 +206,6 @@ vim.api.nvim_create_autocmd('BufEnter', {
     end
 })
 
--- Settings for Markdown preview
-vim.g.mkdp_auto_close = 0
-
 -- If you want insert `(` after select function or method item
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local cmp = require('cmp')
