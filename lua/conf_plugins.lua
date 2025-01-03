@@ -229,3 +229,6 @@ vim.keymap.set('n', '<leader>t', ':TodoQuickFix<CR>')
 
 -- Scrollbar
 require('satellite').setup()
+
+-- Copilot short cuts
+vim.keymap.set('n', '<leader>cc', ':CopilotChat<CR>')

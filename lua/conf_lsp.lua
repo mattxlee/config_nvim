@@ -23,10 +23,10 @@ local bdopts = {
 local luasnip = require('luasnip')
 local cmp = require('cmp')
 cmp.setup({
-    preselect = cmp.PreselectMode.Item,
+    preselect = cmp.PreselectMode.None,
     select_behavior = cmp.SelectBehavior.Select,
     completion = {
-        completeopt = 'menu,menuone,preview,noinsert',
+        completeopt = 'menu,menuone,preview,noinsert,noselect',
     },
     snippet = {
         expand = function(args)
@@ -41,7 +41,7 @@ cmp.setup({
         ['<c-l>'] = cmp.mapping.complete(),
         ['<c-k>'] = cmp.mapping.abort(),
         ['<Tab>'] = cmp.mapping.confirm({
-            select = true,
+            select = false,
             behavior = cmp.ConfirmBehavior.Insert,
         }),
         ['<c-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
