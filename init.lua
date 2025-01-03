@@ -82,10 +82,6 @@ require('lazy').setup({
         },
         build = 'make tiktoken', -- Only on MacOS or Linux
         opts = {
-            -- See Configuration section for options
-            window = {
-                layout = 'horizontal',
-            },
         },
     },
 })
