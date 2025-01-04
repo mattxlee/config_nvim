@@ -142,6 +142,7 @@ vim.keymap.set('n', '<leader>v', ':vsp<CR>')
 vim.keymap.set('n', '<leader>s', ':sp<CR>')
 vim.keymap.set('n', '<leader>w', '<c-w>w')
 vim.keymap.set('n', '<leader>W', '<c-w>W')
+vim.keymap.set('n', '<leader><leader>', '<c-w>x')
 
 -- remove trailing whitespaces
 vim.keymap.set('n', '<leader>x', ':StripWhitespace<CR>')
