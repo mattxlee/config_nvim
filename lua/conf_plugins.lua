@@ -231,5 +231,8 @@ vim.keymap.set('n', '<leader>t', ':TodoQuickFix<CR>')
 require('satellite').setup()
 
 -- Copilot short cuts
-vim.keymap.set('n', '<leader>cc', ':CopilotChat<CR>')
+vim.keymap.set({ 'n', 'v' }, '<leader>cc', ':CopilotChat<CR>')
+vim.keymap.set({ 'n', 'v' }, '<leader>ce', ':CopilotChatExplain<CR>')
+
+-- generate commit message for staged files
 vim.keymap.set('n', '<leader>cm', ':CopilotChatCommit<CR>')
