@@ -92,6 +92,7 @@ vim.cmd('filetype indent on')
 
 vim.cmd('autocmd InsertEnter * set nocursorline')
 vim.cmd('autocmd InsertLeave * set cursorline')
+vim.cmd('autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o')
 
 vim.api.nvim_create_autocmd('BufEnter', {
     callback = function()
