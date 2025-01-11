@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     -- theme
-    { "EdenEast/nightfox.nvim" },
+    { 'EdenEast/nightfox.nvim' },
     -- editor config
     { 'editorconfig/editorconfig-vim' },
     -- Comment code respect the language

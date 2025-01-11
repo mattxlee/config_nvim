@@ -2,14 +2,14 @@ local _border = 'rounded'
 
 local function bordered_hover(_opts)
     _opts = _opts or {}
-    return vim.lsp.buf.hover(vim.tbl_deep_extend("force", _opts, {
+    return vim.lsp.buf.hover(vim.tbl_deep_extend('force', _opts, {
         border = _border
     }))
 end
 
 local function bordered_signature_help(_opts)
     _opts = _opts or {}
-    return vim.lsp.buf.signature_help(vim.tbl_deep_extend("force", _opts, {
+    return vim.lsp.buf.signature_help(vim.tbl_deep_extend('force', _opts, {
         border = _border
     }))
 end

@@ -2,8 +2,8 @@
 require('nightfox').setup({
   options = {
     -- Compiled file's destination location
-    compile_path = vim.fn.stdpath("cache") .. "/nightfox",
-    compile_file_suffix = "_compiled", -- Compiled file suffix
+    compile_path = vim.fn.stdpath('cache') .. '/nightfox',
+    compile_file_suffix = '_compiled', -- Compiled file suffix
     transparent = false,     -- Disable setting background
     terminal_colors = true,  -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
     dim_inactive = false,    -- Non focused panes set to alternative background
@@ -18,16 +18,16 @@ require('nightfox').setup({
       },
     },
     styles = {               -- Style to be applied to different syntax groups
-      comments = "italic",     -- Value is any valid attr-list value `:help attr-list`
-      conditionals = "NONE",
-      constants = "bold",
-      functions = "italic",
-      keywords = "bold",
-      numbers = "NONE",
-      operators = "NONE",
-      strings = "NONE",
-      types = "NONE",
-      variables = "NONE",
+      comments = 'italic',     -- Value is any valid attr-list value `:help attr-list`
+      conditionals = 'NONE',
+      constants = 'bold',
+      functions = 'italic',
+      keywords = 'bold',
+      numbers = 'NONE',
+      operators = 'NONE',
+      strings = 'NONE',
+      types = 'NONE',
+      variables = 'NONE',
     },
     inverse = {             -- Inverse highlight for different types
       match_paren = false,
@@ -44,7 +44,7 @@ require('nightfox').setup({
 })
 
 -- setup must be called before loading
-vim.cmd("colorscheme dawnfox")
+vim.cmd('colorscheme dawnfox')
 
 -- Treesitter for highlighting keywords, functions and etc
 require('nvim-treesitter.configs').setup({
@@ -202,7 +202,7 @@ require('nvim-surround').setup()
 
 -- Settings for indent lines
 local highlight = {
-    "whitespace",
+    'whitespace',
 }
 require('ibl').setup({
     indent = { highlight = highlight },
