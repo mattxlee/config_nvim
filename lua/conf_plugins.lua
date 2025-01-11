@@ -195,6 +195,7 @@ vim.keymap.set('n', '<leader>e', function()
 end)
 -- Fix the color and highlights from telescope dialogs.
 vim.cmd('highlight Pmenu guibg=None')
+vim.cmd('hi! link NeoTreeCursorLine NeoTreePreview')
 
 -- Surround settings
 require('nvim-surround').setup()
