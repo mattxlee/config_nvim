@@ -12,6 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+    -- theme
+    { "EdenEast/nightfox.nvim" },
+    -- editor config
     { 'editorconfig/editorconfig-vim' },
     -- Comment code respect the language
     { 'tomtom/tcomment_vim' },
@@ -21,8 +24,6 @@ require('lazy').setup({
     { 'mtdl9/vim-log-highlighting' },
     { 'cfdrake/vim-pbxproj' },
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-    -- Theme
-    { 'ellisonleao/gruvbox.nvim' },
     -- Tree-view explorer
     { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim', 'nvim-tree/nvim-web-devicons' } },
     -- Git related plugins

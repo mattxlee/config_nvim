@@ -13,7 +13,7 @@ local feedkey = function(key, mode)
 end
 
 -- pop window with border config
-local _border = nil
+local _border = 'rounded'
 local bdopts = {
     border = _border,
     winhighlight = 'Normal:Pmenu,CursorLine:PmenuSel,Search:None',
@@ -78,6 +78,25 @@ cmp.setup({
     }
 })
 
+-- border for lsp info
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
+    vim.lsp.handlers.hover, { border = _border }
+)
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+    vim.lsp.handlers.signature_help, {
+        border = _border
+    }
+)
+
+-- border for diagnostic
+vim.diagnostic.config {
+    float = { border = _border }
+}
+require('lspconfig.ui.windows').default_options = {
+    border = _border
+}
+
+
 -- do not update diagnostics when current edit mode is 'insert'
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -85,6 +104,8 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
         update_in_insert = false,
     }
 )
+
+
 
 require('lsp-progress').setup()
 
