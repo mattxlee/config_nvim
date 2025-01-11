@@ -227,9 +227,6 @@ end, { desc = 'Previous todo comment' })
 
 vim.keymap.set('n', '<leader>t', ':TodoQuickFix<CR>')
 
--- Scrollbar
-require('satellite').setup()
-
 -- Copilot short cuts
 vim.keymap.set({ 'n', 'v' }, '<leader>cc', ':CopilotChat<CR>')
 vim.keymap.set({ 'n', 'v' }, '<leader>ce', ':CopilotChatExplain<CR>')

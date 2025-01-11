@@ -73,7 +73,6 @@ require('lazy').setup({
         },
     },
     { 'folke/todo-comments.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
-    { 'lewis6991/satellite.nvim' },
     {
         'CopilotC-Nvim/CopilotChat.nvim',
         dependencies = {
