@@ -160,7 +160,7 @@ vim.keymap.set('n', '<leader>n', ':noh<CR>')
 vim.keymap.set('n', '<leader>c', '"*y"')
 
 -- other settings
-require('conf_plugins')
+require('conf_misc')
 
 -- load lsp config --
 require('conf_lsp')

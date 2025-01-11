@@ -202,7 +202,7 @@ require('nvim-surround').setup()
 
 -- Settings for indent lines
 local highlight = {
-    "WinSeparator",
+    "whitespace",
 }
 require('ibl').setup({
     indent = { highlight = highlight },
