@@ -1,3 +1,19 @@
+local _border = 'rounded'
+
+local function bordered_hover(_opts)
+    _opts = _opts or {}
+    return vim.lsp.buf.hover(vim.tbl_deep_extend("force", _opts, {
+        border = _border
+    }))
+end
+
+local function bordered_signature_help(_opts)
+    _opts = _opts or {}
+    return vim.lsp.buf.signature_help(vim.tbl_deep_extend("force", _opts, {
+        border = _border
+    }))
+end
+
 local on_attach = function(client, bufnr)
     -- diagnostic
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
@@ -6,7 +22,8 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
     vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, bufopts)
-    vim.keymap.set('n', 'gh', vim.lsp.buf.hover, bufopts)
+    vim.keymap.set('n', 'gh', bordered_hover, bufopts)
+    vim.keymap.set('n', 'gs', bordered_signature_help, bufopts)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
 end

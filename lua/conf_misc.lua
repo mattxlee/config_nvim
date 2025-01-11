@@ -194,7 +194,7 @@ vim.keymap.set('n', '<leader>e', function()
     require('telescope.builtin').symbols(require('telescope.themes').get_cursor({ previewer = false, sources = {'emoji', 'kaomoji', 'gitmoji'} }))
 end)
 -- Fix the color and highlights from telescope dialogs.
-vim.cmd('highlight Pmenu guibg=None')
+vim.cmd('hi! Pmenu guibg=#ebdfe4')
 vim.cmd('hi! link NeoTreeCursorLine NeoTreePreview')
 
 -- Surround settings
