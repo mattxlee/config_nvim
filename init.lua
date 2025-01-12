@@ -16,8 +16,6 @@ require('lazy').setup({
     { 'EdenEast/nightfox.nvim' },
     -- editor config
     { 'editorconfig/editorconfig-vim' },
-    -- Comment code respect the language
-    { 'tomtom/tcomment_vim' },
     -- Highlight the white space with red blocks
     { 'ntpeters/vim-better-whitespace' },
     -- Some extend highlights
