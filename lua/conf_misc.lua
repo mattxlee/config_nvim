@@ -255,3 +255,6 @@ vim.keymap.set({ 'n', 'v' }, '<leader>ct', ':CopilotChatTests<CR>')
 vim.keymap.set({ 'n', 'v' }, '<leader>cr', ':CopilotChatReview<CR>')
 vim.keymap.set({ 'n', 'v' }, '<leader>cf', ':CopilotChatFix<CR>')
 vim.keymap.set({ 'n', 'v' }, '<leader>cm', ':CopilotChatCommit<CR>')
+
+-- Comment
+require('Comment').setup()
