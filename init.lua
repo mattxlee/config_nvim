@@ -157,7 +157,7 @@ vim.keymap.set('n', 'K', ':only<CR>')
 vim.keymap.set('n', '<leader>n', ':noh<CR>')
 
 -- copy to clipboard
-vim.keymap.set('n', '<leader>y', '"*y')
+vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
 
 -- other settings
 require('conf_misc')
