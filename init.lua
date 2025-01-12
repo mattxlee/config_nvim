@@ -74,6 +74,8 @@ require('lazy').setup({
     { 'folke/todo-comments.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
     -- Comment
     { 'numToStr/Comment.nvim' },
+    -- Terminal
+    { 'numToStr/FTerm.nvim' },
     {
         'CopilotC-Nvim/CopilotChat.nvim',
         dependencies = {
