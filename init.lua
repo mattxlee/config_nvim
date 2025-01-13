@@ -84,6 +84,12 @@ require('lazy').setup({
         },
         build = 'make tiktoken', -- Only on MacOS or Linux
         opts = {
+            window = {
+                layout = 'float',
+                width = 0.95,
+                height = 0.8,
+            }
+
         },
     },
 })
