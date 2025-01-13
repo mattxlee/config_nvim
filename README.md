@@ -42,26 +42,6 @@ Add the following line to tmux config file:
 setw -g mode-keys vi
 ```
 
-### Setup colors and fonts
-
-Please install WezTerm under your macOS and config it with following
-instructions. Add following lines to tmux config file to apply the terminal
-settings, nvim from a tmux session will has font italic/bold support.
-
-* macOS
-
-```
-set -g default-terminal "xterm-256color"
-set -ga terminal-overrides ",xterm-256color:RGB"
-```
-
-* Linux
-
-```
-set -g default-terminal 'tmux-256color'
-set -ga terminal-overrides ',xterm*:Tc:sitm=\E[3m'
-```
-
 ## Use install script
 
 The main function of the script `install.sh` from root dir of the project is
@@ -96,6 +76,8 @@ npm install -g @tailwindcss/language-server
 
 ## Shortcuts
 
+**Leader key: `;`**
+
 ### Find and replace
 
 |Shortcut|Command|Comment|
@@ -110,13 +92,14 @@ npm install -g @tailwindcss/language-server
 |-|-|-|
 |`leader`g|Find symbol|Find symbol from current workspace|
 |`leader`o|Find symbol from buffer|Find symbol from current buffer|
-|gr|Find references|Find references of the symbol from cursor word|
 |]d|Next diagnostics|Jump to next diagnostics which is provided by Lsp|
 |[d|Previous diagnostics|Jump to previous diagnostics which is provided by Lsp|
-|;d|Show diagnostics info.|Show diagnostics info. about the line|
+|`leader`d|Show diagnostics info.|Show diagnostics info. about the line|
 |`leader`rn|Rename|Rename cursor symbol with popup window|
 |`leader`ca|Code action|Show code action list for current issue|
+|gr|Find references|Find references of the symbol from cursor word|
 |gh|Show info.|Show code info. of cursor symbol|
+|gs|Show signature info.|Show signature info. of cursor symbol|
 
 ### Completion
 
@@ -137,6 +120,22 @@ npm install -g @tailwindcss/language-server
 |gd|Goto definition|Goto definition from cursor word|
 |`<c-h>`|Switch header/source|Find and switch to the related (header or source), it words only when the type of current buffer is cpp|
 |`<c-p>`|Jump files|Show file list and jump|
+|*|Highlight word|Highlight the word under cursor|
+|`leader`n|Hide highlights|Hide all highlights|
+
+### Move between windows
+
+|Shortcut|Command|Comment|
+|-|-|-|
+|`leader`v|Split vertically|Split window vertically|
+|`leader`s|Split horizontally|Split window horizontally|
+|`leader`w|Jump next|Jump to next window|
+|`leader`W|Jump previous|Jump to previous window|
+|`leader,leader`|Swap windows|Swap current window with the previous window|
+|`leader`=|Equalize|Equalize all windows|
+|`leader`H|Vertical layout|Change layout to vertical|
+|`leader`J|Horizontal layout|Change layout to horizontal|
+|K|Close others|Close all other windows except current window|
 
 ### File explorer
 
@@ -158,7 +157,28 @@ npm install -g @tailwindcss/language-server
 
 |Shortcut|Command|Comment|
 |-|-|-|
-|`leader`t|Format|Format current buffer with configured formatter|
+|`leader`i|Format|Format current buffer with configured formatter|
+
+### Todo
+
+|Shortcut|Command|Comment|
+|-|-|-|
+|`leader`to|Todo list|Show todo list in quickfix window|
+|]t|Next todo|Jump to next todo item|
+|[t|Previous todo|Jump to previous todo item|
+
+### Copilot
+
+Copilot has been integrated
+
+|Shortcut|Command|Comment|
+|-|-|-|
+|`leader`cc|Copilot|Open copilot chat window|
+|`leader`cm|Copilot commit msg|Generate commit message with copilot|
+|`leader`ce|Copilot explain|Explain selected code with copilot|
+|`leader`ct|Copilot tests|Generate tests with copilot|
+|`leader`cr|Copilot review|Review the code with copilot|
+|`leader`cf|Copilot fix|Fix the code with copilot|
 
 ### Misc.
 
