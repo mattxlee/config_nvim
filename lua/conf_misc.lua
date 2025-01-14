@@ -97,8 +97,21 @@ require('neo-tree').setup({
 vim.keymap.set('n', '<c-j>', ':Neotree reveal<CR>')
 vim.keymap.set('n', '<leader>b', ':Neotree toggle<CR>')
 
+local trouble = require('trouble')
+trouble.setup()
+-- Prepare status entry
+local symbols = trouble.statusline({
+    mode = 'lsp_document_symbols',
+    groups = {},
+    title = false,
+    filter = { range = true },
+    format = '{kind_icon}{symbol.name:Normal}',
+    -- The following line is needed to fix the background color
+    -- Set it to the lualine section you want to use
+    hl_group = 'lualine_c_normal',
+})
 -- Status bar
-require('lualine').setup({
+local opts = {
     options = {
         icons_enabled = true,
         component_separators = '',
@@ -107,14 +120,15 @@ require('lualine').setup({
     sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = { 'filename' },
+        lualine_c = { 'filename', { symbols.get, cond = symbols.has } },
         lualine_x = { 'encoding', 'fileformat', 'filetype', function()
             return require('lsp-progress').progress()
         end },
         lualine_y = { 'progress' },
         lualine_z = { 'location' }
     },
-})
+}
+require('lualine').setup(opts)
 
 -- Git sign settings
 require('gitsigns').setup({
