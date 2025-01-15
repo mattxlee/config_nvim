@@ -97,6 +97,7 @@ require('lazy').setup({
                     layout = 'float',
                     width = 0.95,
                     height = 0.8,
+                    border = 'rounded',
                 }
 
             },
