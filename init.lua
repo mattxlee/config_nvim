@@ -1,110 +1,121 @@
+-- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-    vim.fn.system({
-        'git',
-        'clone',
-        '--filter=blob:none',
-        'https://github.com/folke/lazy.nvim.git',
-        '--branch=stable', -- latest stable release
-        lazypath,
-    })
+    local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
+    local out = vim.fn.system({ 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath })
+    if vim.v.shell_error ~= 0 then
+        vim.api.nvim_echo({
+            { 'Failed to clone lazy.nvim:\n', 'ErrorMsg' },
+            { out, 'WarningMsg' },
+            { '\nPress any key to exit...' },
+        }, true, {})
+        vim.fn.getchar()
+        os.exit(1)
+    end
 end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    -- theme
-    { 'EdenEast/nightfox.nvim' },
-    -- editor config
-    { 'editorconfig/editorconfig-vim' },
-    -- Highlight the white space with red blocks
-    { 'ntpeters/vim-better-whitespace' },
-    -- Some extend highlights
-    { 'mtdl9/vim-log-highlighting' },
-    { 'cfdrake/vim-pbxproj' },
-    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-    -- Tree-view explorer
-    { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim', 'nvim-tree/nvim-web-devicons' } },
-    -- Git related plugins
-    { 'lewis6991/gitsigns.nvim' },
-    -- Fugitive
-    { 'tpope/vim-fugitive' },
-    -- Status line
-    { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
-    -- Search and replace special window
-    { 'windwp/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
-    -- Huge telescope plugins
-    { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim', 'nvim-tree/nvim-web-devicons' } },
-    { 'nvim-telescope/telescope-symbols.nvim' },
-    { 'nvim-telescope/telescope-ui-select.nvim' },
-    -- Surround with brackets and etc
-    { 'kylechui/nvim-surround' },
-    -- Show indent lines
-    { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
-    {
-        'windwp/nvim-autopairs',
-        event = 'InsertEnter',
-        config = true
-        -- use opts = {} for passing setup options
-        -- this is equivalent to setup({}) function
+    ui = {
+        border = 'rounded',
+        backdrop = 100,
     },
-    -- Flutter settings
-    { 'akinsho/flutter-tools.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
-    -- Lsp related
-    { 'williamboman/mason.nvim' },
-    { 'williamboman/mason-lspconfig.nvim' },
-    { 'neovim/nvim-lspconfig' },
-    -- Main complete plugin
-    {
-        'hrsh7th/nvim-cmp',
-        dependencies = {
-            -- Show icons from complete menu
-            { 'onsails/lspkind.nvim' },
-            -- Complete sources
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'hrsh7th/cmp-buffer' },
-            { 'hrsh7th/cmp-path' },
-            -- Make selection with signature selection
-            { 'L3MON4D3/LuaSnip', build = 'make install_jsregexp' },
-            -- Signature help
-            { 'hrsh7th/cmp-nvim-lsp-signature-help' },
-            -- Progress of lsp loading
-            { 'linrongbin16/lsp-progress.nvim' },
+    spec = {
+        -- theme
+        { 'EdenEast/nightfox.nvim' },
+        -- editor config
+        { 'editorconfig/editorconfig-vim' },
+        -- Highlight the white space with red blocks
+        { 'ntpeters/vim-better-whitespace' },
+        -- Some extend highlights
+        { 'mtdl9/vim-log-highlighting' },
+        { 'cfdrake/vim-pbxproj' },
+        { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+        -- Tree-view explorer
+        { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim', 'nvim-tree/nvim-web-devicons' } },
+        -- Git related plugins
+        { 'lewis6991/gitsigns.nvim' },
+        -- Fugitive
+        { 'tpope/vim-fugitive' },
+        -- Status line
+        { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
+        -- Search and replace special window
+        { 'windwp/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
+        -- Huge telescope plugins
+        { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim', 'nvim-tree/nvim-web-devicons' } },
+        { 'nvim-telescope/telescope-symbols.nvim' },
+        { 'nvim-telescope/telescope-ui-select.nvim' },
+        -- Surround with brackets and etc
+        { 'kylechui/nvim-surround' },
+        -- Show indent lines
+        { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
+        {
+            'windwp/nvim-autopairs',
+            event = 'InsertEnter',
+            config = true
+            -- use opts = {} for passing setup options
+            -- this is equivalent to setup({}) function
         },
-    },
-    { 'folke/todo-comments.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
-    -- Comment
-    { 'numToStr/Comment.nvim' },
-    -- Terminal
-    { 'numToStr/FTerm.nvim' },
-    {
-        'CopilotC-Nvim/CopilotChat.nvim',
-        dependencies = {
-            { 'github/copilot.vim' }, -- or zbirenbaum/copilot.lua
-            { 'nvim-lua/plenary.nvim', branch = 'master' }, -- for curl, log and async functions
-        },
-        build = 'make tiktoken', -- Only on MacOS or Linux
-        opts = {
-            window = {
-                layout = 'float',
-                width = 0.95,
-                height = 0.8,
-            }
-
-        },
-    },
-    -- Troubles (quickfix with diagnostics)
-    {
-        'folke/trouble.nvim',
-        opts = {}, -- for default options, refer to the configuration section for custom setup.
-        cmd = 'Trouble',
-        keys = {
-            {
-                '<leader>q',
-                '<cmd>Trouble diagnostics toggle focus=false<cr>',
-                desc = 'Diagnostics (Trouble)',
+        -- Flutter settings
+        { 'akinsho/flutter-tools.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+        -- Lsp related
+        { 'williamboman/mason.nvim' },
+        { 'williamboman/mason-lspconfig.nvim' },
+        { 'neovim/nvim-lspconfig' },
+        -- Main complete plugin
+        {
+            'hrsh7th/nvim-cmp',
+            dependencies = {
+                -- Show icons from complete menu
+                { 'onsails/lspkind.nvim' },
+                -- Complete sources
+                { 'hrsh7th/cmp-nvim-lsp' },
+                { 'hrsh7th/cmp-buffer' },
+                { 'hrsh7th/cmp-path' },
+                -- Make selection with signature selection
+                { 'L3MON4D3/LuaSnip', build = 'make install_jsregexp' },
+                -- Signature help
+                { 'hrsh7th/cmp-nvim-lsp-signature-help' },
+                -- Progress of lsp loading
+                { 'linrongbin16/lsp-progress.nvim' },
             },
         },
-    }
+        { 'folke/todo-comments.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+        -- Comment
+        { 'numToStr/Comment.nvim' },
+        -- Terminal
+        { 'numToStr/FTerm.nvim' },
+        {
+            'CopilotC-Nvim/CopilotChat.nvim',
+            dependencies = {
+                { 'github/copilot.vim' }, -- or zbirenbaum/copilot.lua
+                { 'nvim-lua/plenary.nvim', branch = 'master' }, -- for curl, log and async functions
+            },
+            build = 'make tiktoken', -- Only on MacOS or Linux
+            opts = {
+                window = {
+                    layout = 'float',
+                    width = 0.95,
+                    height = 0.8,
+                }
+
+            },
+        },
+        -- Troubles (quickfix with diagnostics)
+        {
+            'folke/trouble.nvim',
+            opts = {}, -- for default options, refer to the configuration section for custom setup.
+            cmd = 'Trouble',
+            keys = {
+                {
+                    '<leader>q',
+                    '<cmd>Trouble diagnostics toggle focus=false<cr>',
+                    desc = 'Diagnostics (Trouble)',
+                },
+            },
+        }
+
+    },
 })
 
 -- common setup --
