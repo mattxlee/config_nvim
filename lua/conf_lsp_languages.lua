@@ -29,7 +29,11 @@ local on_attach = function(client, bufnr)
 end
 
 vim.keymap.set('n', '<leader>m', ':Mason<CR>')
-require('mason').setup()
+require('mason').setup({
+    ui = {
+        border = 'rounded',
+    }
+})
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
