@@ -263,8 +263,6 @@ vim.keymap.set('n', '[t', function()
     require('todo-comments').jump_prev()
 end, { desc = 'Previous todo comment' })
 
-vim.keymap.set('n', '<leader>to', ':TodoQuickFix<CR>')
-
 -- Copilot short cuts
 vim.keymap.set({ 'n', 'v' }, '<leader>cc', ':CopilotChat<CR>')
 vim.keymap.set({ 'n', 'v' }, '<leader>ce', ':CopilotChatExplain<CR>')

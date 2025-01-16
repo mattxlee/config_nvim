@@ -137,6 +137,13 @@ npm install -g @tailwindcss/language-server
 |`leader`J|Horizontal layout|Change layout to horizontal|
 |K|Close others|Close all other windows except current window|
 
+### Quickfix and diagnostics panels
+
+|Shortcut|Command|Comment|
+|-|-|-|
+|`leader`q|Quickfix|Toggle quickfix window|
+|`leader`z|Diagnostics|Toggle diagnostics window|
+
 ### File explorer
 
 |Shortcut|Command|Comment|

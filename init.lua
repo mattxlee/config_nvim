@@ -118,6 +118,11 @@ require('lazy').setup({
                     '<cmd>Trouble telescope toggle focus=true<cr>',
                     desc = "Quickfix List (Trouble)",
                 },
+                {
+                    '<leader>to',
+                    '<cmd>Trouble todo toggle focus=true<cr>',
+                    desc = "Todo List (Trouble)",
+                },
             },
         }
 
