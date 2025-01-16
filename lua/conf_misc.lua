@@ -211,6 +211,19 @@ vim.keymap.set('n', '<leader>e', function()
     require('telescope.builtin').symbols(require('telescope.themes').get_cursor({ previewer = false, sources = {'emoji', 'kaomoji', 'gitmoji'} }))
 end)
 
+-- Telescope results (quickfix) for trouble
+local open_with_trouble = require("trouble.sources.telescope").open
+local telescope = require("telescope")
+
+telescope.setup({
+    defaults = {
+        mappings = {
+            i = { ["<c-q>"] = open_with_trouble },
+            n = { ["<c-q>"] = open_with_trouble },
+        },
+    },
+})
+
 -- Surround settings
 require('nvim-surround').setup()
 

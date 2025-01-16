@@ -109,13 +109,13 @@ require('lazy').setup({
             cmd = 'Trouble',
             keys = {
                 {
-                    '<leader>q',
+                    '<leader>z',
                     '<cmd>Trouble diagnostics toggle focus=false<cr>',
                     desc = 'Diagnostics (Trouble)',
                 },
                 {
-                    '<leader>z',
-                    '<cmd>Trouble qflist toggle<cr>',
+                    '<leader>q',
+                    '<cmd>Trouble telescope toggle focus=false<cr>',
                     desc = "Quickfix List (Trouble)",
                 },
             },
