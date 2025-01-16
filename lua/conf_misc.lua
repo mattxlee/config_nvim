@@ -44,7 +44,6 @@ require('nightfox').setup({
 })
 -- Fix the color and highlights from telescope dialogs.
 vim.cmd('hi! Pmenu guibg=None')
-vim.cmd('hi! NeoTreeCursorLine guibg=#d0d8d8')
 
 -- setup must be called before loading
 vim.cmd('colorscheme duskfox')
