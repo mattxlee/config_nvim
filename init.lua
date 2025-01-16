@@ -113,6 +113,11 @@ require('lazy').setup({
                     '<cmd>Trouble diagnostics toggle focus=false<cr>',
                     desc = 'Diagnostics (Trouble)',
                 },
+                {
+                    '<leader>z',
+                    '<cmd>Trouble qflist toggle<cr>',
+                    desc = "Quickfix List (Trouble)",
+                },
             },
         }
 
