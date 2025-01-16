@@ -177,14 +177,6 @@ require('telescope').setup({
             require('telescope.themes').get_cursor({ previewer = false })
         },
     },
-    defaults = {
-        mappings = {
-            i = {
-                ['<C-j>'] = actions.move_selection_next,
-                ['<C-k>'] = actions.move_selection_previous,
-            }
-        }
-    },
 })
 require('telescope').load_extension('ui-select')
 
@@ -215,10 +207,11 @@ end)
 local open_with_trouble = require("trouble.sources.telescope").open
 local telescope = require("telescope")
 
+-- Setup shortcuts for telegram
 telescope.setup({
     defaults = {
         mappings = {
-            i = { ["<c-q>"] = open_with_trouble },
+            i = { ['<c-j>'] = actions.move_selection_next, ['<c-k>'] = actions.move_selection_previous, ["<c-q>"] = open_with_trouble },
             n = { ["<c-q>"] = open_with_trouble },
         },
     },
