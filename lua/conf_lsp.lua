@@ -12,13 +12,6 @@ local feedkey = function(key, mode)
     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 
--- pop window with border config
-local _border = 'rounded'
-local bdopts = {
-    border = _border,
-    winhighlight = 'Normal:Pmenu,CursorLine:PmenuSel,Search:None',
-}
-
 -- setup cmp
 local luasnip = require('luasnip')
 local cmp = require('cmp')
@@ -34,8 +27,8 @@ cmp.setup({
         end
     },
     window = {
-        completion = bdopts,
-        documentation = bdopts,
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
         ['<c-l>'] = cmp.mapping.complete(),
