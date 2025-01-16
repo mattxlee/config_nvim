@@ -47,7 +47,7 @@ vim.cmd('hi! Pmenu guibg=None')
 vim.cmd('hi! NeoTreeCursorLine guibg=#d0d8d8')
 
 -- setup must be called before loading
-vim.cmd('colorscheme dawnfox')
+vim.cmd('colorscheme duskfox')
 
 -- Treesitter for highlighting keywords, functions and etc
 require('nvim-treesitter.configs').setup({
