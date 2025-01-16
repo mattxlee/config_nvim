@@ -203,16 +203,14 @@ vim.keymap.set('n', '<leader>e', function()
     require('telescope.builtin').symbols(require('telescope.themes').get_cursor({ previewer = false, sources = {'emoji', 'kaomoji', 'gitmoji'} }))
 end)
 
--- Telescope results (quickfix) for trouble
-local open_with_trouble = require("trouble.sources.telescope").open
-local telescope = require("telescope")
-
+local telescope = require('telescope')
+local open_with_trouble = require('trouble.sources.telescope').open
 -- Setup shortcuts for telegram
 telescope.setup({
     defaults = {
         mappings = {
-            i = { ['<c-j>'] = actions.move_selection_next, ['<c-k>'] = actions.move_selection_previous, ["<c-q>"] = open_with_trouble },
-            n = { ["<c-q>"] = open_with_trouble },
+            i = { ['<c-j>'] = actions.move_selection_next, ['<c-k>'] = actions.move_selection_previous, ['<c-q>'] = open_with_trouble },
+            n = { ['<c-q>'] = open_with_trouble },
         },
     },
 })
