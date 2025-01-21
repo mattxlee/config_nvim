@@ -177,10 +177,6 @@ vim.keymap.set('n', '<leader>a', ':Lazy<CR>')
 -- '*' highlights all same strings without jumping to next one
 vim.keymap.set('n', '*', ':keepjumps normal! mi*`i<CR>')
 
--- easy to browse bottom window
-vim.keymap.set('n', '<leader>j', ':cnext<CR>')
-vim.keymap.set('n', '<leader>k', ':cprev<CR>')
-
 -- split/vsplit window and jump to next by using double <leader> keys
 vim.keymap.set('n', '<leader>v', ':vsp<CR>')
 vim.keymap.set('n', '<leader>s', ':sp<CR>')
