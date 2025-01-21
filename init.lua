@@ -105,22 +105,22 @@ require('lazy').setup({
         -- Troubles (quickfix with diagnostics)
         {
             'folke/trouble.nvim',
-            opts = {}, -- for default options, refer to the configuration section for custom setup.
+            opts = { }, -- for default options, refer to the configuration section for custom setup.
             cmd = 'Trouble',
             keys = {
                 {
                     '<leader>z',
-                    '<cmd>Trouble diagnostics toggle focus=true<cr>',
+                    '<cmd>Trouble diagnostics toggle<cr>',
                     desc = 'Diagnostics (Trouble)',
                 },
                 {
                     '<leader>q',
-                    '<cmd>Trouble telescope toggle focus=true<cr>',
+                    '<cmd>Trouble telescope toggle<cr>',
                     desc = "Quickfix List (Trouble)",
                 },
                 {
                     '<leader>to',
-                    '<cmd>Trouble todo toggle focus=true<cr>',
+                    '<cmd>Trouble todo toggle<cr>',
                     desc = "Todo List (Trouble)",
                 },
             },

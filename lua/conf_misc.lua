@@ -100,7 +100,10 @@ vim.keymap.set('n', '<c-j>', ':Neotree reveal<CR>')
 vim.keymap.set('n', '<leader>b', ':Neotree toggle<CR>')
 
 local trouble = require('trouble')
-trouble.setup()
+trouble.setup({
+    auto_preview = false,
+    focus = true,
+})
 -- Prepare status entry
 local symbols = trouble.statusline({
     mode = 'lsp_document_symbols',
