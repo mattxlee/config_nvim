@@ -277,3 +277,20 @@ require('FTerm').setup({
 })
 vim.keymap.set('n', '<leader>tt', "<CMD>lua require('FTerm').toggle()<CR>")
 vim.keymap.set('t', '<leader>tt', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+
+-- Notify with message
+-- Overriding vim.notify with fancy notify if fancy notify exists
+local notify = require("notify")
+vim.notify = notify
+print = function(...)
+    local print_safe_args = {}
+    local _ = { ... }
+    for i = 1, #_ do
+        table.insert(print_safe_args, tostring(_[i]))
+    end
+    notify(table.concat(print_safe_args, ' '), "info")
+end
+notify.setup({
+    render = 'wrapped-compact',
+    stages = 'static',
+})
