@@ -183,27 +183,14 @@ require('telescope').setup({
 require('telescope').load_extension('ui-select')
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<c-p>', function()
-    builtin.find_files(require('telescope.themes').get_cursor({ previewer = false }))
-end)
-vim.keymap.set('n', '<leader>l', function()
-    builtin.grep_string(require('telescope.themes').get_cursor({ previewer = false }))
-end)
-vim.keymap.set('n', '<leader>f', function()
-    builtin.live_grep(require('telescope.themes').get_cursor({ previewer = false }))
-end)
-vim.keymap.set('n', '<leader>o', function()
-    builtin.lsp_document_symbols(require('telescope.themes').get_cursor({ previewer = false }))
-end)
-vim.keymap.set('n', '<leader>g', function()
-    builtin.lsp_dynamic_workspace_symbols(require('telescope.themes').get_cursor({ previewer = false }))
-end)
-vim.keymap.set('n', 'gr', function()
-    builtin.lsp_references(require('telescope.themes').get_cursor({ previewer = false }))
-end)
-vim.keymap.set('n', '<leader>e', function()
-    require('telescope.builtin').symbols(require('telescope.themes').get_cursor({ previewer = false, sources = {'emoji', 'kaomoji', 'gitmoji'} }))
-end)
+vim.keymap.set('n', '<c-p>', ':Telescope find_files<CR>')
+vim.keymap.set('n', '<leader>l', ':Telescope grep_string<CR>')
+vim.keymap.set('n', '<leader>f', ':Telescope live_grep<CR>')
+vim.keymap.set('n', '<leader>e', ':Telescope symbols<CR>')
+vim.keymap.set('n', '<leader>z', ':Telescope diagnostics<CR>')
+vim.keymap.set('n', '<leader>o', ':Telescope lsp_document_symbols<CR>')
+vim.keymap.set('n', '<leader>g', ':Telescope lsp_workspace_symbols<CR>')
+vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
 
 local telescope = require('telescope')
 local open_with_trouble = require('trouble.sources.telescope').open
@@ -257,6 +244,7 @@ cmp.event:on(
 
 -- TODO
 require('todo-comments').setup()
+vim.keymap.set('n', '<leader>to', ':TodoTelescope<CR>')
 
 vim.keymap.set('n', ']t', function()
     require('todo-comments').jump_next()
