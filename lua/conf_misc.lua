@@ -160,8 +160,10 @@ require('gitsigns').setup({
     end
 })
 
--- Fugitive
-vim.keymap.set('n', '<c-g>', ':Git<CR>')
+-- Neogit
+local neogit = require('neogit')
+neogit.setup()
+vim.keymap.set('n', '<c-g>', ':Neogit kind=floating<CR>')
 
 -- Find and replace in files
 require('spectre').setup({

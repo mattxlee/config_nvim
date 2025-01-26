@@ -35,8 +35,8 @@ require('lazy').setup({
         { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim', 'nvim-tree/nvim-web-devicons' } },
         -- Git related plugins
         { 'lewis6991/gitsigns.nvim' },
-        -- Fugitive
-        { 'tpope/vim-fugitive' },
+        -- Git operations
+        { 'NeogitOrg/neogit'},
         -- Status line
         { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
         -- Search and replace special window
