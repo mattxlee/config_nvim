@@ -162,7 +162,10 @@ require('gitsigns').setup({
 
 -- Neogit
 local neogit = require('neogit')
-neogit.setup()
+neogit.setup({
+    disable_context_highlighting = true,
+    disable_insert_on_commit = true,
+})
 vim.keymap.set('n', '<c-g>', ':Neogit kind=floating<CR>')
 
 -- Find and replace in files
