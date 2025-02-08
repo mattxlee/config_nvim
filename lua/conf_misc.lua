@@ -97,24 +97,8 @@ require('neo-tree').setup({
     }
 })
 vim.keymap.set('n', '<c-j>', ':Neotree reveal<CR>')
-vim.keymap.set('n', '<leader>b', ':Neotree action=show toggle=true<CR>')
+vim.keymap.set('n', '<leader>j', ':Neotree action=show toggle=true<CR>')
 
-local trouble = require('trouble')
-trouble.setup({
-    auto_preview = false,
-    focus = true,
-})
--- Prepare status entry
-local symbols = trouble.statusline({
-    mode = 'lsp_document_symbols',
-    groups = {},
-    title = false,
-    filter = { range = true },
-    format = '{kind_icon}{symbol.name:Normal}',
-    -- The following line is needed to fix the background color
-    -- Set it to the lualine section you want to use
-    hl_group = 'lualine_c_normal',
-})
 -- Status bar
 local opts = {
     options = {
@@ -125,7 +109,7 @@ local opts = {
     sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = { 'filename', { symbols.get, cond = symbols.has } },
+        lualine_c = { 'filename' },
         lualine_x = { 'encoding', 'fileformat', 'filetype', function()
             return require('lsp-progress').progress()
         end },
@@ -194,16 +178,15 @@ vim.keymap.set('n', '<leader>e', ':Telescope symbols<CR>')
 vim.keymap.set('n', '<leader>z', ':Telescope diagnostics<CR>')
 vim.keymap.set('n', '<leader>o', ':Telescope lsp_document_symbols<CR>')
 vim.keymap.set('n', '<leader>g', ':Telescope lsp_workspace_symbols<CR>')
+vim.keymap.set('n', '<leader>b', ':Telescope notify<CR>')
 vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
 
 local telescope = require('telescope')
-local open_with_trouble = require('trouble.sources.telescope').open
 -- Setup shortcuts for telegram
 telescope.setup({
     defaults = {
         mappings = {
-            i = { ['<c-j>'] = actions.move_selection_next, ['<c-k>'] = actions.move_selection_previous, ['<c-q>'] = open_with_trouble },
-            n = { ['<c-q>'] = open_with_trouble },
+            i = { ['<c-j>'] = actions.move_selection_next, ['<c-k>'] = actions.move_selection_previous },
         },
     },
 })
