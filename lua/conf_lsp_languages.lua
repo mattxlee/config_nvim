@@ -36,6 +36,12 @@ require('mason').setup({
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+capabilities = vim.tbl_deep_extend('force', capabilities, {
+    offsetEncoding = { 'utf-16' },
+    general = {
+        positionEncodings = { 'utf-16' },
+    },
+})
 
 -- flutter tools
 require('flutter-tools').setup({
