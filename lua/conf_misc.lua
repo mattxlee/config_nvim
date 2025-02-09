@@ -46,7 +46,7 @@ require('nightfox').setup({
 vim.cmd('hi! Pmenu guibg=None')
 
 -- setup must be called before loading
-vim.cmd('colorscheme duskfox')
+vim.cmd('colorscheme carbonfox')
 
 -- Treesitter for highlighting keywords, functions and etc
 require('nvim-treesitter.configs').setup({
