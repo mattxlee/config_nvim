@@ -168,6 +168,10 @@ vim.keymap.set('n', '<leader>x', ':StripWhitespace<CR>')
 vim.keymap.set('n', ']x', ':NextTrailingWhitespace<CR>')
 vim.keymap.set('n', '[x', ':PrevTrailingWhitespace<CR>')
 
+-- navigate in fix window
+vim.keymap.set('n', '<leader>j', ':cnext<CR>')
+vim.keymap.set('n', '<leader>k', ':cprev<CR>')
+
 -- close all other windows
 vim.keymap.set('n', 'K', ':only<CR>')
 

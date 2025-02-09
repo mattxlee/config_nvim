@@ -97,7 +97,6 @@ require('neo-tree').setup({
     }
 })
 vim.keymap.set('n', '<c-j>', ':Neotree reveal<CR>')
-vim.keymap.set('n', '<leader>j', ':Neotree action=show toggle=true<CR>')
 
 -- Status bar
 local opts = {
