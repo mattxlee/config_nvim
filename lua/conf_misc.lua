@@ -178,7 +178,7 @@ vim.keymap.set('n', '<leader>e', ':Telescope symbols<CR>')
 vim.keymap.set('n', '<leader>z', ':Telescope diagnostics<CR>')
 vim.keymap.set('n', '<leader>o', ':Telescope lsp_document_symbols<CR>')
 vim.keymap.set('n', '<leader>g', ':Telescope lsp_workspace_symbols<CR>')
-vim.keymap.set('n', '<leader>b', ':Telescope notify<CR>')
+vim.keymap.set('n', '<leader>b', ':Telescope git_status<CR>')
 vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
 
 local telescope = require('telescope')
