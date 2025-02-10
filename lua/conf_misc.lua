@@ -216,7 +216,7 @@ cmp.event:on(
 
 -- TODO
 require('todo-comments').setup()
-vim.keymap.set({ 'n', 'v' }, '<leader>to', ":lua require('fzf-lua').grep({search=' TODO| HACK| PERF| NOTE| FIX', no_esc=true})<CR>")
+vim.keymap.set({ 'n', 'v' }, '<leader>to', function () require('todo-comments.fzf').todo({ keywords = { 'TODO', 'FIX', 'FIXME' } }) end)
 
 vim.keymap.set('n', ']t', function()
     require('todo-comments').jump_next()
