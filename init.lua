@@ -43,10 +43,8 @@ require('lazy').setup({
         { 'rcarriga/nvim-notify'},
         -- Search and replace special window
         { 'windwp/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
-        -- Huge telescope plugins
-        { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim', 'nvim-tree/nvim-web-devicons' } },
-        { 'nvim-telescope/telescope-symbols.nvim' },
-        { 'nvim-telescope/telescope-ui-select.nvim' },
+        -- Fzf lua
+        { 'ibhagwan/fzf-lua', dependencies = { 'nvim-tree/nvim-web-devicons' } },
         -- Surround with brackets and etc
         { 'kylechui/nvim-surround' },
         -- Show indent lines

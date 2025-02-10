@@ -42,7 +42,7 @@ require('nightfox').setup({
   specs = {},
   groups = {},
 })
--- Fix the color and highlights from telescope dialogs.
+-- Fix the color and highlights
 vim.cmd('hi! Pmenu guibg=None')
 
 -- setup must be called before loading
@@ -159,36 +159,22 @@ vim.keymap.set('n', '<leader>h', function()
     require('spectre').open()
 end)
 
--- Telescope settings
-local actions = require('telescope.actions')
-require('telescope').setup({
-    extensions = {
-        ['ui-select'] = {
-            require('telescope.themes').get_cursor({ previewer = false })
+-- Fzf lua settings
+require('fzf-lua').setup({
+    keymap = {
+        fzf = {
+            ['ctrl-q'] = 'select-all+accept',
         },
     },
 })
-require('telescope').load_extension('ui-select')
-
-vim.keymap.set('n', '<c-p>', ':Telescope find_files<CR>')
-vim.keymap.set('n', '<leader>l', ':Telescope grep_string<CR>')
-vim.keymap.set('n', '<leader>f', ':Telescope live_grep<CR>')
-vim.keymap.set('n', '<leader>e', ':Telescope symbols<CR>')
-vim.keymap.set('n', '<leader>z', ':Telescope diagnostics<CR>')
-vim.keymap.set('n', '<leader>o', ':Telescope lsp_document_symbols<CR>')
-vim.keymap.set('n', '<leader>g', ':Telescope lsp_dynamic_workspace_symbols<CR>')
-vim.keymap.set('n', '<leader>b', ':Telescope git_status<CR>')
-vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
-
-local telescope = require('telescope')
--- Setup shortcuts for telegram
-telescope.setup({
-    defaults = {
-        mappings = {
-            i = { ['<c-j>'] = actions.move_selection_next, ['<c-k>'] = actions.move_selection_previous },
-        },
-    },
-})
+vim.keymap.set('n', '<c-p>', ':FzfLua files<CR>')
+vim.keymap.set('n', '<leader>l', ':FzfLua grep_cword<CR>')
+vim.keymap.set('n', '<leader>f', ':FzfLua live_grep<CR>')
+vim.keymap.set('n', '<leader>z', ':FzfLua diagnostics_workspace<CR>')
+vim.keymap.set('n', '<leader>o', ':FzfLua lsp_document_symbols<CR>')
+vim.keymap.set('n', '<leader>g', ':FzfLua lsp_live_workspace_symbols<CR>')
+vim.keymap.set('n', '<leader>b', ':FzfLua git_status<CR>')
+vim.keymap.set('n', 'gr', ':FzfLua lsp_references<CR>')
 
 -- Surround settings
 require('nvim-surround').setup()
@@ -230,7 +216,7 @@ cmp.event:on(
 
 -- TODO
 require('todo-comments').setup()
-vim.keymap.set('n', '<leader>to', ':TodoTelescope<CR>')
+vim.keymap.set({ 'n', 'v' }, '<leader>to', ":lua require('fzf-lua').grep({search=' TODO| HACK| PERF| NOTE| FIX', no_esc=true})<CR>")
 
 vim.keymap.set('n', ']t', function()
     require('todo-comments').jump_next()
