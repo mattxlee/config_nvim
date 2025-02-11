@@ -173,7 +173,8 @@ vim.keymap.set('n', '<leader>f', ':FzfLua live_grep<CR>')
 vim.keymap.set('n', '<leader>z', ':FzfLua diagnostics_workspace<CR>')
 vim.keymap.set('n', '<leader>o', ':FzfLua lsp_document_symbols<CR>')
 vim.keymap.set('n', '<leader>g', ':FzfLua lsp_live_workspace_symbols<CR>')
-vim.keymap.set('n', '<leader>b', ':FzfLua git_status<CR>')
+vim.keymap.set('n', '<leader>e', ':FzfLua git_status<CR>')
+vim.keymap.set('n', '<leader>b', ':FzfLua buffers<CR>')
 vim.keymap.set('n', 'gr', ':FzfLua lsp_references<CR>')
 
 -- Surround settings
