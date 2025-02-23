@@ -2,6 +2,9 @@
 vim.cmd('hi! Pmenu guibg=None')
 
 -- setup must be called before loading
+local colors = require("gruvbox-baby.colors").config()
+vim.g.gruvbox_baby_highlights = { Normal = { fg = colors.foreground } }
+vim.g.gruvbox_baby_transparent_mode = true
 vim.cmd('colorscheme gruvbox-baby')
 
 -- Treesitter for highlighting keywords, functions and etc
@@ -144,7 +147,7 @@ local hooks = require 'ibl.hooks'
 -- create the highlight groups in the highlight setup hook, so they are reset
 -- every time the colorscheme changes
 hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-    vim.api.nvim_set_hl(0, 'RainbowGray', { fg = '#333333' })
+    vim.api.nvim_set_hl(0, 'RainbowGray', { fg = colors.background_light })
 end)
 require('ibl').setup({
     indent = { highlight = highlight },
