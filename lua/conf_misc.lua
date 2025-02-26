@@ -4,7 +4,7 @@ vim.cmd('hi! Pmenu guibg=None')
 -- setup must be called before loading
 local colors = require("gruvbox-baby.colors").config()
 vim.g.gruvbox_baby_highlights = { Normal = { fg = colors.foreground } }
-vim.g.gruvbox_baby_transparent_mode = true
+vim.g.gruvbox_baby_transparent_mode = false
 vim.cmd('colorscheme gruvbox-baby')
 
 -- Treesitter for highlighting keywords, functions and etc
