@@ -58,8 +58,14 @@ require('neo-tree').setup({
 vim.keymap.set('n', '<c-j>', ':Neotree reveal<CR>')
 
 -- Status bar
+local custom_gruvbox = require('lualine.themes.gruvbox')
+custom_gruvbox.inactive.a.bg = 'None';
+custom_gruvbox.inactive.b.bg = 'None';
+custom_gruvbox.inactive.c.bg = 'None';
+
 local opts = {
     options = {
+        theme = custom_gruvbox,
         icons_enabled = true,
         component_separators = '',
         section_separators = '',
