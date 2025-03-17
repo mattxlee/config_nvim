@@ -22,7 +22,7 @@ require('lazy').setup({
     },
     spec = {
         -- theme
-        { 'EdenEast/nightfox.nvim' },
+        { 'pappasam/papercolor-theme-slim'},
         -- editor config
         { 'editorconfig/editorconfig-vim' },
         -- Highlight the white space with red blocks
