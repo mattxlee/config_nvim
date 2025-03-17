@@ -138,7 +138,10 @@ local highlight = {
     'whitespace',
 }
 require('ibl').setup({
-    indent = { highlight = highlight },
+    indent = {
+		char = "▏",
+        highlight = highlight
+    },
     scope = { enabled = false },
 })
 
