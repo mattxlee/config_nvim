@@ -1,6 +1,3 @@
--- Default options
-vim.cmd('colorscheme PaperColorSlimLight')
-
 -- Treesitter for highlighting keywords, functions and etc
 require('nvim-treesitter.configs').setup({
     -- A list of parser names, or 'all'
