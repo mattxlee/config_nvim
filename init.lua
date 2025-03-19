@@ -72,6 +72,7 @@ require('lazy').setup({
                     groups = {},
                 })
                 vim.cmd('colorscheme github_light_default')
+                vim.cmd('hi NormalFloat guibg=NONE')
             end,
         },
         -- editor config
