@@ -167,8 +167,8 @@ require('lazy').setup({
             opts = {
                 window = {
                     layout = 'float',
-                    width = 0.95,
-                    height = 0.8,
+                    width = 0.99,
+                    height = 0.95,
                     border = 'rounded',
                 }
 
