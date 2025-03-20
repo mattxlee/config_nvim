@@ -103,7 +103,7 @@ vim.keymap.set('n', '<c-g>', ':Neogit kind=vsplit_left<CR>')
 
 -- Find and replace in files
 require('spectre').setup({
-    open_cmd = 'new',
+    open_cmd = 'vnew',
 })
 vim.keymap.set('n', '<leader>h', function()
     require('spectre').open()
