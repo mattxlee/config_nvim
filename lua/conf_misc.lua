@@ -146,6 +146,7 @@ vim.keymap.set('n', '<leader>g', ':FzfLua lsp_live_workspace_symbols<CR>')
 vim.keymap.set('n', '<leader>e', ':FzfLua git_status<CR>')
 vim.keymap.set('n', '<leader>b', ':FzfLua buffers<CR>')
 vim.keymap.set('n', 'gr', ':FzfLua lsp_references<CR>')
+vim.cmd('FzfLua register_ui_select')
 
 -- Surround settings
 require('nvim-surround').setup()
