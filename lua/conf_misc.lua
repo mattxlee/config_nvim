@@ -111,6 +111,9 @@ end)
 
 -- Fzf lua settings
 require('fzf-lua').setup({
+    winopts = {
+        split = 'belowright new',
+    },
     keymap = {
         fzf = {
             ['ctrl-q'] = 'select-all+accept',

@@ -32,6 +32,9 @@ vim.keymap.set('n', '<leader>m', ':Mason<CR>')
 require('mason').setup({
     ui = {
         border = 'rounded',
+        backdrop = 80,
+        width = 0.9,
+        height = 0.9,
     }
 })
 

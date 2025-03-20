@@ -17,8 +17,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     ui = {
+        size = { width = 0.9, height = 0.9 },
+        backdrop = 80,
         border = 'rounded',
-        backdrop = 60,
     },
     spec = {
         -- theme
@@ -166,10 +167,7 @@ require('lazy').setup({
             build = 'make tiktoken', -- Only on MacOS or Linux
             opts = {
                 window = {
-                    layout = 'float',
-                    width = 0.99,
-                    height = 0.95,
-                    border = 'rounded',
+                    layout = 'vertical',
                 }
 
             },
