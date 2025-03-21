@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     ui = {
-        size = { width = 0.9, height = 0.9 },
+        size = { width = 0.8, height = 0.8 },
         backdrop = 100,
         border = 'rounded',
     },

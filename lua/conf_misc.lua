@@ -100,7 +100,7 @@ neogit.setup({
     disable_context_highlighting = true,
     disable_insert_on_commit = true,
 })
-vim.keymap.set('n', '<c-g>', ':Neogit kind=vsplit_left<CR>')
+vim.keymap.set('n', '<c-g>', ':Neogit kind=floating<CR>')
 
 -- Find and replace in files
 require('spectre').setup({
@@ -217,8 +217,8 @@ require('Comment').setup()
 -- Term
 require('FTerm').setup({
     dimensions = {
-        height = 0.95,
-        width = 0.95,
+        height = 0.9,
+        width = 0.9,
     },
     border = 'rounded',
 })
