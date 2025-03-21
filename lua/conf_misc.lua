@@ -112,7 +112,9 @@ end)
 -- Fzf lua settings
 require('fzf-lua').setup({
     winopts = {
-        split = 'belowright new',
+        height = 0.9,
+        width = 0.9,
+        backdrop = 100,
     },
     keymap = {
         fzf = {
