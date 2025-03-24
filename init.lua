@@ -167,7 +167,9 @@ require('lazy').setup({
             build = 'make tiktoken', -- Only on MacOS or Linux
             opts = {
                 window = {
-                    layout = 'vertical',
+                    layout = 'float',
+                    width = 0.9,
+                    height = 0.9,
                 },
                 model = 'claude-3.7-sonnet',
             },
