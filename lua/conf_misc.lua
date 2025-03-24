@@ -100,7 +100,7 @@ neogit.setup({
     disable_context_highlighting = true,
     disable_insert_on_commit = true,
 })
-vim.keymap.set('n', '<c-g>', ':Neogit kind=split_above<CR>')
+vim.keymap.set('n', '<c-g>', ':Neogit kind=floating<CR>')
 
 -- Find and replace in files
 require('spectre').setup({
@@ -159,7 +159,7 @@ local highlight = {
 }
 require('ibl').setup({
     indent = {
-		char = "▏",
+		char = '▏',
         highlight = highlight
     },
     scope = { enabled = false },
@@ -225,9 +225,12 @@ require('FTerm').setup({
 vim.keymap.set('n', '<leader>tt', "<CMD>lua require('FTerm').toggle()<CR>")
 vim.keymap.set('t', '<leader>tt', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
 
+vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' }) -- Transparent content
+
 -- Notify with message
 -- Overriding vim.notify with fancy notify if fancy notify exists
-local notify = require("notify")
+local notify = require('notify')
 vim.notify = notify
 print = function(...)
     local print_safe_args = {}
@@ -235,7 +238,7 @@ print = function(...)
     for i = 1, #_ do
         table.insert(print_safe_args, tostring(_[i]))
     end
-    notify(table.concat(print_safe_args, ' '), "info")
+    notify(table.concat(print_safe_args, ' '), 'info')
 end
 notify.setup({
     render = 'wrapped-compact',
