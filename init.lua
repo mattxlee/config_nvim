@@ -168,8 +168,8 @@ require('lazy').setup({
             opts = {
                 window = {
                     layout = 'vertical',
-                }
-
+                },
+                model = 'claude-3.7-sonnet',
             },
         },
     },
