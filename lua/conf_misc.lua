@@ -25,6 +25,7 @@ require('gruvbox').setup({
 })
 vim.cmd('set background=dark')
 vim.cmd('colorscheme gruvbox')
+vim.cmd('highlight SignColumn guibg=0')
 
 -- Treesitter for highlighting keywords, functions and etc
 require('nvim-treesitter.configs').setup({
