@@ -191,7 +191,7 @@ vim.keymap.set('n', '<leader>j', ':cnext<CR>')
 vim.keymap.set('n', '<leader>k', ':cprev<CR>')
 
 -- close all other windows
-vim.keymap.set('n', 'K', ':only<CR>')
+vim.keymap.set('n', 'K', ':exec "Neotree close"|only<CR>')
 
 -- close all buffers
 vim.keymap.set('n', '<leader>q', ':exec "Neotree close"|%bd<CR>')
