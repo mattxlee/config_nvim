@@ -193,6 +193,9 @@ vim.keymap.set('n', '<leader>k', ':cprev<CR>')
 -- close all other windows
 vim.keymap.set('n', 'K', ':only<CR>')
 
+-- close all buffers
+vim.keymap.set('n', '<leader>q', ':exec "Neotree close"|%bd<CR>')
+
 -- hide the highlights
 vim.keymap.set('n', '<leader>n', ':noh<CR>')
 
