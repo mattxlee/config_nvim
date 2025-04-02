@@ -68,6 +68,7 @@ require('neo-tree').setup({
     close_if_last_window = true,
     filesystem = {
         window = {
+            position = 'float',
             mappings = {
                 ['[c'] = 'prev_git_modified',
                 [']c'] = 'next_git_modified'
