@@ -106,22 +106,6 @@ require('lazy').setup({
         { 'numToStr/Comment.nvim' },
         -- Terminal
         { 'numToStr/FTerm.nvim' },
-        {
-            'CopilotC-Nvim/CopilotChat.nvim',
-            dependencies = {
-                { 'github/copilot.vim' }, -- or zbirenbaum/copilot.lua
-                { 'nvim-lua/plenary.nvim', branch = 'master' }, -- for curl, log and async functions
-            },
-            build = 'make tiktoken', -- Only on MacOS or Linux
-            opts = {
-                window = {
-                    layout = 'float',
-                    width = 0.9,
-                    height = 0.9,
-                },
-                model = 'claude-3.7-sonnet',
-            },
-        },
     },
 })
 

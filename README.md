@@ -174,19 +174,6 @@ npm install -g @tailwindcss/language-server
 |]t|Next todo|Jump to next todo item|
 |[t|Previous todo|Jump to previous todo item|
 
-### Copilot
-
-Copilot has been integrated
-
-|Shortcut|Command|Comment|
-|-|-|-|
-|`leader`cc|Copilot|Open copilot chat window|
-|`leader`cm|Copilot commit msg|Generate commit message with copilot|
-|`leader`ce|Copilot explain|Explain selected code with copilot|
-|`leader`ct|Copilot tests|Generate tests with copilot|
-|`leader`cr|Copilot review|Review the code with copilot|
-|`leader`cf|Copilot fix|Fix the code with copilot|
-
 ### Misc.
 
 |Shortcut|Command|Comment|
