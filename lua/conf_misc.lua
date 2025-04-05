@@ -17,7 +17,7 @@ require('gruvbox').setup({
   invert_tabline = false,
   invert_intend_guides = false,
   inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = '', -- can be "hard", "soft" or empty string
+  contrast = '', -- can be 'hard', 'soft' or empty string
   palette_overrides = {},
   overrides = {},
   dim_inactive = false,
@@ -63,21 +63,17 @@ vim.filetype.add({
 -- use html parser to parse *.ejs files
 vim.treesitter.language.register('html', 'ejs')
 
--- Tree view from the left draw
-require('neo-tree').setup({
-    close_if_last_window = true,
-    filesystem = {
-        window = {
-            position = 'float',
-            mappings = {
-                ['[c'] = 'prev_git_modified',
-                [']c'] = 'next_git_modified'
-            }
-        }
-    }
+-- file tree explorer
+local function my_on_attach(bufnr)
+    local api = require('nvim-tree.api')
+    api.config.mappings.default_on_attach(bufnr)
+    vim.keymap.del('n', '<C-e>', { buffer = bufnr })
+end
+require('nvim-tree').setup({
+    on_attach = my_on_attach,
 })
-vim.keymap.set('n', '<c-j>', ':Neotree reveal<CR>')
-vim.keymap.set('n', '<leader>e', ':Neotree action=show toggle=true<CR>')
+vim.keymap.set('n', '<c-j>', ':NvimTreeFindFile<CR>')
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
 
 -- Status bar
 local opts = {
