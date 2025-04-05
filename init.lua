@@ -57,7 +57,7 @@ require('lazy').setup({
         -- Git related plugins
         { 'lewis6991/gitsigns.nvim' },
         -- Git operations
-        { 'NeogitOrg/neogit'},
+        { 'tpope/vim-fugitive'},
         -- Status line
         { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
         -- Notify
