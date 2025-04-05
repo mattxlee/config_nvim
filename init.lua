@@ -53,7 +53,7 @@ require('lazy').setup({
         { 'cfdrake/vim-pbxproj' },
         { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
         -- Tree-view explorer
-        { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim', 'nvim-tree/nvim-web-devicons' } },
+        { 'nvim-tree/nvim-tree.lua' },
         -- Git related plugins
         { 'lewis6991/gitsigns.nvim' },
         -- Git operations
@@ -191,10 +191,10 @@ vim.keymap.set('n', '<leader>j', ':cnext<CR>')
 vim.keymap.set('n', '<leader>k', ':cprev<CR>')
 
 -- close all other windows
-vim.keymap.set('n', 'K', ':exec "Neotree close"|only<CR>')
+vim.keymap.set('n', 'K', ':only<CR>')
 
 -- close all buffers
-vim.keymap.set('n', '<leader>q', ':exec "Neotree close"|%bd<CR>')
+vim.keymap.set('n', '<leader>q', ':%bd<CR>')
 
 -- hide the highlights
 vim.keymap.set('n', '<leader>n', ':noh<CR>')
