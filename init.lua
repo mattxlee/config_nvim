@@ -52,8 +52,16 @@ require('lazy').setup({
         { 'mtdl9/vim-log-highlighting' },
         { 'cfdrake/vim-pbxproj' },
         { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-        -- Tree-view explorer
-        { 'nvim-tree/nvim-tree.lua' },
+        {
+            'stevearc/oil.nvim',
+            ---@module 'oil'
+            ---@type oil.SetupOpts
+            opts = {},
+            -- Optional dependencies
+            dependencies = { 'nvim-tree/nvim-web-devicons' }, -- use if you prefer nvim-web-devicons
+            -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+            lazy = false,
+        },
         -- Git related plugins
         { 'lewis6991/gitsigns.nvim' },
         -- Git operations
