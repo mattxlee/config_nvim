@@ -56,7 +56,34 @@ require('lazy').setup({
             'stevearc/oil.nvim',
             ---@module 'oil'
             ---@type oil.SetupOpts
-            opts = {},
+            opts = {
+                columns = {
+                    'icon',
+                    -- 'permissions',
+                    'size',
+                    -- 'mtime',
+                },
+                use_default_keymaps = false,
+                keymaps = {
+                    ['q'] = 'actions.close',
+                    ['g?'] = 'actions.show_help',
+                    ['<CR>'] = 'actions.select',
+                    ['<C-l>'] = 'actions.refresh',
+                    ['<C-v>'] = 'actions.preview',
+                    ['-'] = 'actions.parent',
+                    ['_'] = 'actions.open_cwd',
+                    ['`'] = 'actions.cd',
+                    ['~'] = { 'actions.cd', opts = { scope = 'tab' } },
+                    ['gs'] = 'actions.change_sort',
+                    ['gx'] = 'actions.open_external',
+                    ['g.'] = 'actions.toggle_hidden',
+                    ['g\\'] = 'actions.toggle_trash',
+                },
+                view_options = {
+                    show_hidden = true,
+                },
+            },
+            config = true,
             -- Optional dependencies
             dependencies = { 'nvim-tree/nvim-web-devicons' }, -- use if you prefer nvim-web-devicons
             -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.

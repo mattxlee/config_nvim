@@ -64,15 +64,7 @@ vim.filetype.add({
 vim.treesitter.language.register('html', 'ejs')
 
 -- file tree explorer
-require('oil').setup({
-    columns = {
-        'icon',
-        'permissions',
-        'size',
-        'mtime',
-    },
-})
-vim.keymap.set('n', '<c-j>', ':Oil<CR>')
+vim.keymap.set('n', '<C-j>', ':Oil<CR>')
 
 -- Status bar
 local opts = {
