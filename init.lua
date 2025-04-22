@@ -115,6 +115,7 @@ require('lazy').setup({
         -- Flutter settings
         { 'akinsho/flutter-tools.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
         -- Lsp related
+        { 'vim-scripts/a.vim' },
         { 'williamboman/mason.nvim' },
         { 'williamboman/mason-lspconfig.nvim' },
         { 'neovim/nvim-lspconfig' },

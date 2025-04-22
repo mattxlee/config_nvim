@@ -178,7 +178,7 @@ require('ibl').setup({
 })
 
 -- Switch header/source
-vim.keymap.set('n', '<c-h>', ':ClangdSwitchSourceHeader<CR>')
+vim.keymap.set('n', '<c-h>', ':silent A<CR>\\|:e<CR>')
 
 -- Set markdown line-break mode.
 vim.api.nvim_create_autocmd('BufEnter', {
