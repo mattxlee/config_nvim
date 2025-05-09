@@ -239,20 +239,3 @@ vim.keymap.set('t', '<leader>tt', '<C-\\><C-n><CMD>lua require("FTerm").toggle()
 
 vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' }) -- Transparent content
-
--- Notify with message
--- Overriding vim.notify with fancy notify if fancy notify exists
-local notify = require('notify')
-vim.notify = notify
-print = function(...)
-    local print_safe_args = {}
-    local _ = { ... }
-    for i = 1, #_ do
-        table.insert(print_safe_args, tostring(_[i]))
-    end
-    notify(table.concat(print_safe_args, ' '), 'info')
-end
-notify.setup({
-    render = 'wrapped-compact',
-    stages = 'static',
-})

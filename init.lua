@@ -75,8 +75,6 @@ require('lazy').setup({
         { 'tpope/vim-fugitive'},
         -- Status line
         { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
-        -- Notify
-        { 'rcarriga/nvim-notify'},
         -- Search and replace special window
         { 'windwp/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
         -- Fzf lua
