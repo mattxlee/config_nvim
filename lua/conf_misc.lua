@@ -215,14 +215,6 @@ vim.keymap.set('n', '[t', function()
     require('todo-comments').jump_prev()
 end, { desc = 'Previous todo comment' })
 
--- Copilot short cuts
-vim.keymap.set({ 'n', 'v' }, '<leader>cc', ':CopilotChatToggle<CR>')
-vim.keymap.set({ 'n', 'v' }, '<leader>ce', ':CopilotChatExplain<CR>')
-vim.keymap.set({ 'n', 'v' }, '<leader>ct', ':CopilotChatTests<CR>')
-vim.keymap.set({ 'n', 'v' }, '<leader>cr', ':CopilotChatReview<CR>')
-vim.keymap.set({ 'n', 'v' }, '<leader>cf', ':CopilotChatFix<CR>')
-vim.keymap.set({ 'n', 'v' }, '<leader>cm', ':CopilotChatCommit<CR>')
-
 -- Comment
 require('Comment').setup()
 
@@ -261,3 +253,11 @@ require('copilot').setup({
         },
     },
 })
+
+-- Copilot short cuts
+vim.keymap.set({ 'n', 'v' }, '<leader>cc', ':CopilotChatToggle<CR>')
+vim.keymap.set({ 'n', 'v' }, '<leader>ce', ':CopilotChatExplain<CR>')
+vim.keymap.set({ 'n', 'v' }, '<leader>ct', ':CopilotChatTests<CR>')
+vim.keymap.set({ 'n', 'v' }, '<leader>cr', ':CopilotChatReview<CR>')
+vim.keymap.set({ 'n', 'v' }, '<leader>cf', ':CopilotChatFix<CR>')
+vim.keymap.set({ 'n', 'v' }, '<leader>cm', ':CopilotChatCommit<CR>')
