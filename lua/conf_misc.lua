@@ -239,3 +239,25 @@ vim.keymap.set('t', '<leader>tt', '<C-\\><C-n><CMD>lua require("FTerm").toggle()
 
 vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' }) -- Transparent content
+
+-- Copilot
+require('copilot').setup({
+    panel = {
+        enabled = false,
+    },
+    suggestion = {
+        enabled = true,
+        auto_trigger = true,
+        hide_during_completion = true,
+        debounce = 600,
+        trigger_on_accept = true,
+        keymap = {
+            accept = false,
+            accept_word = '<C-f>',
+            accept_line = '<Tab>',
+            next = '<C-n>',
+            prev = '<C-p>',
+            dismiss = "<C-]>",
+        },
+    },
+})
