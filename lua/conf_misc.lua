@@ -246,7 +246,7 @@ require('copilot').setup({
         keymap = {
             accept = false,
             accept_word = '<C-f>',
-            accept_line = '<Tab>',
+            accept_line = '<C-j>',
             next = '<C-n>',
             prev = '<C-p>',
             dismiss = "<C-]>",
